@@ -26,13 +26,41 @@
     .charge .yzm {
         background: #e4393c;
     }
+    .header i {
+        color: #666;
+    }
+    .notice_con{
+        padding: 0 14px;
+        text-align: justify;
+    }
+    .notice_con h1{
+        font-size: 16px;
+        color: #666;
+    }
+    .notice_con p{
+        font-size: 14px;
+        color: #666;
+        line-height: 24px;
+    }
 </style>
 <?php $form = self::beginForm(['showLabel' => false]) ?>
 <div class="container">
      <div class="row">
        <div class="header">
          <a href="<?= url(['user/index']) ?>"> <i class="iconfont">&#xf0292;</i></a>
-         注册
+         风险须知
+       </div>
+
+
+       <div class="notice_con">
+            <h1>一.充值提现风险</h1>
+            <p>1.我们使用的第三方支付随时可能被查封，如果您充值的资金偶尔无法提现了， 请不要逼逼，我们表示遗憾，但无能为力。</p>
+            <p>1.如果您充值的金额不能到账，或者有数额的误差，请不要惊讶，我们故意哒， 你说气人吧。</p>
+
+            <h1>二.投资风险</h1>
+            <p>1.如果您在我们平台亏钱了， 那就是正常的啦。</p>
+            <p>1.如果您在平台赚钱了，首先恭喜您， 但我敢打赌您多半会遇到风险一中提到的问题，啊哈哈哈哈。</p>
+
        </div>
        
        <div id="chartBox" class="chargemain">
