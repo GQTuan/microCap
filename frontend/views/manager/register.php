@@ -44,7 +44,7 @@
     }
 </style>
 <?php $form = self::beginForm(['showLabel' => false]) ?>
-<div class="container">
+<div class="container" style="padding-bottom: 60px;">
      <div class="row">
        <div class="header">
          <a href="<?= url(['user/index']) ?>"> <i class="iconfont">&#xf0292;</i></a>
