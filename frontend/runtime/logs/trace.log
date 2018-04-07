@@ -1,84 +1,21 @@
-2018-04-07 12:41:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Module::getModule] Loading module: wizard
-2018-04-07 12:41:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Application::bootstrap] Bootstrap with common\modules\wizard\Module::bootstrap()
-2018-04-07 12:41:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Module::getModule] Loading module: admin
-2018-04-07 12:41:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Application::bootstrap] Bootstrap with admin\Module::bootstrap()
-2018-04-07 12:41:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
-2018-04-07 12:41:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Module::getModule] Loading module: debug
-2018-04-07 12:41:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Application::bootstrap] Bootstrap with yii\debug\Module::bootstrap()
-2018-04-07 12:41:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Module::getModule] Loading module: gii
-2018-04-07 12:41:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Application::bootstrap] Bootstrap with yii\gii\Module::bootstrap()
-2018-04-07 12:41:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\web\UrlManager::parseRequest] No matching URL rules. Using default URL parsing logic.
-2018-04-07 12:41:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\web\Application::handleRequest] Route requested: 'admin/admin/operate'
-2018-04-07 12:41:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Controller::runAction] Route to run: admin/admin/operate
-2018-04-07 12:41:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][info][yii\web\Session::open] Session started
+2018-04-07 12:48:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Module::getModule] Loading module: wizard
+2018-04-07 12:48:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Application::bootstrap] Bootstrap with common\modules\wizard\Module::bootstrap()
+2018-04-07 12:48:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Module::getModule] Loading module: admin
+2018-04-07 12:48:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Application::bootstrap] Bootstrap with admin\Module::bootstrap()
+2018-04-07 12:48:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2018-04-07 12:48:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Module::getModule] Loading module: debug
+2018-04-07 12:48:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Application::bootstrap] Bootstrap with yii\debug\Module::bootstrap()
+2018-04-07 12:48:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Module::getModule] Loading module: gii
+2018-04-07 12:48:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Application::bootstrap] Bootstrap with yii\gii\Module::bootstrap()
+2018-04-07 12:48:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\web\UrlManager::parseRequest] No matching URL rules. Using default URL parsing logic.
+2018-04-07 12:48:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\web\Application::handleRequest] Route requested: 'admin/admin/operate'
+2018-04-07 12:48:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Controller::runAction] Route to run: admin/admin/operate
+2018-04-07 12:48:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][info][yii\web\Session::open] Session started
     in /Applications/MAMP/htdocs/x46/common/components/Session.php:59
     in /Applications/MAMP/htdocs/x46/common/components/Module.php:54
-2018-04-07 12:41:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `admin_user`
+2018-04-07 12:48:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `admin_user`
     in /Applications/MAMP/htdocs/x46/common/components/Identity.php:84
     in /Applications/MAMP/htdocs/x46/common/components/Module.php:54
-2018-04-07 12:41:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=x46
-    in /Applications/MAMP/htdocs/x46/common/components/Identity.php:84
-    in /Applications/MAMP/htdocs/x46/common/components/Module.php:54
-2018-04-07 12:42:13 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Module::getModule] Loading module: wizard
-2018-04-07 12:42:13 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Application::bootstrap] Bootstrap with common\modules\wizard\Module::bootstrap()
-2018-04-07 12:42:13 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Module::getModule] Loading module: admin
-2018-04-07 12:42:13 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Application::bootstrap] Bootstrap with admin\Module::bootstrap()
-2018-04-07 12:42:13 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
-2018-04-07 12:42:13 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Module::getModule] Loading module: debug
-2018-04-07 12:42:13 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Application::bootstrap] Bootstrap with yii\debug\Module::bootstrap()
-2018-04-07 12:42:13 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Module::getModule] Loading module: gii
-2018-04-07 12:42:13 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Application::bootstrap] Bootstrap with yii\gii\Module::bootstrap()
-2018-04-07 12:42:13 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\web\UrlManager::parseRequest] No matching URL rules. Using default URL parsing logic.
-2018-04-07 12:42:13 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\web\Application::handleRequest] Route requested: 'admin/admin/operate'
-2018-04-07 12:42:13 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Controller::runAction] Route to run: admin/admin/operate
-2018-04-07 12:42:13 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][info][yii\web\Session::open] Session started
-    in /Applications/MAMP/htdocs/x46/common/components/Session.php:59
-    in /Applications/MAMP/htdocs/x46/common/components/Module.php:54
-2018-04-07 12:42:13 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `admin_user`
-    in /Applications/MAMP/htdocs/x46/common/components/Identity.php:84
-    in /Applications/MAMP/htdocs/x46/common/components/Module.php:54
-2018-04-07 12:42:13 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=x46
-    in /Applications/MAMP/htdocs/x46/common/components/Identity.php:84
-    in /Applications/MAMP/htdocs/x46/common/components/Module.php:54
-2018-04-07 12:43:13 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Module::getModule] Loading module: wizard
-2018-04-07 12:43:13 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Application::bootstrap] Bootstrap with common\modules\wizard\Module::bootstrap()
-2018-04-07 12:43:13 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Module::getModule] Loading module: admin
-2018-04-07 12:43:13 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Application::bootstrap] Bootstrap with admin\Module::bootstrap()
-2018-04-07 12:43:13 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
-2018-04-07 12:43:13 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Module::getModule] Loading module: debug
-2018-04-07 12:43:13 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Application::bootstrap] Bootstrap with yii\debug\Module::bootstrap()
-2018-04-07 12:43:13 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Module::getModule] Loading module: gii
-2018-04-07 12:43:13 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Application::bootstrap] Bootstrap with yii\gii\Module::bootstrap()
-2018-04-07 12:43:13 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\web\UrlManager::parseRequest] No matching URL rules. Using default URL parsing logic.
-2018-04-07 12:43:13 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\web\Application::handleRequest] Route requested: 'admin/admin/operate'
-2018-04-07 12:43:13 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Controller::runAction] Route to run: admin/admin/operate
-2018-04-07 12:43:13 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][info][yii\web\Session::open] Session started
-    in /Applications/MAMP/htdocs/x46/common/components/Session.php:59
-    in /Applications/MAMP/htdocs/x46/common/components/Module.php:54
-2018-04-07 12:43:13 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `admin_user`
-    in /Applications/MAMP/htdocs/x46/common/components/Identity.php:84
-    in /Applications/MAMP/htdocs/x46/common/components/Module.php:54
-2018-04-07 12:43:13 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=x46
-    in /Applications/MAMP/htdocs/x46/common/components/Identity.php:84
-    in /Applications/MAMP/htdocs/x46/common/components/Module.php:54
-2018-04-07 12:44:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Module::getModule] Loading module: wizard
-2018-04-07 12:44:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Application::bootstrap] Bootstrap with common\modules\wizard\Module::bootstrap()
-2018-04-07 12:44:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Module::getModule] Loading module: admin
-2018-04-07 12:44:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Application::bootstrap] Bootstrap with admin\Module::bootstrap()
-2018-04-07 12:44:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
-2018-04-07 12:44:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Module::getModule] Loading module: debug
-2018-04-07 12:44:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Application::bootstrap] Bootstrap with yii\debug\Module::bootstrap()
-2018-04-07 12:44:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Module::getModule] Loading module: gii
-2018-04-07 12:44:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Application::bootstrap] Bootstrap with yii\gii\Module::bootstrap()
-2018-04-07 12:44:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\web\UrlManager::parseRequest] No matching URL rules. Using default URL parsing logic.
-2018-04-07 12:44:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\web\Application::handleRequest] Route requested: 'admin/admin/operate'
-2018-04-07 12:44:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][trace][yii\base\Controller::runAction] Route to run: admin/admin/operate
-2018-04-07 12:44:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][info][yii\web\Session::open] Session started
-    in /Applications/MAMP/htdocs/x46/common/components/Session.php:59
-    in /Applications/MAMP/htdocs/x46/common/components/Module.php:54
-2018-04-07 12:44:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `admin_user`
-    in /Applications/MAMP/htdocs/x46/common/components/Identity.php:84
-    in /Applications/MAMP/htdocs/x46/common/components/Module.php:54
-2018-04-07 12:44:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=x46
+2018-04-07 12:48:12 [POST][http://x46.com/admin/admin/operate?parent.id=&][::1][-][251602631709cd426f7a67c5ecd8c5c6][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=x46
     in /Applications/MAMP/htdocs/x46/common/components/Identity.php:84
     in /Applications/MAMP/htdocs/x46/common/components/Module.php:54
