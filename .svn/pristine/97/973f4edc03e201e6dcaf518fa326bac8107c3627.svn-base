@@ -1,2 +1,0 @@
-a:4:{s:4:"user";s:2:"rh";s:3:"sql";s:87:"ALTER TABLE `user_withdraw`
-ADD COLUMN `trade_no`  varchar(50) NOT NULL AFTER `amount`;";s:4:"desc";s:12:"添加字段";s:7:"warning";a:0:{}}

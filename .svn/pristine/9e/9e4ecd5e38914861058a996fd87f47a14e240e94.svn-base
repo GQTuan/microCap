@@ -1,2 +1,0 @@
-a:5:{s:4:"user";s:2:"wq";s:3:"sql";s:100:"ALTER TABLE `order`
-ADD COLUMN `sell_time`  datetime NULL COMMENT '平仓时间' AFTER `is_console`;";s:4:"desc";s:5:"order";s:7:"warning";a:0:{}s:6:"delete";b:1;}

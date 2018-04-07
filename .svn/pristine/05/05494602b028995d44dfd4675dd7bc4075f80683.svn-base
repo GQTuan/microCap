@@ -1,2 +1,0 @@
-a:4:{s:4:"user";s:2:"rh";s:3:"sql";s:122:"ALTER TABLE `order`
-ADD COLUMN `is_medal`  tinyint(4) NULL DEFAULT -1 COMMENT '是否使用免死金牌' AFTER `discount`;";s:4:"desc";s:14:"order加字段";s:7:"warning";a:0:{}}

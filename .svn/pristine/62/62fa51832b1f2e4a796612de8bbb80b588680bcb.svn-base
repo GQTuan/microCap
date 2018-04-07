@@ -1,4 +1,0 @@
-a:5:{s:4:"user";s:8:"ChisWill";s:3:"sql";s:289:"ALTER TABLE `product`
-MODIFY COLUMN `deposit`  decimal(11,2) NULL DEFAULT 1 COMMENT '保证金' AFTER `name`,
-MODIFY COLUMN `one_profit`  int(11) NULL DEFAULT 1 COMMENT '一手盈亏' AFTER `deposit`,
-ADD COLUMN `is_trade`  tinyint NULL DEFAULT 1 COMMENT '允许交易' AFTER `trade_time`;";s:4:"desc";s:14:"update product";s:7:"warning";a:0:{}s:6:"delete";b:1;}
