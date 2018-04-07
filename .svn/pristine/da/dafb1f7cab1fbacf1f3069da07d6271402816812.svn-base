@@ -1,2 +1,0 @@
-a:4:{s:4:"user";s:2:"wq";s:3:"sql";s:113:"ALTER TABLE `user_account`
-ADD COLUMN `trade_no`  varchar(250) NOT NULL COMMENT '订单号' AFTER `bank_address`;";s:4:"desc";s:18:"账户表家字段";s:7:"warning";a:0:{}}

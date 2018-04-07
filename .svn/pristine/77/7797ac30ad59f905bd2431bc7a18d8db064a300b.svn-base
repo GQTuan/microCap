@@ -1,4 +1,0 @@
-a:5:{s:4:"user";s:3:"宏";s:3:"sql";s:119:"ALTER TABLE `user`
-DROP COLUMN `m_id`;
-ALTER TABLE `user_extend`
-CHANGE COLUMN `id` `user_id`  int(11) NOT NULL FIRST ;";s:4:"desc";s:6:"update";s:7:"warning";a:1:{i:0;s:4:"DROP";}s:6:"delete";b:1;}

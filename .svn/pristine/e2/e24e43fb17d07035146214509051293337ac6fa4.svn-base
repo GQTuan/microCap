@@ -1,2 +1,0 @@
-a:4:{s:4:"user";s:2:"rh";s:3:"sql";s:50:"ALTER TABLE `user_account`
-DROP COLUMN `trade_no`;";s:4:"desc";s:12:"删除字段";s:7:"warning";a:1:{i:0;s:4:"DROP";}}
