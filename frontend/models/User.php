@@ -3,6 +3,7 @@
 namespace frontend\models;
 
 use Yii;
+use common\helpers\ImagesUploadFile;
 use frontend\components\WebUser;
 use common\helpers\FileHelper;
 use common\models\AdminUser;
@@ -16,6 +17,8 @@ class User extends \common\models\User
     public $newPassword;
     public $cfmPassword;
     public $rememberMe;
+    public $confirmDeal;
+    public $newDealPassword;
     public $verifyCode;
     public $captcha;
     public $code;
@@ -55,6 +58,9 @@ class User extends \common\models\User
             [['invide_code'], 'verifyCode'],
             // 验证码
             [['captcha'], 'captcha'],
+            [['newDealPassword', 'confirmDeal'], 'required', 'on' => 'deal_password'],
+            [['newDealPassword', 'confirmDeal'], 'match', 'pattern' => '/[a-z0-9~!@#$%^]{6,}/Ui', 'on' => ['deal_password'], 'message' => '{attribute}至少6位'],
+            [['newDealPassword'], 'compare', 'compareAttribute' => 'confirmDeal', 'on' => ['deal_password']],
           
         ]);
     }
@@ -71,6 +77,7 @@ class User extends \common\models\User
             'setMobile' => ['mobile', 'verifyCode'],
             'withdraw' => ['withdrawPassword'],
             'managerReg' => ['oldPassword', 'cfmPassword', 'verifyCode'],
+            'deal_password' => ['newDealPassword', 'confirmDeal']
 
         ]);
     }
@@ -86,6 +93,8 @@ class User extends \common\models\User
             'withdrawPassword' => '交易密码',
             'captcha' => '动态码',
             'code' => '邀请码',
+            'newDealPassword' => '交易密码',
+            'confirmDeal' => '确认交易密码'
         ]);
     }
 
@@ -251,5 +260,23 @@ class User extends \common\models\User
                     ->andWhere(['state' => self::STATE_VALID])
                     ->andFilterWhere(['like', 'mobile', $this->mobile])
                     ->orderBy('created_at DESC');
+    }
+    /**
+     * 头像修改
+     * @return bool
+     */
+    public function saveAvatar()
+    {
+        if(isset($_FILES['avatar']['name'])) {
+            $result = ImagesUploadFile::uploadFiles('avatar');
+            $result = json_decode($result, true);
+            if($result['code'] == 0)
+            {
+                $user = User::findOne(u()->id);
+                $user->face = $result['data']['url'].$result['data']['new_name'];
+                if($user->update()) return true;
+            }
+        }
+        return false;
     }
 }

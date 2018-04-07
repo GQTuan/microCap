@@ -474,8 +474,11 @@ small {
             <li class="border_bottom"> 
                 <a href="<?= url('user/share') ?>"><i class="iconfont icon-sousuo"></i><em>邀请码</em></a>
             </li>
+            <li class="border_bottom">
+                <a href="<?= url('user/modify-phone') ?>" class=""><i class="iconfont"></i><em>修改手机</em></a>
+            </li>
             <li class="border_bottom"> 
-                <a href="<?= url('user/password') ?>" class=""><i class="iconfont"></i><em>修改密码</em></a>
+                <a href="<?= url('user/modify-pwd') ?>" class=""><i class="iconfont"></i><em>修改密码</em></a>
             </li>
             <li class="border_bottom">
                 <a href="<?= url('user/setreal') ?>" class=""><i class="iconfont"></i><em>修改交易密码</em></a>

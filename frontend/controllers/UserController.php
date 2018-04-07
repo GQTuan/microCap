@@ -56,7 +56,7 @@ class UserController extends \frontend\components\Controller
      */
     public function actionIndex()
     {
-        $this->redirect('/site/my');
+//        $this->redirect('/site/my');
         $this->view->title = '我的个人中心';
 
         $user = User::findModel(u()->id);
