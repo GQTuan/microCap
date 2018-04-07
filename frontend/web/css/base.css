@@ -29,11 +29,13 @@ body {
 /*头部区域*/
 #header {
     text-align: center;
-    background: #03A9F4;
+    background: #f7f7f7;
 }
 #header h4 {
     width: 100%;
-    color: #fff;
+    color: #666;
+    font-size: 16px;
+    font-weight: 400;
 }
 /*移动端*/
 
@@ -960,7 +962,7 @@ html {
     float: left;
     width: 25%;
     text-align: center;
-    padding: 2% 0 2%;
+    padding: 1% 0 1%;
 }
 
 .page-footer ul li a {
@@ -985,10 +987,12 @@ html {
     font-size: .4rem;
     color: #333;
     margin-top: 3%;
+    position: relative;
+    top: -.1rem;
 }
 
 .page-footer ul li i {
-    font-size: .5rem;
+    font-size: .6rem;
     color: #60636c;
 }
 
@@ -1058,3 +1062,36 @@ aside.slide-wrapper li > a {
 aside.slide-wrapper li.current > a {
     background-color: #262626;
 }
+
+.clear_fl:after{
+    content:"";
+    display: block;
+    clear: both;
+}
+.lf{
+    float: left;
+}
+.rt{
+    float: right;
+}
+.flex_none{
+    -moz-box-flex: none; /*Firefox*/
+    -webkit-box-flex: none; /*Safari,Opera,Chrome*/
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex:none;
+}
+.flex_nowrap{
+    display:flex;
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */ 
+    display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */ 
+    display: -ms-flexbox; /* TWEENER - IE 10 */ 
+    display: -webkit-flex; /* NEW - Chrome */ 
+    -webkit-flex-wrap: nowrap;
+    -moz-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    -o-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+

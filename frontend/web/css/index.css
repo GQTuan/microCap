@@ -196,11 +196,12 @@
 }
 
 .theme .content .list {
-    width: 33.33%;
-    height: 4.5rem;
+    width: 50%;
+    height: 5.5rem;
     border-right: 1px solid #f1f1f1;
     float: left;
     border-bottom: 1px solid #f1f1f1;
+    padding-top: 10px;
 }
 
 .theme .content .list .shang {
@@ -208,7 +209,7 @@
     width: 100%;
 }
 
-.theme .content .list:nth-child(3n) {
+.theme .content .list:nth-child(2n) {
     border-right: none;
 }
 
@@ -604,7 +605,9 @@
     padding: 0;
     border-radius: 0;
 }
-
+p {
+    margin: 0;
+}
 
 
 

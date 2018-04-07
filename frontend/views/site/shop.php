@@ -16,6 +16,25 @@
     .db {
         display: inline;
     }
+    .banner img {
+        display: block;
+        width: 100%;
+        height: 200px;
+    }
+    .second_nav li{
+        width: 100%!important;
+    }
+    .second_nav li img{
+        width: 60%!important;
+        border-radius: 50%;
+    }
+    .second_nav li  p{
+        margin-top: 6px!important;
+        color: goldenrod!important;
+        font-size: 14px!important;
+        line-height: 24px!important;
+    }
+    
 </style>
 
 <script type="text/javascript">
@@ -41,132 +60,42 @@
 <body>      
     <!--头部区域-->
     <header class="mui-bar mui-bar-nav" id="header">
-        <h4>积分商城</h4>
+        <h4>点点商城</h4>
     </header>
     <div id="main" class="clearfloat warp">         
         <div class="mui-content">
             <!--banner开始-->
             <div class="banner swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><a href="javascript:void(0)"><img class="swiper-lazy" data-src="/images/banner4.jpg" alt=""></a></div>
-                    <div class="swiper-slide"><a href="javascript:void(0)"><img class="swiper-lazy" data-src="/images/banner1.jpg" alt=""></a></div>
-                    <div class="swiper-slide"><a href="javascript:void(0)"><img class="swiper-lazy" data-src="/images/banner3.jpg" alt=""></a></div>
+                    <div class="swiper-slide"><a href="javascript:void(0)"><img class="swiper-lazy" data-src="/images/shop_banner1.jpg" alt=""></a></div>
+                    <div class="swiper-slide"><a href="javascript:void(0)"><img class="swiper-lazy" data-src="/images/shop_banner2.jpg" alt=""></a></div>
                 </div>
             </div>
             <!--第一栏分类开始-->
             <div class="cation clearfloat box-s">
-                <ul>
+                <ul class="flex_nowrap second_nav">
                     <li>
                         <a href="#">
-                            <img src="/images/ico5.png"/>
-                            <p>新品专区</p>
+                            <img src="/images/_New.png"/>
+                            <p>新品上市</p>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="/images/ico2.png"/>
-                            <p>送礼首选</p>
+                            <img src="/images/_Life.png"/>
+                            <p>品质生活</p>
                         </a>
                     </li>
                     <li>
                         <a href="<?= url(['site/index']) ?>">
-                            <img src="/images/ico3.png"/>
+                            <img src="/images/_Money.png"/>
                             <p>惠赚钱</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="/images/ico4.png"/>
-                            <p>私人定制</p>
                         </a>
                     </li>
                 </ul>
             </div>
             <!--第一栏分类结束-->
-            
-        
-            <!--1F家居用品、电器-->
-            <div class="theme clearfloat">
-                <div class="boutit clearfloat">
-                    <span></span>
-                    <samp>1F家居用品、电器</samp>
-                </div>
-                <div class="content clearfloat">
-                    <div class="list clearfloat fl">
-                        <a href="<?= url(['site/detail']) ?>">
-                            <div class="tu clearfloat fr">
-                                <span></span>
-                                <img src="/images/1f1.jpg" />
-                            </div>
-                            <div class="shang clearfloat fl box-s">
-                                <p class="tit over">利仁（Liven） DHG-233A 电火锅</p>
-                                <p><span>积分:</span><span class="over db red">11000</span></p>
-                            </div>
-                        </a>
-                    </div>
 
-                    <div class="list clearfloat fl">
-                        <a href="<?= url(['site/detail']) ?>">
-                            <div class="tu clearfloat fr">
-                                <span></span>
-                                <img src="/images/1f2.jpg" />
-                            </div>
-                            <div class="shang clearfloat fl box-s">
-                                <p class="tit over">九阳（Joyoung）榨汁机家用果汁机（汁渣分离</p>
-                                <p><span>积分:</span><span class="over db red">11000</span></p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="list clearfloat fl">
-                        <a href="<?= url(['site/detail']) ?>">
-                            <div class="tu clearfloat fr">
-                                <span></span>
-                                <img src="/images/1f3.jpg" />
-                            </div>
-                            <div class="shang clearfloat fl box-s">
-                                <p class="tit over">亿嘉IJARL LOTOTO 时尚创意 带盖马克杯 水杯 绿色兔子 FM491008TZM</p>
-                                <p><span>积分:</span><span class="over db red">1500</span></p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="list clearfloat fl">
-                        <a href="<?= url(['site/detail']) ?>">
-                            <div class="tu clearfloat fr">
-                                <span></span>
-                                <img src="/images/1f2.jpg" />
-                            </div>
-                            <div class="shang clearfloat fl box-s">
-                                <p class="tit over">九阳（Joyoung）榨汁机家用果汁机（汁渣分离</p>
-                                <p><span>积分:</span><span class="over db red">11000</span></p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="list clearfloat fl">
-                        <a href="<?= url(['site/detail']) ?>">
-                            <div class="tu clearfloat fr">
-                                <span></span>
-                                <img src="/images/1f3.jpg" />
-                            </div>
-                            <div class="shang clearfloat fl box-s">
-                                <p class="tit over">亿嘉IJARL LOTOTO 时尚创意 带盖马克杯 水杯 绿色兔子 FM491008TZM</p>
-                                <p><span>积分:</span><span class="over db red">1500</span></p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="list clearfloat fl">
-                        <a href="<?= url(['site/detail']) ?>">
-                            <div class="tu clearfloat fr">
-                                <span></span>
-                                <img src="/images/1f1.jpg" />
-                            </div>
-                            <div class="shang clearfloat fl box-s">
-                                <p class="tit over">利仁（Liven） DHG-233A 电火锅</p>
-                                <p><span>积分:</span><span class="over db red">11000</span></p>
-                            </div>
-                        </a>
-                    </div>
-                </div>                          
-            </div>
             <!--4F手机、数码配件-->
             <div class="theme clearfloat">
                 <div class="boutit clearfloat">
@@ -182,7 +111,8 @@
                             </div>
                             <div class="shang clearfloat fl box-s">
                                 <p class="tit over">单反相机，彰显你的风格</p>
-                                <p><span>积分:</span><span class="over db red">100000</span></p>
+                                <p><span>提货券:</span><span class="over db red">100000</span></p>
+                                <p><span>余额兑换:</span><span class="over db red">100</span></p>
                             </div>
                         </a>
                     </div>
@@ -194,7 +124,8 @@
                             </div>
                             <div class="shang clearfloat fl box-s">
                                 <p class="tit over">吸盘式手机支架/车载支架/汽车导航支架 </p>
-                                <p><span>积分:</span><span class="over db red">2900</span></p>
+                                <p><span>提货券:</span><span class="over db red">2900</span></p>
+                                <p><span>余额兑换:</span><span class="over db red">100</span></p>
                             </div>
                         </a>
                     </div>
@@ -206,7 +137,8 @@
                             </div>
                             <div class="shang clearfloat fl box-s">
                                 <p class="tit over"> Lightning数据线 手机数据/充电线 1.2米白色用于苹果</p>
-                                <p><span>积分:</span><span class="over db red">2680</span></p>
+                                <p><span>提货券:</span><span class="over db red">2680</span></p>
+                                <p><span>余额兑换:</span><span class="over db red">100</span></p>
                             </div>
                         </a>
                     </div>
@@ -218,7 +150,8 @@
                             </div>
                             <div class="shang clearfloat fl box-s">
                                 <p class="tit over"> 8孔位3米插座插排插线板接线板 节能防火插座板</p>
-                                <p><span>积分:</span><span class="over db red">3980</span></p>
+                                <p><span>提货券:</span><span class="over db red">3980</span></p>
+                                <p><span>余额兑换:</span><span class="over db red">100</span></p>
                             </div>
                         </a>
                     </div>
@@ -230,7 +163,8 @@
                             </div>
                             <div class="shang clearfloat fl box-s">
                                 <p class="tit over">Lightning数据线 手机数据/充电线 1.2米白色用于苹果</p>
-                                <p><span>积分:</span><span class="over db red">1000</span></p>
+                                <p><span>提货券:</span><span class="over db red">1000</span></p>
+                                <p><span>余额兑换:</span><span class="over db red">100</span></p>
                             </div>
                         </a>
                     </div>
@@ -242,7 +176,8 @@
                             </div>
                             <div class="shang clearfloat fl box-s">
                                 <p class="tit over">吸盘式手机支架/车载支架/汽车导航支架</p>
-                                <p><span>积分:</span><span class="over db red">1000</span></p>
+                                <p><span>提货券:</span><span class="over db red">1000</span></p>
+                                <p><span>余额兑换:</span><span class="over db red">100</span></p>
                             </div>
                         </a>
                     </div>
