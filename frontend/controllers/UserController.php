@@ -56,6 +56,7 @@ class UserController extends \frontend\components\Controller
      */
     public function actionIndex()
     {
+        $this->redirect('/site/my');
         $this->view->title = '我的个人中心';
 
         $user = User::findModel(u()->id);
@@ -652,6 +653,59 @@ class UserController extends \frontend\components\Controller
         user()->logout(false);
 
         return $this->redirect('/site/index');
+    }
+    public function actionSetreal()
+    {
+        $this->view->title = '修改交易密码';
+        $model = User::findOne(u('id'));
+        $model->scenario = 'deal_password';
+
+        if ($model->load($_POST)) {
+
+            if ($model->validate()) {
+                $model->deal_pwd = $model->newDealPassword;
+                if ($model->update()) {
+                    return success('设置成功');
+                } else {
+                    return error($model);
+                }
+            } else {
+                return error($model);
+            }
+        }
+
+        return $this->render('setreal', compact('model'));
+    }
+    public function actionCheckDealPwd()
+    {
+        $user = User::findModel(u()->id);
+//        //判断是否设置了交易密码
+        if(empty($user['deal_pwd']))
+        {
+            return error(-1, '您还没有设置交易密码');
+//            $this->redirect(['user/setreal']);
+        }
+        if(post('deal_pwd')){
+            //检查交易密码正确性
+            if(post('deal_pwd') != $user->deal_pwd)
+            {
+                return error(-2, '交易密码错误！');
+            }
+            session('confirm_true', 1);
+            return self::success(0);
+        }else{
+            return error(-3, '请输入交易密码后操作！');
+        }
+    }
+    public function actionModifyAvatar()
+    {
+        $userModel = new User();
+        if($userModel->saveAvatar())
+        {
+            return success('修改成功');
+        }
+        return error('修改失败');
+
     }
 
 }

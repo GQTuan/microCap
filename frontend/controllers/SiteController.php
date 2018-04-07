@@ -77,6 +77,75 @@ class SiteController extends \frontend\components\Controller
         return $this->render('index', compact('productArr', 'rankings', 'count'));
     }
 
+    /********* 商城 - start *********/
+
+    // 商城首页
+    public function actionShop()
+    {
+        $this->view->title = '商城';
+        $confirm_true = session('confirm_true');
+
+        return $this->render('shop', compact('confirm_true'));
+    }
+
+    // 修改交易密码
+    public function actionModify()
+    {
+        $this->view->title = '修改交易密码';
+        return $this->render('modify');
+    }
+
+    // 商城详情
+    public function actionDetail()
+    {
+        $this->view->title = '商品详情';
+        return $this->render('detail');
+    }
+
+    // 确认订单
+    public function actionConfirm()
+    {
+        $this->view->title = '确认订单';
+        return $this->render('confirm');
+    }
+
+    // 支付
+    public function actionPay()
+    {
+        $this->view->title = '支付订单';
+        return $this->render('pay');
+    }
+
+    // 购物车
+    public function actionCart()
+    {
+        $this->view->title = '购物车';
+        return $this->render('cart');
+    }
+
+    // 个人中心
+    public function actionMy()
+    {
+        $this->view->title = '个人中心';
+
+        if (user()->isGuest) {
+            return $this->redirect('/site/login');
+        }
+        $user = User::findModel(u()->id);
+        $manager = '申请经纪人';
+        //如果是经纪人
+        if ($user->is_manager == User::IS_MANAGER_YES) {
+            $manager = '我是经纪人';
+        }
+        $userCoupons = UserCoupon::find()->andWhere(['use_state' => UserCoupon::USE_STATE_WAIT, 'user_id' => u()->id])->andWhere(['>', 'number', 0])->andWhere(['>', 'valid_time', self::$time])->joinWith(['coupon'])->orderBy('amount ASC')->count();
+
+        return $this->render('my', compact('manager', 'user', 'userCoupons'));
+
+
+    }
+    /********* 商城 - end *********/
+
+
     //期货的最新价格数据集
     public function actionAjaxNewProductPrice()
     {
@@ -372,10 +441,10 @@ class SiteController extends \frontend\components\Controller
     }
 
 
-    public function actionDetail()
+    public function actionDetails()
     {
         $this->view->title = '商品详情';
-        return $this->render('detail', compact('url')); 
+        return $this->render('details', compact('url'));
     }
 
     public function actionBuy()
