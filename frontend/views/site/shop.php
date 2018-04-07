@@ -34,7 +34,6 @@
         font-size: 14px!important;
         line-height: 24px!important;
     }
-    
 </style>
 
 <script type="text/javascript">
@@ -57,7 +56,26 @@
 </div>
 <!--loading页结束-->
 
-<body>      
+<body>    
+        <!-- 交易密码 他弹框 - start -->
+        <div class="pwd_mask">
+            <div class="pwd_content">
+                <h1 class="pwd_title">输入交易密码</h1>
+                <div class="pwd_section">
+                    <input />
+                    <p class="pwd_tip">
+                        <a href="<?= url(['user/setreal']) ?>">忘记交易密码</a>
+                    </p>
+                </div>
+                <div class="pwd_section">
+                    <a href="javascript:void();" class="pwd_submit">确认</a>
+                </div>
+            </div>
+        </div>
+        <!-- 交易密码 他弹框 - end -->
+
+
+
     <!--头部区域-->
     <header class="mui-bar mui-bar-nav" id="header">
         <h4>点点商城</h4>
@@ -226,7 +244,8 @@
     });
     function checkPwd()
     {
-        layer.prompt({
+        $(".pwd_mask").show();
+        /*layer.prompt({
                 formType:1,
                 title:'请输入交易密码',
             },
@@ -249,10 +268,37 @@
                             $.alert(ret.data);
                         }
                         else {
-//                            window.location.href = '/site/index';
+
                         }
                     }
                 });
-            });
+            });*/
     }
+
+    $(".pwd_submit").click(function(){
+        var value = $(".pwd_section input").val();
+        $.post({
+            url: "<?=url(['user/check-deal-pwd'])?>",
+            data: {deal_pwd:value},
+            dataType:'json',
+            success: function (ret) {
+                if (ret.info == -1) {
+                    $.alert(ret.data);
+                    setTimeout(function(){
+                        window.location.href='/user/setreal';
+                    },1000);
+                }else if(ret.info == -2)
+                {
+                    $.alert(ret.data);
+                }
+                else if(ret.info == -3)
+                {
+                    $.alert(ret.data);
+                }
+                else {
+                    $(".pwd_mask").hide();
+                }
+            }
+        });
+    });
 </script>
