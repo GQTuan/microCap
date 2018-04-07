@@ -1,0 +1,39 @@
+a:4:{s:4:"user";s:2:"wq";s:3:"sql";s:1657:"CREATE TABLE `province` (
+  `id` tinyint(3) NOT NULL,
+  `name` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+insert into province values(1, '北京');
+insert into province values(2, '天津');
+insert into province values(3, '河北');
+insert into province values(4, '山西');
+insert into province values(5, '内蒙古');
+insert into province values(6, '辽宁');
+insert into province values(7, '吉林');
+insert into province values(8, '黑龙江');
+insert into province values(9, '上海');
+insert into province values(10, '江苏');
+insert into province values(11, '浙江');
+insert into province values(12, '安徽');
+insert into province values(13, '福建');
+insert into province values(14, '江西');
+insert into province values(15, '山东');
+insert into province values(16, '河南');
+insert into province values(17, '湖北');
+insert into province values(18, '湖南');
+insert into province values(19, '广东');
+insert into province values(20, '广西壮族');
+insert into province values(21, '海南');
+insert into province values(22, '重庆');
+insert into province values(23, '四川');
+insert into province values(24, '贵州');
+insert into province values(25, '云南');
+insert into province values(26, '西藏');
+insert into province values(27, '陕西');
+insert into province values(28, '甘肃');
+insert into province values(29, '青海');
+insert into province values(30, '宁夏回族');
+insert into province values(31, '新疆维吾尔');
+insert into province values(32, '香港特别行政区');
+insert into province values(33, '澳门特别行政区');
+insert into province values(34, '台湾');";s:4:"desc";s:8:"province";s:7:"warning";a:0:{}}

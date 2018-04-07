@@ -1,0 +1,10 @@
+a:5:{s:4:"user";s:2:"wq";s:3:"sql";s:565:"ALTER TABLE `product`
+ADD COLUMN `source`  tinyint(4) NULL DEFAULT 1 COMMENT '来源（1交易所2自动生成）' AFTER `is_trade`;
+CREATE TABLE `product_param` (
+  `product_id` int(11) NOT NULL,
+  `start_price` int(11) NOT NULL DEFAULT '1' COMMENT '起始价格',
+  `end_price` int(11) NOT NULL DEFAULT '1' COMMENT '截止价格',
+  `start_point` tinyint(4) NOT NULL DEFAULT '-2' COMMENT '起始点数',
+  `end_point` tinyint(4) NOT NULL DEFAULT '2' COMMENT '截止点数',
+  PRIMARY KEY (`product_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='产品参数';";s:4:"desc";s:7:"product";s:7:"warning";a:0:{}s:6:"delete";b:1;}

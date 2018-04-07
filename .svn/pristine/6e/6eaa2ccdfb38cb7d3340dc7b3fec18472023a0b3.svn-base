@@ -1,0 +1,114 @@
+body{
+    min-width: 100vw;
+    min-height:95vh;
+    background: #0E0F1A;
+}
+.register-container{
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+.img-container{
+    text-align: center;
+    position: relative;
+}
+.img-container img{
+    width: 18%;
+}
+.user-reigister{
+    color: #F5F5F5;
+    font-size: .5rem;
+    margin:.4rem 0 0.2rem 0;
+}
+.flex-nowrap{
+    display:flex;
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */ 
+    display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */ 
+    display: -ms-flexbox; /* TWEENER - IE 10 */ 
+    display: -webkit-flex; /* NEW - Chrome */ 
+    -webkit-flex-wrap: nowrap;
+    -moz-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    -o-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+.my-form-group *{
+    white-space: nowrap;
+}
+.my-form-group label{
+    padding:0 .1rem;
+}
+.my-form-group input{
+    width: 100%;
+}
+.my-form-group {
+    height: 1.3rem;
+    line-height: 1.3rem;
+    margin-bottom: .3rem;
+}
+.my-form-group label{
+    font-size: .4rem;
+    color: #fff;
+    display: inline-block;
+    width: 2.2rem;
+    -moz-box-flex: none; /*Firefox*/
+    -webkit-box-flex: none; /*Safari,Opera,Chrome*/
+    
+
+    -webkit-box-flex: none;
+  -webkit-flex: none;
+      -ms-flex: none;
+          flex:none;
+}
+.my-form-group input{
+    background: transparent;
+    border:0;
+    outline: 0;
+    text-align: center;
+    border-bottom:1px solid #fff;
+    vertical-align: middle;
+    color: #fff;
+    font-size: .4rem;
+    height: 1.3rem;
+    /*margin: 0 .2rem;*/
+    border-radius: 0
+}
+.yanzm{
+    padding:.01rem .6rem;
+    height: .8rem;
+    line-height: .8rem;
+    background: #7E7C72;
+    margin-right: .2rem;
+}
+.change-one{
+    font-size: .4rem;
+    color: #fff;
+}
+.my-get-code{
+    background: #FACE15;
+    font-size: #5B4F1F;
+    height: .9rem;
+    line-height: .9rem;
+    padding: 0 .2rem;
+    margin-left: .3rem;
+    width: 50%;
+    text-align: center;
+}
+.checkboxFour a{
+    display: inline;
+    color: #00B1DE;
+    font-size: .34rem;
+}
+.checkboxFour span{
+    font-size: .34rem;
+    color: #fff;
+}
+.my-form-group .sumit{
+    border: 0;
+    background: #FACE15;
+    font-size: .38rem;
+    color: #5E4F21;
+    height: .96rem;
+    line-height: .96rem;
+    margin-top: 0.4rem;
+}

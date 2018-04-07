@@ -1,0 +1,33 @@
+a:5:{s:4:"user";s:2:"wq";s:3:"sql";s:1920:"SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for product_price
+-- ----------------------------
+DROP TABLE IF EXISTS `product_price`;
+CREATE TABLE `product_price` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `product_id` int(11) NOT NULL,
+  `deposit` decimal(11,2) NOT NULL COMMENT '保证金',
+  `one_profit` decimal(11,2) NOT NULL COMMENT '一手盈亏',
+  `unit` varchar(10) DEFAULT NULL COMMENT '带数量的单位',
+  `fee` decimal(11,1) DEFAULT '0.0' COMMENT '手续费',
+  `max_hand` int(11) DEFAULT '0' COMMENT '最大手数',
+  `point` int(11) DEFAULT '5' COMMENT '点数',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COMMENT='产品价格拓展表';
+
+-- ----------------------------
+-- Records of product_price
+-- ----------------------------
+INSERT INTO `product_price` VALUES ('1', '1', '2000.00', '70.00', '1M', '10.0', '10', '5');
+INSERT INTO `product_price` VALUES ('2', '1', '2000.00', '75.00', '5M', '10.0', '10', '5');
+INSERT INTO `product_price` VALUES ('3', '1', '2000.00', '80.00', '15M', '5.0', '10', '5');
+INSERT INTO `product_price` VALUES ('4', '1', '2000.00', '82.00', '30M', '5.0', '10', '5');
+INSERT INTO `product_price` VALUES ('5', '1', '2000.00', '85.00', '1H', '5.0', '10', '5');
+INSERT INTO `product_price` VALUES ('6', '4', '2000.00', '70.00', '5M', '10.0', '10', '5');
+INSERT INTO `product_price` VALUES ('7', '4', '2000.00', '75.00', '15M', '5.0', '10', '5');
+INSERT INTO `product_price` VALUES ('8', '4', '2000.00', '80.00', '30M', '5.0', '10', '5');
+INSERT INTO `product_price` VALUES ('9', '4', '2000.00', '85.00', '1H', '5.0', '10', '5');
+INSERT INTO `product_price` VALUES ('10', '9', '2000.00', '70.00', '15M', '10.0', '10', '5');
+INSERT INTO `product_price` VALUES ('11', '9', '2000.00', '80.00', '30M', '5.0', '10', '5');
+INSERT INTO `product_price` VALUES ('12', '9', '2000.00', '85.00', '1H', '5.0', '10', '5');";s:4:"desc";s:13:"product_price";s:7:"warning";a:1:{i:0;s:4:"DROP";}s:6:"delete";b:1;}

@@ -1,0 +1,2 @@
+a:5:{s:4:"user";s:2:"wq";s:3:"sql";s:112:"ALTER TABLE `product_price`
+ADD COLUMN `unit`  varchar(10) NULL COMMENT '带数量的单位' AFTER `one_profit`;";s:4:"desc";s:13:"product_price";s:7:"warning";a:0:{}s:6:"delete";b:1;}
