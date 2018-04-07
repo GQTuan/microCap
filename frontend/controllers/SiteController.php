@@ -489,6 +489,7 @@ class SiteController extends \frontend\components\Controller
     public function actionLogout()
     {
         user()->logout(false);
+        session('confirm_true', null);
 
         return $this->redirect(['site/login']);
     }
