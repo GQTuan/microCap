@@ -64,7 +64,7 @@
                 <div class="pwd_section">
                     <input />
                     <p class="pwd_tip">
-                        <a href="<?= url(['user/setreal']) ?>">忘记交易密码</a>
+                        <a href="<?= url(['user/modify']) ?>">忘记交易密码</a>
                     </p>
                 </div>
                 <div class="pwd_section">
@@ -245,34 +245,6 @@
     function checkPwd()
     {
         $(".pwd_mask").show();
-        /*layer.prompt({
-                formType:1,
-                title:'请输入交易密码',
-            },
-            function(value, index, elem){
-                $.post({
-                    url: "<?=url(['user/check-deal-pwd'])?>",
-                    data: {deal_pwd:value},
-                    dataType:'json',
-                    success: function (ret) {
-                        layer.closeAll();
-                        if (ret.info == -1) {
-                            $.alert(ret.data);
-                            window.location.href='/user/setreal'
-                        }else if(ret.info == -2)
-                        {
-                            $.alert(ret.data);
-                        }
-                        else if(ret.info == -3)
-                        {
-                            $.alert(ret.data);
-                        }
-                        else {
-
-                        }
-                    }
-                });
-            });*/
     }
 
     $(".pwd_submit").click(function(){

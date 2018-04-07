@@ -50,6 +50,15 @@ class UserController extends \frontend\components\Controller
             return true;
         }
     }
+
+
+    // 修改交易密码
+    public function actionModify()
+    {
+        $this->view->title = '修改交易密码';
+        return $this->render('modify');
+    }
+
     
     /**
      * @authname  个人中心
