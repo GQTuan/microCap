@@ -1,5 +1,13 @@
-<?php $this->regCss('price') ?>
-<?php $this->regCss('login') ?>
+<?php $this->regCss('base') ?>
+<?php $this->regCss('index') ?>
+<?php $this->regCss('mui.min') ?>
+<?php $this->regCss('loaders.min') ?>
+<?php $this->regCss('loading') ?>
+<?php $this->regCss('swiper.min') ?>
+
+<?php $this->regJs('rem') ?>
+<?php $this->regJs('others') ?>
+<?php $this->regJs('swiper.jquery.min') ?>
 
 <style type="text/css">
     #wizard-toolbar{

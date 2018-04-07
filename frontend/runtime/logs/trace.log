@@ -4180,3 +4180,889 @@ AND rc.table_name = 'user' AND kcu.table_name = 'user'
     in /Applications/MAMP/htdocs/pan/microCap/common/modules/wizard/Module.php:94
     in /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/main.php:58
     in /Applications/MAMP/htdocs/pan/microCap/common/components/View.php:37
+2018-04-07 13:05:35 [GET][http://micro.com/site/confirm][::1][100001][-][trace][yii\base\Module::getModule] Loading module: wizard
+2018-04-07 13:05:35 [GET][http://micro.com/site/confirm][::1][100001][-][trace][yii\base\Application::bootstrap] Bootstrap with common\modules\wizard\Module::bootstrap()
+2018-04-07 13:05:35 [GET][http://micro.com/site/confirm][::1][100001][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2018-04-07 13:05:35 [GET][http://micro.com/site/confirm][::1][100001][-][trace][yii\base\Module::getModule] Loading module: debug
+2018-04-07 13:05:35 [GET][http://micro.com/site/confirm][::1][100001][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\debug\Module::bootstrap()
+2018-04-07 13:05:35 [GET][http://micro.com/site/confirm][::1][100001][-][trace][yii\base\Module::getModule] Loading module: gii
+2018-04-07 13:05:35 [GET][http://micro.com/site/confirm][::1][100001][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\gii\Module::bootstrap()
+2018-04-07 13:05:35 [GET][http://micro.com/site/confirm][::1][100001][-][trace][yii\web\UrlManager::parseRequest] No matching URL rules. Using default URL parsing logic.
+2018-04-07 13:05:35 [GET][http://micro.com/site/confirm][::1][100001][-][trace][yii\web\Application::handleRequest] Route requested: 'site/confirm'
+2018-04-07 13:05:35 [GET][http://micro.com/site/confirm][::1][100001][-][trace][yii\base\Controller::runAction] Route to run: site/confirm
+2018-04-07 13:05:35 [GET][http://micro.com/site/confirm][::1][100001][-][info][yii\db\Command::query] SELECT option_value FROM `option` WHERE option_name='frontend_settings'
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:128
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:120
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Config.php:25
+2018-04-07 13:05:35 [GET][http://micro.com/site/confirm][::1][100001][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=x46
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:128
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:120
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Config.php:25
+2018-04-07 13:05:35 [GET][http://micro.com/site/confirm][::1][100001][-][info][yii\web\Session::open] Session started
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Session.php:59
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:05:35 [GET][http://micro.com/site/confirm][::1][100001][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:05:35 [GET][http://micro.com/site/confirm][::1][100001][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:05:35 [GET][http://micro.com/site/confirm][::1][100001][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=100001
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:05:35 [GET][http://micro.com/site/confirm][::1][100001][-][trace][yii\base\InlineAction::runWithParams] Running action: frontend\controllers\SiteController::actionConfirm()
+2018-04-07 13:05:35 [GET][http://micro.com/site/confirm][::1][100001][-][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/frontend/views/site/confirm.php
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:109
+2018-04-07 13:05:35 [GET][http://micro.com/site/confirm][::1][100001][-][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/main.php
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:109
+2018-04-07 13:05:35 [GET][http://micro.com/site/confirm][::1][100001][-][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/_footer.php
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/main.php:57
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/View.php:37
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:109
+2018-04-07 13:05:35 [GET][http://micro.com/site/confirm][::1][100001][-][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/common/modules/wizard/views/generate/index.php
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/wizard/Module.php:94
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/main.php:58
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/View.php:37
+2018-04-07 13:05:39 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Module::getModule] Loading module: wizard
+2018-04-07 13:05:39 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Application::bootstrap] Bootstrap with common\modules\wizard\Module::bootstrap()
+2018-04-07 13:05:39 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2018-04-07 13:05:39 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Module::getModule] Loading module: debug
+2018-04-07 13:05:39 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Application::bootstrap] Bootstrap with yii\debug\Module::bootstrap()
+2018-04-07 13:05:39 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Module::getModule] Loading module: gii
+2018-04-07 13:05:39 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Application::bootstrap] Bootstrap with yii\gii\Module::bootstrap()
+2018-04-07 13:05:39 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\web\UrlManager::parseRequest] No matching URL rules. Using default URL parsing logic.
+2018-04-07 13:05:39 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\web\Application::handleRequest] Route requested: 'js/hammer.min.map'
+2018-04-07 13:05:39 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Controller::runAction] Route to run: site/error
+2018-04-07 13:05:39 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Command::query] SELECT option_value FROM `option` WHERE option_name='frontend_settings'
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:128
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:120
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Config.php:25
+2018-04-07 13:05:39 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=x46
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:128
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:120
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Config.php:25
+2018-04-07 13:05:39 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\web\Session::open] Session started
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Session.php:59
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:05:39 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:05:39 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:05:39 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=100001
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:05:39 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\InlineAction::runWithParams] Running action: frontend\controllers\SiteController::actionError()
+2018-04-07 13:05:39 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/frontend/views/site/error.php
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/WebController.php:140
+2018-04-07 13:05:39 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/main.php
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/WebController.php:140
+2018-04-07 13:05:39 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/_footer.php
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/main.php:57
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/View.php:37
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/WebController.php:140
+2018-04-07 13:05:39 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/common/modules/wizard/views/generate/index.php
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/wizard/Module.php:94
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/main.php:58
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/View.php:37
+2018-04-07 13:05:41 [GET][http://micro.com/site/confirm][::1][100001][-][trace][yii\base\Module::getModule] Loading module: wizard
+2018-04-07 13:05:41 [GET][http://micro.com/site/confirm][::1][100001][-][trace][yii\base\Application::bootstrap] Bootstrap with common\modules\wizard\Module::bootstrap()
+2018-04-07 13:05:41 [GET][http://micro.com/site/confirm][::1][100001][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2018-04-07 13:05:41 [GET][http://micro.com/site/confirm][::1][100001][-][trace][yii\base\Module::getModule] Loading module: debug
+2018-04-07 13:05:41 [GET][http://micro.com/site/confirm][::1][100001][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\debug\Module::bootstrap()
+2018-04-07 13:05:41 [GET][http://micro.com/site/confirm][::1][100001][-][trace][yii\base\Module::getModule] Loading module: gii
+2018-04-07 13:05:41 [GET][http://micro.com/site/confirm][::1][100001][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\gii\Module::bootstrap()
+2018-04-07 13:05:41 [GET][http://micro.com/site/confirm][::1][100001][-][trace][yii\web\UrlManager::parseRequest] No matching URL rules. Using default URL parsing logic.
+2018-04-07 13:05:41 [GET][http://micro.com/site/confirm][::1][100001][-][trace][yii\web\Application::handleRequest] Route requested: 'site/confirm'
+2018-04-07 13:05:41 [GET][http://micro.com/site/confirm][::1][100001][-][trace][yii\base\Controller::runAction] Route to run: site/confirm
+2018-04-07 13:05:41 [GET][http://micro.com/site/confirm][::1][100001][-][info][yii\db\Command::query] SELECT option_value FROM `option` WHERE option_name='frontend_settings'
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:128
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:120
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Config.php:25
+2018-04-07 13:05:41 [GET][http://micro.com/site/confirm][::1][100001][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=x46
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:128
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:120
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Config.php:25
+2018-04-07 13:05:41 [GET][http://micro.com/site/confirm][::1][100001][-][info][yii\web\Session::open] Session started
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Session.php:59
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:05:41 [GET][http://micro.com/site/confirm][::1][100001][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:05:41 [GET][http://micro.com/site/confirm][::1][100001][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:05:41 [GET][http://micro.com/site/confirm][::1][100001][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=100001
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:05:41 [GET][http://micro.com/site/confirm][::1][100001][-][trace][yii\base\InlineAction::runWithParams] Running action: frontend\controllers\SiteController::actionConfirm()
+2018-04-07 13:05:41 [GET][http://micro.com/site/confirm][::1][100001][-][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/frontend/views/site/confirm.php
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:109
+2018-04-07 13:05:41 [GET][http://micro.com/site/confirm][::1][100001][-][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/main.php
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:109
+2018-04-07 13:05:41 [GET][http://micro.com/site/confirm][::1][100001][-][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/_footer.php
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/main.php:57
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/View.php:37
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:109
+2018-04-07 13:05:41 [GET][http://micro.com/site/confirm][::1][100001][-][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/common/modules/wizard/views/generate/index.php
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/wizard/Module.php:94
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/main.php:58
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/View.php:37
+2018-04-07 13:05:42 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Module::getModule] Loading module: wizard
+2018-04-07 13:05:42 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Application::bootstrap] Bootstrap with common\modules\wizard\Module::bootstrap()
+2018-04-07 13:05:42 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2018-04-07 13:05:42 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Module::getModule] Loading module: debug
+2018-04-07 13:05:42 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Application::bootstrap] Bootstrap with yii\debug\Module::bootstrap()
+2018-04-07 13:05:42 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Module::getModule] Loading module: gii
+2018-04-07 13:05:42 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Application::bootstrap] Bootstrap with yii\gii\Module::bootstrap()
+2018-04-07 13:05:42 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\web\UrlManager::parseRequest] No matching URL rules. Using default URL parsing logic.
+2018-04-07 13:05:42 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\web\Application::handleRequest] Route requested: 'js/hammer.min.map'
+2018-04-07 13:05:42 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Controller::runAction] Route to run: site/error
+2018-04-07 13:05:42 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Command::query] SELECT option_value FROM `option` WHERE option_name='frontend_settings'
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:128
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:120
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Config.php:25
+2018-04-07 13:05:42 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=x46
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:128
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:120
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Config.php:25
+2018-04-07 13:05:42 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\web\Session::open] Session started
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Session.php:59
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:05:42 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:05:42 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:05:42 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=100001
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:05:42 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\InlineAction::runWithParams] Running action: frontend\controllers\SiteController::actionError()
+2018-04-07 13:05:42 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/frontend/views/site/error.php
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/WebController.php:140
+2018-04-07 13:05:42 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/main.php
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/WebController.php:140
+2018-04-07 13:05:42 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/_footer.php
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/main.php:57
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/View.php:37
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/WebController.php:140
+2018-04-07 13:05:42 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/common/modules/wizard/views/generate/index.php
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/wizard/Module.php:94
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/main.php:58
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/View.php:37
+2018-04-07 13:06:23 [GET][http://micro.com/site/pay][::1][100001][-][trace][yii\base\Module::getModule] Loading module: wizard
+2018-04-07 13:06:23 [GET][http://micro.com/site/pay][::1][100001][-][trace][yii\base\Application::bootstrap] Bootstrap with common\modules\wizard\Module::bootstrap()
+2018-04-07 13:06:23 [GET][http://micro.com/site/pay][::1][100001][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2018-04-07 13:06:23 [GET][http://micro.com/site/pay][::1][100001][-][trace][yii\base\Module::getModule] Loading module: debug
+2018-04-07 13:06:23 [GET][http://micro.com/site/pay][::1][100001][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\debug\Module::bootstrap()
+2018-04-07 13:06:23 [GET][http://micro.com/site/pay][::1][100001][-][trace][yii\base\Module::getModule] Loading module: gii
+2018-04-07 13:06:23 [GET][http://micro.com/site/pay][::1][100001][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\gii\Module::bootstrap()
+2018-04-07 13:06:23 [GET][http://micro.com/site/pay][::1][100001][-][trace][yii\web\UrlManager::parseRequest] No matching URL rules. Using default URL parsing logic.
+2018-04-07 13:06:23 [GET][http://micro.com/site/pay][::1][100001][-][trace][yii\web\Application::handleRequest] Route requested: 'site/pay'
+2018-04-07 13:06:23 [GET][http://micro.com/site/pay][::1][100001][-][trace][yii\base\Controller::runAction] Route to run: site/pay
+2018-04-07 13:06:23 [GET][http://micro.com/site/pay][::1][100001][-][info][yii\db\Command::query] SELECT option_value FROM `option` WHERE option_name='frontend_settings'
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:128
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:120
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Config.php:25
+2018-04-07 13:06:23 [GET][http://micro.com/site/pay][::1][100001][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=x46
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:128
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:120
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Config.php:25
+2018-04-07 13:06:23 [GET][http://micro.com/site/pay][::1][100001][-][info][yii\web\Session::open] Session started
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Session.php:59
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:06:23 [GET][http://micro.com/site/pay][::1][100001][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:06:23 [GET][http://micro.com/site/pay][::1][100001][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:06:23 [GET][http://micro.com/site/pay][::1][100001][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=100001
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:06:23 [GET][http://micro.com/site/pay][::1][100001][-][trace][yii\base\InlineAction::runWithParams] Running action: frontend\controllers\SiteController::actionPay()
+2018-04-07 13:06:23 [GET][http://micro.com/site/pay][::1][100001][-][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/frontend/views/site/pay.php
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:116
+2018-04-07 13:06:23 [GET][http://micro.com/site/pay][::1][100001][-][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/main.php
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:116
+2018-04-07 13:06:23 [GET][http://micro.com/site/pay][::1][100001][-][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/_footer.php
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/main.php:57
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/View.php:37
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:116
+2018-04-07 13:06:23 [GET][http://micro.com/site/pay][::1][100001][-][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/common/modules/wizard/views/generate/index.php
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/wizard/Module.php:94
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/main.php:58
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/View.php:37
+2018-04-07 13:06:24 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Module::getModule] Loading module: wizard
+2018-04-07 13:06:24 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Application::bootstrap] Bootstrap with common\modules\wizard\Module::bootstrap()
+2018-04-07 13:06:24 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2018-04-07 13:06:24 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Module::getModule] Loading module: debug
+2018-04-07 13:06:24 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Application::bootstrap] Bootstrap with yii\debug\Module::bootstrap()
+2018-04-07 13:06:24 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Module::getModule] Loading module: gii
+2018-04-07 13:06:24 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Application::bootstrap] Bootstrap with yii\gii\Module::bootstrap()
+2018-04-07 13:06:24 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\web\UrlManager::parseRequest] No matching URL rules. Using default URL parsing logic.
+2018-04-07 13:06:24 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\web\Application::handleRequest] Route requested: 'js/hammer.min.map'
+2018-04-07 13:06:24 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Controller::runAction] Route to run: site/error
+2018-04-07 13:06:24 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Command::query] SELECT option_value FROM `option` WHERE option_name='frontend_settings'
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:128
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:120
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Config.php:25
+2018-04-07 13:06:24 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=x46
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:128
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:120
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Config.php:25
+2018-04-07 13:06:24 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\web\Session::open] Session started
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Session.php:59
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:06:24 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:06:24 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:06:24 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=100001
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:06:24 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\InlineAction::runWithParams] Running action: frontend\controllers\SiteController::actionError()
+2018-04-07 13:06:24 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/frontend/views/site/error.php
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/WebController.php:140
+2018-04-07 13:06:24 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/main.php
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/WebController.php:140
+2018-04-07 13:06:24 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/_footer.php
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/main.php:57
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/View.php:37
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/WebController.php:140
+2018-04-07 13:06:24 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/common/modules/wizard/views/generate/index.php
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/wizard/Module.php:94
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/main.php:58
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/View.php:37
+2018-04-07 13:06:25 [GET][http://micro.com/site/shop][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Module::getModule] Loading module: wizard
+2018-04-07 13:06:25 [GET][http://micro.com/site/shop][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Application::bootstrap] Bootstrap with common\modules\wizard\Module::bootstrap()
+2018-04-07 13:06:25 [GET][http://micro.com/site/shop][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2018-04-07 13:06:25 [GET][http://micro.com/site/shop][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Module::getModule] Loading module: debug
+2018-04-07 13:06:25 [GET][http://micro.com/site/shop][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Application::bootstrap] Bootstrap with yii\debug\Module::bootstrap()
+2018-04-07 13:06:25 [GET][http://micro.com/site/shop][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Module::getModule] Loading module: gii
+2018-04-07 13:06:25 [GET][http://micro.com/site/shop][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Application::bootstrap] Bootstrap with yii\gii\Module::bootstrap()
+2018-04-07 13:06:25 [GET][http://micro.com/site/shop][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\web\UrlManager::parseRequest] No matching URL rules. Using default URL parsing logic.
+2018-04-07 13:06:25 [GET][http://micro.com/site/shop][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\web\Application::handleRequest] Route requested: 'site/shop'
+2018-04-07 13:06:25 [GET][http://micro.com/site/shop][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Controller::runAction] Route to run: site/shop
+2018-04-07 13:06:25 [GET][http://micro.com/site/shop][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Command::query] SELECT option_value FROM `option` WHERE option_name='frontend_settings'
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:128
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:120
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Config.php:25
+2018-04-07 13:06:25 [GET][http://micro.com/site/shop][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=x46
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:128
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:120
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Config.php:25
+2018-04-07 13:06:25 [GET][http://micro.com/site/shop][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\web\Session::open] Session started
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Session.php:59
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:06:25 [GET][http://micro.com/site/shop][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:06:25 [GET][http://micro.com/site/shop][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:06:25 [GET][http://micro.com/site/shop][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=100001
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:06:25 [GET][http://micro.com/site/shop][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\InlineAction::runWithParams] Running action: frontend\controllers\SiteController::actionShop()
+2018-04-07 13:06:25 [GET][http://micro.com/site/shop][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/frontend/views/site/shop.php
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:88
+2018-04-07 13:06:27 [GET][http://micro.com/site/shop][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Module::getModule] Loading module: wizard
+2018-04-07 13:06:27 [GET][http://micro.com/site/shop][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Application::bootstrap] Bootstrap with common\modules\wizard\Module::bootstrap()
+2018-04-07 13:06:27 [GET][http://micro.com/site/shop][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2018-04-07 13:06:27 [GET][http://micro.com/site/shop][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Module::getModule] Loading module: debug
+2018-04-07 13:06:27 [GET][http://micro.com/site/shop][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Application::bootstrap] Bootstrap with yii\debug\Module::bootstrap()
+2018-04-07 13:06:27 [GET][http://micro.com/site/shop][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Module::getModule] Loading module: gii
+2018-04-07 13:06:27 [GET][http://micro.com/site/shop][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Application::bootstrap] Bootstrap with yii\gii\Module::bootstrap()
+2018-04-07 13:06:27 [GET][http://micro.com/site/shop][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\web\UrlManager::parseRequest] No matching URL rules. Using default URL parsing logic.
+2018-04-07 13:06:27 [GET][http://micro.com/site/shop][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\web\Application::handleRequest] Route requested: 'site/shop'
+2018-04-07 13:06:27 [GET][http://micro.com/site/shop][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Controller::runAction] Route to run: site/shop
+2018-04-07 13:06:27 [GET][http://micro.com/site/shop][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Command::query] SELECT option_value FROM `option` WHERE option_name='frontend_settings'
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:128
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:120
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Config.php:25
+2018-04-07 13:06:27 [GET][http://micro.com/site/shop][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=x46
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:128
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:120
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Config.php:25
+2018-04-07 13:06:27 [GET][http://micro.com/site/shop][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\web\Session::open] Session started
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Session.php:59
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:06:27 [GET][http://micro.com/site/shop][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:06:27 [GET][http://micro.com/site/shop][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:06:27 [GET][http://micro.com/site/shop][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=100001
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:06:27 [GET][http://micro.com/site/shop][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\InlineAction::runWithParams] Running action: frontend\controllers\SiteController::actionShop()
+2018-04-07 13:06:27 [GET][http://micro.com/site/shop][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/frontend/views/site/shop.php
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:88
+2018-04-07 13:08:42 [GET][http://micro.com/site/shop][::1][100001][-][trace][yii\base\Module::getModule] Loading module: wizard
+2018-04-07 13:08:42 [GET][http://micro.com/site/shop][::1][100001][-][trace][yii\base\Application::bootstrap] Bootstrap with common\modules\wizard\Module::bootstrap()
+2018-04-07 13:08:42 [GET][http://micro.com/site/shop][::1][100001][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2018-04-07 13:08:42 [GET][http://micro.com/site/shop][::1][100001][-][trace][yii\base\Module::getModule] Loading module: debug
+2018-04-07 13:08:42 [GET][http://micro.com/site/shop][::1][100001][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\debug\Module::bootstrap()
+2018-04-07 13:08:42 [GET][http://micro.com/site/shop][::1][100001][-][trace][yii\base\Module::getModule] Loading module: gii
+2018-04-07 13:08:42 [GET][http://micro.com/site/shop][::1][100001][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\gii\Module::bootstrap()
+2018-04-07 13:08:42 [GET][http://micro.com/site/shop][::1][100001][-][trace][yii\web\UrlManager::parseRequest] No matching URL rules. Using default URL parsing logic.
+2018-04-07 13:08:42 [GET][http://micro.com/site/shop][::1][100001][-][trace][yii\web\Application::handleRequest] Route requested: 'site/shop'
+2018-04-07 13:08:42 [GET][http://micro.com/site/shop][::1][100001][-][trace][yii\base\Controller::runAction] Route to run: site/shop
+2018-04-07 13:08:42 [GET][http://micro.com/site/shop][::1][100001][-][info][yii\db\Command::query] SELECT option_value FROM `option` WHERE option_name='frontend_settings'
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:128
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:120
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Config.php:25
+2018-04-07 13:08:42 [GET][http://micro.com/site/shop][::1][100001][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=x46
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:128
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:120
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Config.php:25
+2018-04-07 13:08:42 [GET][http://micro.com/site/shop][::1][100001][-][info][yii\web\Session::open] Session started
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Session.php:59
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:08:42 [GET][http://micro.com/site/shop][::1][100001][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:08:42 [GET][http://micro.com/site/shop][::1][100001][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:08:42 [GET][http://micro.com/site/shop][::1][100001][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=100001
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:08:42 [GET][http://micro.com/site/shop][::1][100001][-][trace][yii\base\InlineAction::runWithParams] Running action: frontend\controllers\SiteController::actionShop()
+2018-04-07 13:08:42 [GET][http://micro.com/site/shop][::1][100001][-][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/frontend/views/site/shop.php
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:88
+2018-04-07 13:08:42 [GET][http://micro.com/site/shop][::1][100001][-][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/main.php
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:88
+2018-04-07 13:08:42 [GET][http://micro.com/site/shop][::1][100001][-][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/_footer.php
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/main.php:57
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/View.php:37
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:88
+2018-04-07 13:08:42 [GET][http://micro.com/site/shop][::1][100001][-][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/common/modules/wizard/views/generate/index.php
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/wizard/Module.php:94
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/main.php:58
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/View.php:37
+2018-04-07 13:08:43 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Module::getModule] Loading module: wizard
+2018-04-07 13:08:43 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Application::bootstrap] Bootstrap with common\modules\wizard\Module::bootstrap()
+2018-04-07 13:08:43 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2018-04-07 13:08:43 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Module::getModule] Loading module: debug
+2018-04-07 13:08:43 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Application::bootstrap] Bootstrap with yii\debug\Module::bootstrap()
+2018-04-07 13:08:43 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Module::getModule] Loading module: gii
+2018-04-07 13:08:43 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Application::bootstrap] Bootstrap with yii\gii\Module::bootstrap()
+2018-04-07 13:08:43 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\web\UrlManager::parseRequest] No matching URL rules. Using default URL parsing logic.
+2018-04-07 13:08:43 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\web\Application::handleRequest] Route requested: 'js/maps/swiper.jquery.min.js.map'
+2018-04-07 13:08:43 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Controller::runAction] Route to run: site/error
+2018-04-07 13:08:43 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Command::query] SELECT option_value FROM `option` WHERE option_name='frontend_settings'
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:128
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:120
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Config.php:25
+2018-04-07 13:08:43 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=x46
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:128
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:120
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Config.php:25
+2018-04-07 13:08:43 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\web\Session::open] Session started
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Session.php:59
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:08:43 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:08:43 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:08:43 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=100001
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:08:43 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\InlineAction::runWithParams] Running action: frontend\controllers\SiteController::actionError()
+2018-04-07 13:08:43 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/frontend/views/site/error.php
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/WebController.php:140
+2018-04-07 13:08:43 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/main.php
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/WebController.php:140
+2018-04-07 13:08:43 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/_footer.php
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/main.php:57
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/View.php:37
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/WebController.php:140
+2018-04-07 13:08:43 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/common/modules/wizard/views/generate/index.php
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/wizard/Module.php:94
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/main.php:58
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/View.php:37
+2018-04-07 13:08:43 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Module::getModule] Loading module: wizard
+2018-04-07 13:08:43 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Application::bootstrap] Bootstrap with common\modules\wizard\Module::bootstrap()
+2018-04-07 13:08:43 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2018-04-07 13:08:43 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Module::getModule] Loading module: debug
+2018-04-07 13:08:43 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Application::bootstrap] Bootstrap with yii\debug\Module::bootstrap()
+2018-04-07 13:08:43 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Module::getModule] Loading module: gii
+2018-04-07 13:08:43 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Application::bootstrap] Bootstrap with yii\gii\Module::bootstrap()
+2018-04-07 13:08:43 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\web\UrlManager::parseRequest] No matching URL rules. Using default URL parsing logic.
+2018-04-07 13:08:43 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\web\Application::handleRequest] Route requested: 'js/hammer.min.map'
+2018-04-07 13:08:43 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Controller::runAction] Route to run: site/error
+2018-04-07 13:08:43 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Command::query] SELECT option_value FROM `option` WHERE option_name='frontend_settings'
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:128
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:120
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Config.php:25
+2018-04-07 13:08:43 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=x46
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:128
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:120
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Config.php:25
+2018-04-07 13:08:44 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\web\Session::open] Session started
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Session.php:59
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:08:44 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:08:44 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:08:44 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=100001
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:08:44 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\InlineAction::runWithParams] Running action: frontend\controllers\SiteController::actionError()
+2018-04-07 13:08:44 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/frontend/views/site/error.php
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/WebController.php:140
+2018-04-07 13:08:44 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/main.php
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/WebController.php:140
+2018-04-07 13:08:44 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/_footer.php
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/main.php:57
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/View.php:37
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/WebController.php:140
+2018-04-07 13:08:44 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/common/modules/wizard/views/generate/index.php
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/wizard/Module.php:94
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/main.php:58
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/View.php:37
+2018-04-07 13:10:05 [GET][http://micro.com/site/shop][::1][100001][-][trace][yii\base\Module::getModule] Loading module: wizard
+2018-04-07 13:10:05 [GET][http://micro.com/site/shop][::1][100001][-][trace][yii\base\Application::bootstrap] Bootstrap with common\modules\wizard\Module::bootstrap()
+2018-04-07 13:10:05 [GET][http://micro.com/site/shop][::1][100001][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2018-04-07 13:10:05 [GET][http://micro.com/site/shop][::1][100001][-][trace][yii\base\Module::getModule] Loading module: debug
+2018-04-07 13:10:05 [GET][http://micro.com/site/shop][::1][100001][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\debug\Module::bootstrap()
+2018-04-07 13:10:05 [GET][http://micro.com/site/shop][::1][100001][-][trace][yii\base\Module::getModule] Loading module: gii
+2018-04-07 13:10:05 [GET][http://micro.com/site/shop][::1][100001][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\gii\Module::bootstrap()
+2018-04-07 13:10:05 [GET][http://micro.com/site/shop][::1][100001][-][trace][yii\web\UrlManager::parseRequest] No matching URL rules. Using default URL parsing logic.
+2018-04-07 13:10:05 [GET][http://micro.com/site/shop][::1][100001][-][trace][yii\web\Application::handleRequest] Route requested: 'site/shop'
+2018-04-07 13:10:05 [GET][http://micro.com/site/shop][::1][100001][-][trace][yii\base\Controller::runAction] Route to run: site/shop
+2018-04-07 13:10:05 [GET][http://micro.com/site/shop][::1][100001][-][info][yii\db\Command::query] SELECT option_value FROM `option` WHERE option_name='frontend_settings'
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:128
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:120
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Config.php:25
+2018-04-07 13:10:05 [GET][http://micro.com/site/shop][::1][100001][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=x46
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:128
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:120
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Config.php:25
+2018-04-07 13:10:05 [GET][http://micro.com/site/shop][::1][100001][-][info][yii\web\Session::open] Session started
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Session.php:59
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:10:05 [GET][http://micro.com/site/shop][::1][100001][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:10:05 [GET][http://micro.com/site/shop][::1][100001][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:10:05 [GET][http://micro.com/site/shop][::1][100001][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=100001
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:10:05 [GET][http://micro.com/site/shop][::1][100001][-][trace][yii\base\InlineAction::runWithParams] Running action: frontend\controllers\SiteController::actionShop()
+2018-04-07 13:10:05 [GET][http://micro.com/site/shop][::1][100001][-][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/frontend/views/site/shop.php
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:88
+2018-04-07 13:10:05 [GET][http://micro.com/site/shop][::1][100001][-][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/main.php
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:88
+2018-04-07 13:10:05 [GET][http://micro.com/site/shop][::1][100001][-][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/_footer.php
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/main.php:57
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/View.php:37
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:88
+2018-04-07 13:10:05 [GET][http://micro.com/site/shop][::1][100001][-][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/common/modules/wizard/views/generate/index.php
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/wizard/Module.php:94
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/main.php:58
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/View.php:37
+2018-04-07 13:10:06 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Module::getModule] Loading module: wizard
+2018-04-07 13:10:06 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Application::bootstrap] Bootstrap with common\modules\wizard\Module::bootstrap()
+2018-04-07 13:10:06 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2018-04-07 13:10:06 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Module::getModule] Loading module: debug
+2018-04-07 13:10:06 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Application::bootstrap] Bootstrap with yii\debug\Module::bootstrap()
+2018-04-07 13:10:06 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Module::getModule] Loading module: gii
+2018-04-07 13:10:06 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Application::bootstrap] Bootstrap with yii\gii\Module::bootstrap()
+2018-04-07 13:10:06 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\web\UrlManager::parseRequest] No matching URL rules. Using default URL parsing logic.
+2018-04-07 13:10:06 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\web\Application::handleRequest] Route requested: 'js/hammer.min.map'
+2018-04-07 13:10:06 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Controller::runAction] Route to run: site/error
+2018-04-07 13:10:06 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Command::query] SELECT option_value FROM `option` WHERE option_name='frontend_settings'
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:128
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:120
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Config.php:25
+2018-04-07 13:10:06 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=x46
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:128
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:120
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Config.php:25
+2018-04-07 13:10:06 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\web\Session::open] Session started
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Session.php:59
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:10:06 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:10:06 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:10:06 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=100001
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:10:06 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\InlineAction::runWithParams] Running action: frontend\controllers\SiteController::actionError()
+2018-04-07 13:10:06 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/frontend/views/site/error.php
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/WebController.php:140
+2018-04-07 13:10:06 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/main.php
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/WebController.php:140
+2018-04-07 13:10:07 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/_footer.php
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/main.php:57
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/View.php:37
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/WebController.php:140
+2018-04-07 13:10:07 [GET][http://micro.com/js/hammer.min.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/common/modules/wizard/views/generate/index.php
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/wizard/Module.php:94
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/main.php:58
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/View.php:37
+2018-04-07 13:10:06 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Module::getModule] Loading module: wizard
+2018-04-07 13:10:06 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Application::bootstrap] Bootstrap with common\modules\wizard\Module::bootstrap()
+2018-04-07 13:10:06 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2018-04-07 13:10:06 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Module::getModule] Loading module: debug
+2018-04-07 13:10:06 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Application::bootstrap] Bootstrap with yii\debug\Module::bootstrap()
+2018-04-07 13:10:06 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Module::getModule] Loading module: gii
+2018-04-07 13:10:06 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Application::bootstrap] Bootstrap with yii\gii\Module::bootstrap()
+2018-04-07 13:10:06 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\web\UrlManager::parseRequest] No matching URL rules. Using default URL parsing logic.
+2018-04-07 13:10:06 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\web\Application::handleRequest] Route requested: 'js/maps/swiper.jquery.min.js.map'
+2018-04-07 13:10:06 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Controller::runAction] Route to run: site/error
+2018-04-07 13:10:06 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Command::query] SELECT option_value FROM `option` WHERE option_name='frontend_settings'
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:128
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:120
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Config.php:25
+2018-04-07 13:10:06 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=x46
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:128
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/setting/models/Setting.php:120
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Config.php:25
+2018-04-07 13:10:07 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\web\Session::open] Session started
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Session.php:59
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:10:07 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:10:07 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:10:07 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=100001
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/SiteController.php:35
+2018-04-07 13:10:07 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\InlineAction::runWithParams] Running action: frontend\controllers\SiteController::actionError()
+2018-04-07 13:10:07 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/frontend/views/site/error.php
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/WebController.php:140
+2018-04-07 13:10:07 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/main.php
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/WebController.php:140
+2018-04-07 13:10:07 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/_footer.php
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/main.php:57
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/View.php:37
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/WebController.php:140
+2018-04-07 13:10:07 [GET][http://micro.com/js/maps/swiper.jquery.min.js.map][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/common/modules/wizard/views/generate/index.php
+    in /Applications/MAMP/htdocs/pan/microCap/common/modules/wizard/Module.php:94
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/views/layouts/main.php:58
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/View.php:37
+2018-04-07 13:10:11 [POST][http://micro.com/user/check-deal-pwd][::1][100001][-][trace][yii\base\Module::getModule] Loading module: wizard
+2018-04-07 13:10:11 [POST][http://micro.com/user/check-deal-pwd][::1][100001][-][trace][yii\base\Application::bootstrap] Bootstrap with common\modules\wizard\Module::bootstrap()
+2018-04-07 13:10:11 [POST][http://micro.com/user/check-deal-pwd][::1][100001][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2018-04-07 13:10:11 [POST][http://micro.com/user/check-deal-pwd][::1][100001][-][trace][yii\base\Module::getModule] Loading module: debug
+2018-04-07 13:10:11 [POST][http://micro.com/user/check-deal-pwd][::1][100001][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\debug\Module::bootstrap()
+2018-04-07 13:10:11 [POST][http://micro.com/user/check-deal-pwd][::1][100001][-][trace][yii\base\Module::getModule] Loading module: gii
+2018-04-07 13:10:11 [POST][http://micro.com/user/check-deal-pwd][::1][100001][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\gii\Module::bootstrap()
+2018-04-07 13:10:11 [POST][http://micro.com/user/check-deal-pwd][::1][100001][-][trace][yii\web\UrlManager::parseRequest] No matching URL rules. Using default URL parsing logic.
+2018-04-07 13:10:11 [POST][http://micro.com/user/check-deal-pwd][::1][100001][-][trace][yii\web\Application::handleRequest] Route requested: 'user/check-deal-pwd'
+2018-04-07 13:10:11 [POST][http://micro.com/user/check-deal-pwd][::1][100001][-][trace][yii\base\Controller::runAction] Route to run: user/check-deal-pwd
+2018-04-07 13:10:11 [POST][http://micro.com/user/check-deal-pwd][::1][100001][-][info][yii\web\Session::open] Session started
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Session.php:59
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/UserController.php:30
+2018-04-07 13:10:11 [POST][http://micro.com/user/check-deal-pwd][::1][100001][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/UserController.php:30
+2018-04-07 13:10:11 [POST][http://micro.com/user/check-deal-pwd][::1][100001][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=x46
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/UserController.php:30
+2018-04-07 13:10:11 [POST][http://micro.com/user/check-deal-pwd][::1][100001][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/UserController.php:30
+2018-04-07 13:10:11 [POST][http://micro.com/user/check-deal-pwd][::1][100001][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=100001
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/UserController.php:30
+2018-04-07 13:10:11 [POST][http://micro.com/user/check-deal-pwd][::1][100001][-][trace][yii\base\InlineAction::runWithParams] Running action: frontend\controllers\UserController::actionCheckDealPwd()
+2018-04-07 13:10:11 [POST][http://micro.com/user/check-deal-pwd][::1][100001][-][info][yii\db\Command::query] SELECT * FROM `user` `user` WHERE `id`=100001
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/ARModel.php:244
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/UserController.php:681
+2018-04-07 13:10:11 [GET][http://micro.com/user/setreal][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Module::getModule] Loading module: wizard
+2018-04-07 13:10:11 [GET][http://micro.com/user/setreal][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Application::bootstrap] Bootstrap with common\modules\wizard\Module::bootstrap()
+2018-04-07 13:10:11 [GET][http://micro.com/user/setreal][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2018-04-07 13:10:11 [GET][http://micro.com/user/setreal][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Module::getModule] Loading module: debug
+2018-04-07 13:10:11 [GET][http://micro.com/user/setreal][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Application::bootstrap] Bootstrap with yii\debug\Module::bootstrap()
+2018-04-07 13:10:11 [GET][http://micro.com/user/setreal][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Module::getModule] Loading module: gii
+2018-04-07 13:10:11 [GET][http://micro.com/user/setreal][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Application::bootstrap] Bootstrap with yii\gii\Module::bootstrap()
+2018-04-07 13:10:11 [GET][http://micro.com/user/setreal][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\web\UrlManager::parseRequest] No matching URL rules. Using default URL parsing logic.
+2018-04-07 13:10:11 [GET][http://micro.com/user/setreal][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\web\Application::handleRequest] Route requested: 'user/setreal'
+2018-04-07 13:10:11 [GET][http://micro.com/user/setreal][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\Controller::runAction] Route to run: user/setreal
+2018-04-07 13:10:11 [GET][http://micro.com/user/setreal][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\web\Session::open] Session started
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Session.php:59
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/UserController.php:30
+2018-04-07 13:10:11 [GET][http://micro.com/user/setreal][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/UserController.php:30
+2018-04-07 13:10:11 [GET][http://micro.com/user/setreal][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=x46
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/UserController.php:30
+2018-04-07 13:10:11 [GET][http://micro.com/user/setreal][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/UserController.php:30
+2018-04-07 13:10:11 [GET][http://micro.com/user/setreal][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=100001
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/Identity.php:84
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/UserController.php:30
+2018-04-07 13:10:11 [GET][http://micro.com/user/setreal][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\InlineAction::runWithParams] Running action: frontend\controllers\UserController::actionSetreal()
+2018-04-07 13:10:11 [GET][http://micro.com/user/setreal][::1][100001][e405be4b7b9c09364fe84e6353b69deb][info][yii\db\Command::query] SELECT * FROM `user` `user` WHERE `id`=100001
+    in /Applications/MAMP/htdocs/pan/microCap/frontend/controllers/UserController.php:660
+2018-04-07 13:10:11 [GET][http://micro.com/user/setreal][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/vendor/yiisoft/yii2/views/errorHandler/exception.php
+2018-04-07 13:10:11 [GET][http://micro.com/user/setreal][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/View.php:37
+2018-04-07 13:10:11 [GET][http://micro.com/user/setreal][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/View.php:37
+2018-04-07 13:10:11 [GET][http://micro.com/user/setreal][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/View.php:37
+2018-04-07 13:10:11 [GET][http://micro.com/user/setreal][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/View.php:37
+2018-04-07 13:10:11 [GET][http://micro.com/user/setreal][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/View.php:37
+2018-04-07 13:10:11 [GET][http://micro.com/user/setreal][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/View.php:37
+2018-04-07 13:10:11 [GET][http://micro.com/user/setreal][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/View.php:37
+2018-04-07 13:10:11 [GET][http://micro.com/user/setreal][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/View.php:37
+2018-04-07 13:10:11 [GET][http://micro.com/user/setreal][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/View.php:37
+2018-04-07 13:10:11 [GET][http://micro.com/user/setreal][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/View.php:37
+2018-04-07 13:10:11 [GET][http://micro.com/user/setreal][::1][100001][e405be4b7b9c09364fe84e6353b69deb][trace][yii\base\View::renderFile] Rendering view file: /Applications/MAMP/htdocs/pan/microCap/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php
+    in /Applications/MAMP/htdocs/pan/microCap/common/components/View.php:37
