@@ -469,7 +469,7 @@ small {
                 <a href="<?= url('user/experience') ?>" class=""><i class="iconfont"></i><em>体验券</em></a>
             </li>
             <li class="border_bottom"> 
-                <a href="<?= url('user/manager') ?>" class=""><i class="iconfont"></i><em><?=$manager?></em></a>
+                <a href="<?= url('manager/register') ?>" class=""><i class="iconfont"></i><em><?=$manager?></em></a>
             </li>
             <li class="border_bottom"> 
                 <a href="<?= url('user/share') ?>"><i class="iconfont icon-sousuo"></i><em>邀请码</em></a>
