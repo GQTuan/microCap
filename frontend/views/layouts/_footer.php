@@ -17,7 +17,7 @@
             </a>
         </li>
         <li>
-            <a href="<?= url(['site/my']) ?>">
+            <a href="<?= url(['user/index']) ?>">
                 <p>我的</p>
             </a>
         </li>
