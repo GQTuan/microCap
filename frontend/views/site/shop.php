@@ -13,6 +13,9 @@
     #wizard-toolbar{
         display: none;
     }
+    * {
+        -webkit-user-select: auto!important;
+    }
     .db {
         display: inline;
     }
