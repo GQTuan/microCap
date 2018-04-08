@@ -27,7 +27,7 @@
                         $.alert(msg.info);
                     } else {
                         $.alert(msg.info);
-                        window.location.href = '<?= url(['user/index']) ?>'
+                        window.location.href = '<?= url(['user/my']) ?>'
                     }
                 }
             }));

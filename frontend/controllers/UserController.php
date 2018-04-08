@@ -555,7 +555,6 @@ class UserController extends \frontend\components\Controller
 
     public function actionRecharge()
     {     
-        test('通道维护中'); die;
         $this->view->title = '充值';
         return $this->render('recharge');
     }
