@@ -4,6 +4,7 @@
     body{
         width:100vw;
         overflow-x:hidden;
+        background: #f5f5f5;
      }
      div{
         overflow-x: hidden;
@@ -11,6 +12,43 @@
      a.qiandao-btn:hover{
         color: #655934;
      }
+     .index-title {
+        background: #fff;
+    }
+    .index-title span {
+        color: #333;
+    }
+    .my-btn-noflex {
+        background: #e4393c;
+        color: #fff;
+    }
+    .section .title {
+        background: #fff;
+        color: #333;
+        margin-bottom: 0;
+        border-bottom: .04rem solid #ddd;
+    }
+    .section .title a {
+        color: #333;
+    }
+    .section .product-list {
+        background: #fff;
+    }
+    .section .product-list li+li {
+        border-left: 1px solid #ddd;
+    }
+    .item-list {
+        background: #fff;
+    }
+    .item-list li a {
+        color: #666;
+    }
+    .ranking-list {
+        background: #fff;
+    }
+    .flex-nowrap li {
+        padding-top: .4rem;
+    }
 </style>
 <p class="flex-nowrap index-title">
 <a class="img-link" href="<?= url(['user/index']) ?>">

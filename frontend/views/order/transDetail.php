@@ -25,7 +25,86 @@ body{
     position: relative;
     width: 3.6rem;
     margin-right: 0!important;
+    padding-top: 0.4rem;
 }
+body{
+    background: #fff
+}
+a.qiandao-btn:hover{
+        color: #655934;
+     }
+     .index-title {
+        background: #f7f7f7;
+        border-bottom: 1px solid #ddd!important;
+    }
+    .index-title span {
+        color: #333;
+    }
+    .my-btn-noflex {
+        background: #e4393c;
+        color: #fff;
+    }
+    .section .title {
+        background: #fff;
+        color: #333;
+        margin-bottom: 0;
+        border-bottom: .04rem solid #ddd;
+    }
+    .section .title a {
+        color: #333;
+    }
+    .section .product-list {
+        background: #fff;
+    }
+    .section .product-list li+li {
+        border-left: 1px solid #ddd;
+    }
+    .item-list {
+        background: #fff;
+    }
+    .item-list li a {
+        color: #666;
+    }
+    .ranking-list {
+        background: #fff;
+    }
+    .detail-container .product-list li p:nth-child(1) {
+        color: #666;
+    }
+    .detail-container .product-list li.active p:nth-child(1) {
+        color: #666;
+    }
+    .detail-container .product-list li.active:after {
+        border-bottom: 2px solid #aa917a;
+    }
+    .graph-kind {
+        padding: .2rem .6rem;
+        background: #f5f5f5;
+    }
+    #feature-tab li a {
+        color: #989898;
+    }
+    #feature-tab li.active a {
+        background: #eb8e88;
+        color: #fff;
+    }
+    .main-panel {
+        background: #f5f5f5;
+    }
+    .pro-name {
+        color: #666;
+    }
+    .info-item p {
+        color: #666;
+    }
+    .line-container {
+        background: #fff;
+    }
+    .btn-group-container {
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        background: #fff;
+    }
 </style>
 <div class="detail-container">
     <p class="flex-nowrap index-title">

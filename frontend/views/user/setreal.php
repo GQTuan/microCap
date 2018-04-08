@@ -1,3 +1,11 @@
+<style type="text/css">
+    body{
+        background: #fff;
+    }
+    .modify-container .title {
+        color: #333;
+    }
+</style>
 <?php $form = self::beginForm(['showLabel' => false]) ?>
 <div class="modify-container">
     <p class="title">设置交易密码</p>

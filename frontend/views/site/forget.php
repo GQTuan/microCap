@@ -3,6 +3,51 @@
     .input-con.has-getbtn .get-btn{
         width: 2.8rem!important;
     }
+    body{
+    background: #fff;
+  }
+  .login-mask {
+    background: #ddd;
+  }
+  .login-container {
+    background: #fff;
+  }
+  .login-container .title{
+    color: #333;
+  }
+  .pwd-input {
+    font-size: .42rem;
+    color: #333;
+    border-bottom: 1px solid #999;
+  }
+  .title1 a {
+    font-size: .44rem;
+    color: #e4393c;
+    margin-bottom: 0.7rem;
+}
+.login-btn {
+    color: #fff;
+    background: #e4393c;
+}
+.input-con input {
+    border: 1px solid #999;
+    border-radius: 4px;
+}
+.input-con.has-getbtn .get-btn {
+    color: #fff;
+    background: #e4393c;
+    border: 0;
+    border-radius: 4px;
+}
+.input-con input.submit {
+    height: 1.22rem;
+    line-height: 1.22rem;
+    font-size: .45rem;
+    color: #fff;
+    background: #e4393c;
+    border: 0;
+    margin-top: 0;
+}
 </style>
 <div class="modify-container">
     <?php $form = self::beginForm(['showLabel' => false]) ?>

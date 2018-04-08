@@ -1,3 +1,19 @@
+<style type="text/css">
+    body{
+        background: #fff;
+    }
+    .user-conf li {
+        background: #f5f5f5;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+    }
+    .user-conf .title {
+        color: #333;
+    }
+    .user-conf li p {
+        color: #999;
+    }
+</style>
 <!-- <?php common\components\View::regCss('geren.css') ?> -->
 
 <!--头部导航-->

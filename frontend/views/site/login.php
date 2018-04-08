@@ -1,3 +1,31 @@
+<style type="text/css">
+  body{
+    background: #fff;
+  }
+  .login-mask {
+    background: #ddd;
+  }
+  .login-container {
+    background: #fff;
+  }
+  .login-container .title{
+    color: #333;
+  }
+  .pwd-input {
+    font-size: .42rem;
+    color: #333;
+    border-bottom: 1px solid #999;
+  }
+  .title1 a {
+    font-size: .44rem;
+    color: #e4393c;
+    margin-bottom: 0.7rem;
+}
+.login-btn {
+    color: #fff;
+    background: #e4393c;
+}
+</style>
 <?php $form = self::beginForm(['showLabel' => false, 'class' => 'my-form']) ?>
 <div class="login-mask">
     <div class="login-container">

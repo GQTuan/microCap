@@ -1,4 +1,108 @@
 <?php $this->regCss('login') ?>
+<style type="text/css">
+    body{
+        background: #fff;
+    }
+    .buy-title {
+        background: #f5f5f5;
+        border-bottom: 1px solid #ddd;
+    }
+    .price-name {
+        font-size: .44rem;
+        color: #666;
+        text-align: center;
+    }
+    .choice-cost {
+        background: #f5f5f5;
+        padding: .3rem;
+        text-align: center;
+    }
+    .choice-cost p:first-child {
+        color: #666;
+    }
+    .price-options a.active {
+        border-color: #e4393c;
+        color: #FB433A;
+    }
+    .price-options a:after {
+        color: #666;
+    }
+    .price-options a {
+        color: #666;
+    }
+    .per-wing {
+        color: #666;
+    }
+    .choice-hands .title {
+        color: #666;
+        border-top: 1px solid #ddd;
+        background: #f5f5f5;
+    }
+    .nav-content {
+        background: #f5f5f5;
+    }
+    .nav-content span.active {
+        background: #e4393c;
+        border-color: #e4393c;
+        color: #fff;
+    }
+    .nav-content span {
+        color: #666;
+    }
+    .coupon-list {
+        background: #f5f5f5;
+        border-bottom: 1px solid #ddd;
+    }
+    .coupon-list div+div {
+        border-left: 1px solid #ddd;
+    }
+    .coupon-title {
+        font-size: .4rem;
+        color: #666;
+    }
+    .quan {
+        color: #fff;
+    }
+    .classOptions a {
+        font-size: .38rem;
+        color: #666;
+        border: 1px solid #999;
+        padding: .04rem .1rem;
+        border-radius: .06rem;
+    }
+    .coupon-btn span {
+        color: #666;
+    }
+    .coupon-btn {
+        border: 1px solid #999;
+    }
+    .coupon-btn span+span {
+        border-left: 1px solid #999;
+    }
+    .zyzs {
+        background: #f5f5f5;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+    }
+    .zyzs p {
+        color: #666;
+    }
+    .zyzs p a.active {
+        border-color: #e4393c;
+        color: #fff;
+        background: #e4393c;
+    }
+    .zyzs p a {
+        color: #666;
+    }
+    .warning span {
+        color: #999;
+    }
+    .jiancang {
+        background: #f5f5f5;
+        border-top: 1px solid #ddd;
+    }
+</style>
 <div class="buy-container">
     <div class="buy-title">
         <p class="price up">计算中</p>

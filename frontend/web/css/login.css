@@ -1481,7 +1481,7 @@ a:hover{
 }
 .login-container .pwd-input::-webkit-input-placeholder{
     font-size: .42rem;
-    color: #343746;
+    color: #999;
 }
 .login-btn{
     width: 100%;
@@ -1533,13 +1533,13 @@ a:hover{
     line-height: 1.1rem;
     padding-left: .3rem;
     font-size: .38rem;
-    color: #fff;
+    color: #333;
     background: transparent;
     border:1px solid #545560;
 }
 .input-con ::-webkit-input-placeholder{
     font-size: .38rem;
-    color: #585A6C;
+    color: #999;
 }
 .input-con input.submit{
     height: 1.22rem;

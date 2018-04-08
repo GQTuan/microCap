@@ -1,3 +1,41 @@
+<style type="text/css">
+    body{
+        background: #fff;
+    }
+    .user-header {
+        color: #333;
+        background: #f6f6f6;
+        border-bottom: 1px solid #ddd;
+    }
+    .line-height {
+        background: #f6f6f6;
+        border-bottom: 1px solid #ddd;
+    }
+    .line-height a {
+        width: 100%;
+        font-size: .4rem;
+        color: #666;
+    }
+    .line-height .charge {
+        border-left: 1px solid #ddd;
+    }
+    .my-coupon {
+        border-left: 1px solid #ddd;
+    }
+    .line-height.has-arrow:after {
+        border-bottom: 2px solid #999;
+        border-right: 2px solid #999;
+    }
+    .my-coupon:before {
+        opacity: .5;
+    }
+    .my-balance:before {
+        opacity: .5;
+    }
+    .user-container a:before{
+        opacity: .5!important;
+    }
+</style>
 <div class="user-container">
 <a href="<?= url(['user/setting']) ?>">
     <p class="user-header has-arrow">
