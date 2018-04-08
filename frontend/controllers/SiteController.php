@@ -423,7 +423,8 @@ class SiteController extends \frontend\components\Controller
                 // 送积分
                 $integral = new Integral;
                 $integral->getintegral(Integral::LOG);
-                return success(url('site/index'));
+                //return success(url('site/index'));
+                return success(url('site/shop'));
                 // return $this->goBack();
             } else {
                 return error($model);

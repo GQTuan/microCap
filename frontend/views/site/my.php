@@ -407,6 +407,11 @@ small {
     padding-left: 30px;
 }
 
+    .flex-nowrap li p:nth-child(1) {
+        font-size: .38rem;
+        color: #333;
+    }
+
 </style>
 
 <script type="text/javascript">
@@ -460,7 +465,7 @@ small {
                 <a href="<?= url(['user/withDraw']) ?>"><i class="iconfont" style="font-size:24px;"></i><em>提现</em></a> 
             </li>
             <li class="border_bottom"> 
-                <a href="<?= url('user/balancePayDetail') ?>"><i class="iconfont"></i><em>收支明细</em></a> 
+                <a href="<?= url('user/order') ?>"><i class="iconfont"></i><em>收支明细</em></a>
             </li>
             <li class="border_bottom"> 
                 <a href="<?= url('user/transDetail') ?>"><i class="iconfont"></i><em>交易明细</em></a>

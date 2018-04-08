@@ -64,7 +64,7 @@
                 <div class="pwd_section">
                     <input />
                     <p class="pwd_tip">
-                        <a href="<?= url(['user/modify']) ?>">忘记交易密码</a>
+                        <!--<a href="<?/*= url(['user/modify']) */?>">忘记交易密码</a>-->
                     </p>
                 </div>
                 <div class="pwd_section">
@@ -118,7 +118,7 @@
             <div class="theme clearfloat">
                 <div class="boutit clearfloat">
                     <span></span>
-                    <samp>4F手机、数码配件</samp>
+                    <samp>1F手机、数码配件</samp>
                 </div>
                 <div class="content clearfloat">
                     <div class="list clearfloat fl">
