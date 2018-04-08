@@ -73,18 +73,18 @@
         <?php endif; ?>
         </div>
         <div>
-            <p class="coupon-title">
+            <!--<p class="coupon-title">
                 <span class="pai">牌</span>
                 使用免死金牌
-                <span data-max="<?=  $medalArr?$medalArr:0 ?>" class="pai-count count">0</span><!-- data-max : 免死金牌总数 -->
+                <span data-max="<?/*=  $medalArr?$medalArr:0 */?>" class="pai-count count">0</span>
                 <span>块</span>
-                <p class="mianKuai">共<?=  $medalArr?$medalArr:0 ?>块</p><!-- data-max : 免死金牌总数 -->
+                <p class="mianKuai">共<?/*=  $medalArr?$medalArr:0 */?>块</p>
             </p>
             <p class="coupon-btn clear-fl">
                 <span class="minus-btn">-</span>
                 <span class="pai-count count">0</span>
                 <span class="plus-btn">+</span>
-            </p>
+            </p>-->
         </div>
     </div>
 
