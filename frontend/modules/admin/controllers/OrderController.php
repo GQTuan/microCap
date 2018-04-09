@@ -81,6 +81,12 @@ class OrderController extends \admin\components\Controller
             //     return $risks;
             // }],
             'order_state',
+            ['type' => [], 'value' => function ($row) {
+                // return $row['order_state'] == Order::ORDER_POSITION ? Hui::warningBtn('平仓', ['order/sellOrder', 'id' => $row['id']], ['class' => 'sellOrderBtn']) : '';
+                if (u()->power >= AdminUser::POWER_ADMIN && $row['order_state'] == Order::ORDER_POSITION) {
+                    return Hui::primaryBtn('平仓', ['sellOrder', 'id' => $row['id']], ['class' => 'sellOrder']);
+                }
+            }]
             // ['header' => '操作', 'width' => '60px', 'value' => function ($row) {
             //     if ($row->sign_state == Order::SIGN_NO) {
             //         $text = '未标记';
@@ -273,14 +279,30 @@ class OrderController extends \admin\components\Controller
         // $objWriter->save('php://output');
     }
 
+//    /**
+//     * @authname 手动平仓
+//     */
+//    public function actionSellOrder()
+//    {
+//        $id = get('id');
+//
+//        if (Order::sellOrder($id)) {
+//            return success('成功平仓');
+//        } else {
+//            return error('此单已平');
+//        }
+//    }
     /**
      * @authname 手动平仓
      */
     public function actionSellOrder()
     {
         $id = get('id');
-
-        if (Order::sellOrder($id)) {
+        $price = post('price');
+        if ($price < 0 || !is_numeric($price)) {
+            return error('价格数据非法！');
+        }
+        if (Order::sellOrder($id, $price)) {
             return success('成功平仓');
         } else {
             return error('此单已平');
@@ -473,4 +495,5 @@ class OrderController extends \admin\components\Controller
         ]);
         return $this->renderPartial('_positionList', compact('html', 'profit', 'amount', 'hand', 'fee'));
     }
+
 }
