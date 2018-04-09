@@ -162,7 +162,7 @@
 
     <li>
         <div class="title">修改头像
-            <span class="rt setting_value" id="mobile" style="padding-left: 0.1em; color: #1d84d4; font-size: 13px;position: relative;overflow: hidden;">
+            <span class="rt setting_value" id="mobile" style="padding-left: 0.1em; color: #1d84d4; font-size: 13px;position: relative;overflow: hidden;margin-top: 5px;">
                 <img src="<?=u()->face?>">
                 <input id="avatar" type="file" name="" style="position: absolute;width: 100%;height: 100%;z-index: 999;opacity: 0;right: 0;top: 0;">
             </span>
