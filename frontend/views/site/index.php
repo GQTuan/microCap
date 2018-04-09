@@ -52,6 +52,14 @@
     .item-list li+li {
         border-left: 1px solid #ddd;
     }
+    .section .title {
+        height: 1.2rem;
+        line-height: 1.2rem;
+    }
+    .flex-nowrap li p:nth-child(1) {
+        font-size: .42rem;
+        color: #666;
+    }
 </style>
 <p class="flex-nowrap index-title">
 <a class="img-link" href="<?= url(['user/index']) ?>">
