@@ -105,6 +105,18 @@ a.qiandao-btn:hover{
         border-bottom: 1px solid #ddd;
         background: #fff;
     }
+    .section {
+        margin-bottom: 0;
+    }
+    .main-panel {
+        padding: 0.1rem .4rem;
+    }
+    .detail-container .product-list li {
+        padding-top: 0.26rem;
+    }
+    .section .product-list {
+        height: 1.5rem;
+    }
 </style>
 <div class="detail-container">
     <p class="flex-nowrap index-title">

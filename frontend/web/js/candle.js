@@ -1,8 +1,8 @@
 var resetKline,$chart;
 $(function () {
     var seHeight = $(window).height();
-    $('#areaContainer').css('height',"calc(" +  seHeight + "px - 10.5rem)");
-    $('#kContainer').css('height',"calc(" +  seHeight + "px - 10.5rem)");
+    $('#areaContainer').css('height',"calc(" +  seHeight + "px - 9.5rem)");
+    $('#kContainer').css('height',"calc(" +  seHeight + "px - 9.5rem)");
     var data = {};
     var dayUnit = 5;
     var recMin = (new Date()).getMinutes();

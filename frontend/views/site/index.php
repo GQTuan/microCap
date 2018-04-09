@@ -60,6 +60,7 @@
         font-size: .42rem;
         color: #666;
     }
+    
 </style>
 <p class="flex-nowrap index-title">
 <a class="img-link" href="<?= url(['user/index']) ?>">
