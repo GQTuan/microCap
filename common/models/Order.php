@@ -137,7 +137,7 @@ class Order extends \common\components\ARModel
      * @access public
      * @return boolean
      */
-    public static function sellOrder($id, $isConsole = false)
+    public static function sellOrder($id, $isConsole = false, $price = 0)
     {
         $query = self::find()->where(['id' => $id, 'order_state' => self::ORDER_POSITION])->with('product');
         if (!$isConsole) {
@@ -145,15 +145,21 @@ class Order extends \common\components\ARModel
         }
         $order = $query->one();
         if (!empty($order)) {
-            //最新价格
-            $dataAll = DataAll::newProductPrice($order->product_id);
+            if (!empty($price)) {
+                if ($price == 0) {
+                    //最新价格
+                    $dataAll = DataAll::newProductPrice($order->product_id);
+                    $price = $dataAll->price;
+                }
+            }
+
             // $dataAll->price = 200;
             //买涨
             if ($order->rise_fall == self::RISE) {
-                $diffPrice = sprintf('%.3f', $dataAll->price - $order->price);
+                $diffPrice = sprintf('%.3f',  $price- $order->price);
             } else {
             //买跌
-                $diffPrice = sprintf('%.3f', $order->price - $dataAll->price);
+                $diffPrice = sprintf('%.3f', $order->price - $price);
             }
 
             //挣了多少钱
@@ -186,7 +192,7 @@ class Order extends \common\components\ARModel
             $order->sell_deposit = sprintf('%.2f', $order->deposit + $order->profit);
 
             $order->sell_hand = $order->hand;
-            $order->sell_price = $dataAll->price;
+            $order->sell_price = $price;
             $order->order_state = self::ORDER_THROW;
             $order->is_console = $isConsole === true ? self::IS_CONSOLE_YES : self::IS_CONSOLE_NO;
 // test($order->attributes);
