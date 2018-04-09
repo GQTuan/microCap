@@ -65,7 +65,7 @@
             <div class="pwd_content">
                 <h1 class="pwd_title">输入交易密码</h1>
                 <div class="pwd_section">
-                    <input />
+                    <input type="password" />
                     <p class="pwd_tip">
                         <!--<a href="<?/*= url(['user/modify']) */?>">忘记交易密码</a>-->
                     </p>
