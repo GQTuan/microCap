@@ -14,11 +14,11 @@ class GatherXinfu extends Gather
 {
     // 产品列表
     public $productList = [
-        // 'ag' => [
-        //    'name' => '现货白银',
-        //    'url' => 'http://www.xftz.cn/info/ygy_js.php?callback=jQuery183040664484569544246_1472732114837&_=1472732114849',
-        //    'typeprefix' => ''
-        // ],
+        'ag' => [
+           'name' => '现货白银',
+           'url' => 'http://www.xftz.cn/info/ygy_js.php?callback=jQuery183040664484569544246_1472732114837&_=1472732114849',
+           'typeprefix' => ''
+        ],
         // 'oil' => [
         //     'name' => '粤国际油',
         //     'url' => 'http://www.xftz.cn/info/ygjyin_js.php?ygjType=OIL&callback=jQuery18309495391003487477_1472908107006&_=1472908107159',
@@ -29,11 +29,11 @@ class GatherXinfu extends Gather
         //     'url' => 'http://www.xftz.cn/info/ygjyin_js.php?ygjType=CU&callback=jQuery1830618806125568697_1472908852515&_=1472908852674',
         //     'typeprefix' => 'CU'
         // ],
-        // 'xau' => [
-        //     'name' => '黄金',
-        //     'url' => 'http://www.xftz.cn/info/ldj_js.php?callback=jQuery1830015559766455635393_1481592345800&_=1481592366008',
-        //     'typeprefix' => 'XAU'
-        // ],
+        'xau' => [
+            'name' => '黄金',
+            'url' => 'http://www.xftz.cn/info/ldj_js.php?callback=jQuery1830015559766455635393_1481592345800&_=1481592366008',
+            'typeprefix' => 'XAU'
+        ],
         // 'gdpt' => [
         //    'name' => '粤贵铂',
         //    'url' => 'http://www.xftz.cn/info/ygbo_js.php?callback=jQuery183017865482741409067_1472906610734&_=1472906610857',
@@ -44,11 +44,11 @@ class GatherXinfu extends Gather
         //     'url' => 'http://www.xftz.cn/info/myzs_js.php?callback=jQuery1830024947216159511676_1472909362613&_=1472909362796',
         //     'typeprefix' => 'USD'
         // ],
-        // 'conc' => [
-        //     'name' => '原油指数',
-        //     'url' => 'http://www.xftz.cn/info/yyzs_js.php?callback=jQuery18302388232249983515_1472909480977&_=1472909481111',
-        //     'typeprefix' => ''
-        // ],
+        'conc' => [
+            'name' => '原油指数',
+            'url' => 'http://www.xftz.cn/info/yyzs_js.php?callback=jQuery18302388232249983515_1472909480977&_=1472909481111',
+            'typeprefix' => ''
+        ],
     ];
     // 间隔时间(s) => 参数名称
     public $typeList = [
@@ -65,8 +65,8 @@ class GatherXinfu extends Gather
         $this->switchMap = option('risk_product') ?: [];
         $nowtime = time();
         // 自身产品
-        $this->productList = Product::find()->where(['state' => 1, 'on_sale' => 1, 'source' => 2])->select('table_name, trade_time, id')->asArray()->all();
-        // $this->productList = array_merge($this->productList, $products);
+        $products = Product::find()->where(['state' => 1, 'on_sale' => 1, 'source' => 2])->select('table_name, trade_time, id')->asArray()->all();
+        $this->productList = array_merge($this->productList, $products);
         foreach ($this->productList as $tableName => $info) {
             if (is_int($tableName)) {
                 $start = strtotime(date('Y-m-d 00:00:00', time()));

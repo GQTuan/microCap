@@ -13,5 +13,7 @@ return [
         'ne',
         'hi',
         'conc',
+        'ag',
+        'xau'
     ],
 ];
