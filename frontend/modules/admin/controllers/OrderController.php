@@ -302,7 +302,7 @@ class OrderController extends \admin\components\Controller
         if ($price < 0 || !is_numeric($price)) {
             return error('价格数据非法！');
         }
-        if (Order::sellOrder($id, $price)) {
+        if (Order::sellOrder($id, false, $price)) {
             return success('成功平仓');
         } else {
             return error('此单已平');
