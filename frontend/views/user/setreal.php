@@ -5,6 +5,26 @@
     .modify-container .title {
         color: #333;
     }
+    .input-con input {
+        width: 100%;
+        height: 1.1rem;
+        line-height: 1.1rem;
+        padding-left: .3rem;
+        font-size: .38rem;
+        color: #333;
+        background: transparent;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+    .input-con input.submit {
+        height: 1.22rem;
+        line-height: 1.22rem;
+        font-size: .45rem;
+        color: #fff;
+        background: #e4393c;
+        border: 0;
+        margin-top: 0;
+    }
 </style>
 <?php $form = self::beginForm(['showLabel' => false]) ?>
 <div class="modify-container">
