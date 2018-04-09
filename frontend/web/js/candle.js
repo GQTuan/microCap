@@ -269,12 +269,13 @@ $(function () {
     }
 
     function getAreaStock(data) {
-        var length = data[-1].length;
+        /*var length = data[-1].length;
         if (length > 10) {
             data = data[-1].slice(length - 10);
         } else {
             data = data[-1];
-        }
+        }*/
+        data = data[-1];
         //console.log(data);
         if(data[length-1]){
             var price = data[length-1][2]
@@ -283,7 +284,7 @@ $(function () {
             chart: {
                 type: 'spline',
                 resetZoomButton: false,
-                backgroundColor: 'rgba(0,0,0,0)',
+                backgroundColor: '#fff',
                 pinchType: "none", //禁用手势操作
                 zoomType: "none",
                 panning: false,
@@ -327,14 +328,14 @@ $(function () {
                 selected: 0,
             },
             xAxis: {
-                tickColor: '#FF0000',
+                tickColor: '#e6eaf2',
                 tickWidth: 3,
-                tickPixelInterval:10,//设置横坐标密度 
+               // tickPixelInterval:10,//设置横坐标密度
                 labels: {
                     y: 28, //x轴刻度往下移动20px
                     style: {
-                        color: '#ffffff',//颜色
-                        fontSize:'8px'  //字体
+                        color: '#333',//颜色
+                        fontSize:'12px'  //字体
                     }
                 }
             },
@@ -348,18 +349,18 @@ $(function () {
                     x: 0,
                     //y: 28, //x轴刻度往下移动20px
                     style: {
-                        color: '#ffffff',//颜色
-                        fontSize:'14px'  //字体
+                        color: '#333',//颜色
+                        fontSize:'12px'  //字体
                     }
                 }, 
-                offset: 40, //y轴偏移绘图区域距离
-                tickAmount: 7,
+                offset: 6, //y轴偏移绘图区域距离
+                //tickAmount: 7,
                 plotLines: [{
                     value: 0,
                     width: 1,
                     color: '#808080'
                 }],
-                opposite:true
+                opposite:false
             }/*,{
                 gridLineColor: 'transparent',
                 title: {
@@ -418,25 +419,25 @@ $(function () {
             },
             series : [{
                 name : 'price',
-                type: 'spline',
-                lineWidth : .7,
-                lineColor:'#E8A91A',
+                type: 'areaspline',
+                lineWidth : 2,
+                lineColor:'#ef7973',
                 data : data,
                 tooltip: {
                     valueDecimals: 2
                 },
-                /*fillColor : {
+                fillColor : {
                     linearGradient : {
                         x1: 0,
                         y1: 0,
-                        x2: 1,
+                        x2: 0,
                         y2: 1
                     },
                     stops : [
-                        [0, Highcharts.getOptions().colors[1]],
-                        [1, Highcharts.Color(Highcharts.getOptions().colors[5]).setOpacity(0).get('rgba')]
+                        [0, "#f45e4f"],
+                        [1, Highcharts.Color("#f45e4f").setOpacity(0).get('rgba')]
                     ]
-                },*/
+                },
                 threshold: null
             }]
         },function(chart){
