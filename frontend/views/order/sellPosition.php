@@ -1,3 +1,34 @@
+<style type="text/css">
+    body{
+        background: #fff;
+    }
+    .sell-title {
+        background: #f5f5f5;
+        border-bottom: 1px solid #ddd;
+    }
+    .sell-title span:last-child {
+        color: #666;
+    }
+    .price-info {
+        background: #f5f5f5;
+    }
+    .price-info>span {
+        color: #666;
+    }
+    .price-info>span+span {
+        border-left: 1px solid #ddd;
+    }
+    .sell-item {
+        border-bottom: 1px solid #ddd;
+        background: #f5f5f5;
+    }
+    .sell-item>span {
+        color: #666;
+    }
+    .sell-btn {
+        background: #e4393c;
+    }
+</style>
 <div class="sell-container">
     <p class="sell-title">
         <span class="<?= $order->rise_fall==1?'up-icon':'down-icon'; ?>"><?= $order->rise_fall==1?'涨':'跌'; ?></span>

@@ -265,3 +265,10 @@ text-align: center;}
 #chartBox .yzm{
     top:-10px;
 }
+
+.deta_more {
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+    color: #999;
+}

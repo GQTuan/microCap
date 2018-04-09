@@ -4,6 +4,28 @@
     footer .flex-nowrap li{
         padding: 0;
     }
+    body{
+        background: #fff;
+    }
+    .header {
+        color: #666;
+    }
+    #chartBox li {
+        border: 1px solid #ddd;
+        font-size: 12px;
+    }
+    .charge ul li {
+        background: #fff;
+    }
+    .charge ul li input {
+        color: #333;
+    }
+    .disabled {
+        background-color: #999;
+    }
+    .charge .yzm {
+        background: #e4393c;
+    }
 </style>
 <?php $form = self::beginForm(['showLabel' => false]) ?>
 <div class="container">

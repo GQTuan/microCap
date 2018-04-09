@@ -46,8 +46,11 @@
     .ranking-list {
         background: #fff;
     }
-    .flex-nowrap li {
+    .product-list li {
         padding-top: .4rem;
+    }
+    .item-list li+li {
+        border-left: 1px solid #ddd;
     }
 </style>
 <p class="flex-nowrap index-title">

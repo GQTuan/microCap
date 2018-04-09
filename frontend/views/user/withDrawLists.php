@@ -1,3 +1,8 @@
+<style type="text/css">
+    body{
+        background: #fff;
+    }
+</style>
 <div class="order-container">
 
     <div class="content">

@@ -1,3 +1,9 @@
+<style type="text/css">
+  body{
+    background: #fff;
+  }
+</style>
+<div class="deta_more">没有更多了</div>
 <div class="coupon-container">
    <ul>
    <?php foreach ($userCoupons as $userCoupon) :?>

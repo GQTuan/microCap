@@ -48,6 +48,9 @@
     border: 0;
     margin-top: 0;
 }
+.modify-container .title {
+    color: #666;
+}
 </style>
 <div class="modify-container">
     <?php $form = self::beginForm(['showLabel' => false]) ?>

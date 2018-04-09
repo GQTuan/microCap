@@ -1,8 +1,41 @@
 <?php use frontend\models\Order; ?>
+<style type="text/css">
+    body{
+        background: #fff;
+    }
+    .position-container .title.up {
+        background: #f5f5f5;
+    }
+    .position-container .title a {
+        background: #e4393c;
+        color: #fff;
+    }
+    .position-list li:nth-child(2n + 1) {
+        background: #f5f5f5;
+    }
+    .position-list li {
+        height: 1.6rem;
+        line-height: 1.6rem;
+        background: #eee;
+    }
+    .position-list .name {
+        color: #666;
+    }
+    .position-list .odds {
+        color: #666;
+    }
+    .handles {
+        color: #666;
+    }
+    .posi-btn {
+        background: #e4393c;
+        color: #fff;
+    }
+</style>
 <div class="position-container">
 <?php $profit =  $user->profit_account + $user->loss_account?>
     <p class="title clear-fl <?= $profit>=0?'up':'down' ?>">
-        <span style="color:#fff;">总盈亏:<span><?=  $profit ?></span>元</span>
+        <span style="color:#666;">总盈亏:<span><?=  $profit ?></span>元</span>
         <a href="<?= url(['user/order']) ?>">交易记录</a>
     </p>
     <?php if(empty($orders)): ?>

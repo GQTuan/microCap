@@ -86,6 +86,34 @@
         margin-left: 5%;
         margin-top: 60px;
     }
+
+
+    body{
+        background: #fff!important;
+    }
+    #submitBtn {
+        color: #fff;
+        font-size: 15px;
+        background: #e4393c;
+        width: 90%;
+        height: 44px;
+        line-height: 44px;
+        border-radius: 6px;
+        margin-left: 5%;
+        margin-top: 60px;
+    }
+    .form-group {
+        position: relative;
+        height: 50px;
+        line-height: 50px;
+        background: #f5f5f5;
+        width: 100%;
+        margin-top: 15px;
+    }
+    .form-group input {
+        background: #f5f5f5;
+        color:#666;
+    }
 </style>
 <?php $form = self::beginForm(['showLabel' => false]) ?>
     

@@ -1,4 +1,12 @@
 <style type="text/css">
+.line-height {
+    height: 1.4rem;
+    line-height: 1.4rem;
+    padding: 0 .4rem;
+    background: #161823;
+    border-bottom: 1px solid #0E0F1A;
+    position: relative;
+}
     body{
         background: #fff;
     }
@@ -34,6 +42,9 @@
     }
     .user-container a:before{
         opacity: .5!important;
+    }
+    .line-height.has-arrow:after {
+        top: -.1rem;
     }
 </style>
 <div class="user-container">

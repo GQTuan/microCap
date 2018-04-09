@@ -1,3 +1,41 @@
+<style type="text/css">
+  body{
+    background: #fff;
+  }
+  .my-btn-group {
+    background: #f5f5f5;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.my-btn-group p {
+    border: 1px solid #e4393c;
+}
+.my-btn-group a.active {
+    background: #e4393c;
+    color: #fff;
+}
+.my-btn-group a {
+    color: #e4393c;
+}
+.put-detail li p, .trans-detail li p {
+    border: 1px solid #ddd;
+    background: #f5f5f5;
+}
+.trans-detail li p:nth-child(1) {
+    height: 1.3rem;
+    line-height: 1.3rem;
+    padding: 0 .7rem;
+    font-size: .46rem;
+    color: #666;
+}
+.trans-detail li p:nth-child(2) {
+    height: 1.2rem;
+    line-height: 1.2rem;
+    padding: 0 .7rem;
+    font-size: .38rem;
+    color: #333;
+}
+</style>
 <div class="order-container">
   <div class="my-btn-group">
     <p class="flex-nowrap">
