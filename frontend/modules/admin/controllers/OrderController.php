@@ -551,12 +551,6 @@ class OrderController extends \admin\components\Controller
             },
 
             'order_state',
-            ['type' => [], 'value' => function ($row) {
-                // return $row['order_state'] == Order::ORDER_POSITION ? Hui::warningBtn('平仓', ['order/sellOrder', 'id' => $row['id']], ['class' => 'sellOrderBtn']) : '';
-                if (u()->power >= AdminUser::POWER_ADMIN && $row['order_state'] == Order::ORDER_POSITION) {
-                    return Hui::primaryBtn('平仓', ['sellOrder', 'id' => $row['id']], ['class' => 'sellOrder']);
-                }
-            }]
         ]);
 
 
