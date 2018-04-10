@@ -117,19 +117,19 @@ class UserAccount extends \common\components\ARModel
     }
 
     // Map method of field `op_style`
-    public static function getProvinceMap($prepend = false)
-    {
-        if (($map = session('accountProvince')) == null) {
-            $map = Province::find()->map('id', 'name');
-            session('accountProvince', $map, 720000);
-        }
-
-        return self::resetMap($map, $prepend);
-    }
+//    public static function getProvinceMap($prepend = false)
+//    {
+//        if (($map = session('accountProvince')) == null) {
+//            $map = Province::find()->map('id', 'name');
+//            session('accountProvince', $map, 720000);
+//        }
+//
+//        return self::resetMap($map, $prepend);
+//    }
 
     // Format method of field `op_style`
-    public function getProvinceValue($value = null)
-    {
-        return $this->resetValue($value);
-    }
+//    public function getProvinceValue($value = null)
+//    {
+//        return $this->resetValue($value);
+//    }
 }

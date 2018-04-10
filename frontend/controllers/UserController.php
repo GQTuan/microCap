@@ -140,7 +140,7 @@ class UserController extends \frontend\components\Controller
             $userAccount->bank_address = $bank_code->name;
             $userAccount->bank_type = $bank_code->bankno;
             $userAccount->realname = $userAccount->bank_user;
-            $userAccount->bank_mobile = u()->mobile;
+            $userAccount->bank_mobile = '181';//u()->mobile;
             $userAccount->id_card = 'xx';
             $userAccount->user_id = u()->id;
             //用户账户表处理

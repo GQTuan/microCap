@@ -30,8 +30,8 @@
   </div>
   <div class="sell-item">
     <span>开户省份</span>
-    <!-- <input class="rt" placeholder="输入开户省份"/> -->
-    <?= $form->field($userAccount, 'province')->dropDownlist()  ?>
+      <?= $form->field($userAccount, 'province')->textInput(['placeholder' => '输入开户省份', 'class' => 'rt'])  ?>
+<!--    --><?//= $form->field($userAccount, 'province')->dropDownlist()  ?>
 
   </div>
   <div class="sell-item">
@@ -62,6 +62,7 @@
     <?= $form->field($userAccount, 'bank_user')->textInput(['placeholder' => '请输入持卡人姓名', 'class' => 'rt']) ?>
 
   </div>
+
   <p class="footer-tip">提交后系统将绑定您的银行卡信息</p>
   <p class="footer-tip2">单笔可提5000，每天累计可提20000</p>
   <p class="footer-tip2">每笔提现扣除<?= config('web_out_money_fee', 2) ?>元手续费</p>
