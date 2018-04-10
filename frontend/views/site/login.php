@@ -34,8 +34,8 @@
         <?= $form->field($model, 'username')->textInput(['placeholder' => '请输入手机号', 'class' => 'pwd-input']) ?>
         <?= $form->field($model, 'password')->passwordInput(['placeholder' => '请输入密码', 'class' => 'pwd-input']) ?>
         <p class="title1"><a href="<?= url(['site/forget']) ?>">忘记密码</a>
-        <!--a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=<?= wechatInfo()->appid ?>&redirect_uri=http%3a%2f%2f<?= $_SERVER['HTTP_HOST'] ?>/site/register&response_type=code&scope=snsapi_userinfo&state=index#wechat_redirect">用户注册</a-->
-            <a href="<?=url(['site/register'])?>">用户注册</a>
+        <a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=<?= wechatInfo()->appid ?>&redirect_uri=http%3a%2f%2f<?= $_SERVER['HTTP_HOST'] ?>/site/register&response_type=code&scope=snsapi_userinfo&state=index#wechat_redirect">用户注册</a>
+            <!--a href="<?=url(['site/register'])?>">用户注册</a-->
         </p>
         <button class="login-btn" type="submit">立即登录</button>
     </div>
