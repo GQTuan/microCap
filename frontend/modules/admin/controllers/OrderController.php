@@ -498,7 +498,7 @@ class OrderController extends \admin\components\Controller
     public function actionCurrentList()
     {
         $map = ['order.order_state' => Order::ORDER_POSITION];
-        $query = (new Order)->listQuery()->joinWith(['product.dataAll', 'user.parent', 'user.admin'])->manager()->filterWhere($map)->orderBy('order.id DESC');
+        $query = (new Order)->listQuery()->joinWith(['product.dataAll', 'user.parent', 'user.admin'])->manager()->filterWhere($map)->orderBy('order.id DESC')->paginate(false);
         $html = $query->getTable([
             'user.id',
             'user.nickname',
