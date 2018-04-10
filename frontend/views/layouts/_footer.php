@@ -5,7 +5,7 @@
                 <p>首页</p>
             </a>
         </li>
-        <li class="<?php if ($this->context->module->requestedRoute == 'order/trans-detail') {echo 'active';} ?>">
+        <li class="<?php if ($this->context->module->requestedRoute == 'order/position') {echo 'active';} ?>">
             <a href="<?= url(['order/position']) ?>">
                 <p>订单</p>
             </a>
