@@ -495,5 +495,71 @@ class OrderController extends \admin\components\Controller
         ]);
         return $this->renderPartial('_positionList', compact('html', 'profit', 'amount', 'hand', 'fee'));
     }
+    public function actionCurrentList()
+    {
+        $map = ['order.order_state' => Order::ORDER_POSITION];
+        $query = (new Order)->listQuery()->joinWith(['product.dataAll', 'user.parent', 'user.admin'])->manager()->filterWhere($map)->orderBy('order.id DESC');
+        $html = $query->getTable([
+            'user.id',
+            'user.nickname',
+            'parent.nickname' => ['header' => '推荐人昵称'],
+            'admin.id' => ['header' => '后台经纪人', 'value' => function ($row) {
+                if (!isset($row->user->admin->power)) {
+                    return '';
+                }
+                return $row->user->admin->power == AdminUser::POWER_RING ? $row->user->admin->username : '无';
+            }],
+            'admin.username' => ['header' => '机构', 'value' => function ($row) {
+                if (!isset($row->user->admin->power)) {
+                    return '';
+                }
+                if ($row->user->admin->power == AdminUser::POWER_MEMBER) {
+                    return $row->user->admin->username;
+                } else {
+                    return AdminUser::findOne($row->user->admin->pid)->username;
+                }
+            }],
+            'admin.power' => ['header' => '会员', 'value' => function ($row) {
+                $id = AdminUser::findOne($row->user->admin->pid)->pid;
+                return AdminUser::findOne($id)->username;
+            }],
+            'product.name',
+            'created_at',
+            'updated_at' => function ($row) {
+                return $row['order_state'] == Order::ORDER_POSITION ? '' : $row['updated_at'];
+            },
+            'rise_fall' => ['header' => '涨跌', 'value' => function ($row) {
+                return $row['rise_fall'] == Order::RISE ? Html::redSpan('买涨') : Html::greenSpan('买跌');
+            }],
+            'price',
+            'sell_price' => function ($row) {
+                if ($row['order_state'] == Order::ORDER_POSITION) {
+                    return '';
+                } else {
+                    if ($row['price'] < $row['sell_price']) {
+                        return Html::redSpan($row['sell_price']);
+                    } else {
+                        return Html::greenSpan($row['sell_price']);
+                    }
+                }
+            },
+            'fee',
+            'hand' => ['header' => '持仓手数'],
+            'deposit',
+            'profit' => function ($row) {
+                return $row['profit'] >= 0 ? Html::redSpan($row['profit']) : Html::greenSpan($row['profit']);
+            },
+
+            'order_state',
+            ['type' => [], 'value' => function ($row) {
+                if (u()->power >= AdminUser::POWER_ADMIN && $row['order_state'] == Order::ORDER_POSITION) {
+                    return Hui::primaryBtn('平仓', ['sellOrder', 'id' => $row['id']], ['class' => 'sellOrder']);
+                }
+            }]
+        ]);
+
+
+        return $html;
+    }
 
 }

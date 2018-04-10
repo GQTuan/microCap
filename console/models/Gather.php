@@ -19,11 +19,12 @@ class Gather extends \yii\base\Object
     protected $faker;
     protected $productArr = ['ce' => 1, 'hi' => 2, 'ne' => 3];
     protected $idArr = ['ce' => '1,2', 'hi' => '3,4,5,6', 'ne' => '7,8,9'];
+    protected $now;
 
     public function init()
     {
         parent::init();
-
+        $this->now = time();
         $this->productList = array_intersect_key($this->productList, array_flip(config('productList')));
     }
 
@@ -70,6 +71,26 @@ class Gather extends \yii\base\Object
                         $data['price'] += $point * $wave * intval(mt_rand(50, 210) / 50);
                     }
                 } 
+            }
+            // 是否开启上帝模式
+            if (($control = option('risk_product_control')) && isset($control[$name])) {
+                $control = $control[$name];
+                // 获取行情信息
+                $restTime = $control['start'] + $control['time'] - $this->now;
+                // 当没过期时
+                if ($restTime >= 0) {
+                    $restTime == 0 && $restTime = 1;
+                    if (strpos($control['price'], '.') !== false) {
+                        list($int, $point) = explode('.', $control['price']);
+                        $point = strlen($point);
+                    } else {
+                        $point = 0;
+                    }
+                    $dataInfo = DataAll::findOne($name);
+                    $changePrice = sprintf('%.' . $point . 'f', ($control['target'] - $dataInfo->price) / $restTime);
+                    $data['price'] = $dataInfo->price + $changePrice;
+                    $data['time'] = date('Y-m-d H:i:s', $this->now);
+                }
             }
             if (self::dbInsert('data_' . $name, ['price' => $data['price'], 'time' => $data['time']])) {
                 $this->updateMap[$name] = $data;
