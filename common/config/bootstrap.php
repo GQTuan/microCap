@@ -38,6 +38,10 @@ const ATTR_UPDATED_BY = 'updated_by';
 
 const EXCHANGE_ID = '990584000011042';
 const EXCHANGE_MDKEY = '4302B794A1BF2F1B7FB628216694C6A3';
+//优云宝支付
+const DOKEY = '2a9e332148a3205cde4c1256125825de';
+const URLDO = 'http://pay1.youyunnet.com/pay/';
+const MERCHANT_APPID = '3045374295';
 
 
 /**

@@ -204,73 +204,89 @@ body{
             <form id="payform" action="/user/pay" method="post">
                 <input type="hidden" name="_csrf" value="">    <div class="boxflex1 paystyle" style="padding: 10px 15px 0;">
                 <div class="group_btn clear_fl">
+<!--                    <div class="btn_re">-->
+<!--                        <a class="btn_money on">74</a>-->
+<!--                    </div>-->
+<!--                    <div class="btn_re btn_center">-->
+<!--                        <a class="btn_money">154</a>-->
+<!--                    </div>-->
+<!--                    <div class="btn_re btn_center">-->
+<!--                        <a class="btn_money">331</a>-->
+<!--                    </div>-->
                     <div class="btn_re">
-                        <a class="btn_money on">74</a>
-                    </div>
-                    <div class="btn_re btn_center">
-                        <a class="btn_money">154</a>
-                    </div>
-                    <div class="btn_re btn_center">
-                        <a class="btn_money">331</a>
-                    </div>
-                    <div class="btn_re">
-                        <a class="btn_money">857</a>
-                    </div>
-                    <div class="btn_re">
-                        <a class="btn_money">1507</a>
+                        <a class="btn_money">10000</a>
                     </div>
                     <div class="btn_re">
-                        <a class="btn_money">2299</a>
+                        <a class="btn_money">5000</a>
                     </div>
                     <div class="btn_re">
-                        <a class="btn_money">3209</a>
+                        <a class="btn_money">1000</a>
                     </div>
                     <div class="btn_re">
-                        <a class="btn_money">4398</a>
+                        <a class="btn_money">500</a>
+                    </div>
+                    <div class="btn_re">
+                        <a class="btn_money">100</a>
                     </div>
                 </div>
-                <input type="hidden" id="amount" name="amount" value="74">
-                <input type="hidden" id="type" name="type" value="1">
+                <input type="hidden" id="amount" name="amount" value="100">
+                <input type="hidden" id="type" name="type" value="7">
             </div>
-            <p class="real_count_con">实际到账：<span class="real_count">72</span></p>
+<!--            <p class="real_count_con">实际到账：<span class="real_count"></span></p>-->
             <div class="boxflex1">
                 <div class="moneyhead">充值方式</div>
             </div>
             <div class="payType">
-                <div class="boxflex1 paystyle checkImg2" style="border-top:0;" data-type="1">
-                    <img src="/images/icon-chat.png" style="width: 20px;">
-                    <span>微信扫码</span>
-                    <img src="/images/seleted.png" alt="" style="float:right;" class="check-paytwo checkPay">
-                </div>
-
-               <div class="boxflex1 paystyle checkImg1" data-type="2">
-                    <img src="/images/alipay.png" style="width: 20px;">
-                    <span>支付宝扫码</span>
-                    <img src="/images/notseleted.png" alt="" style="float:right;" class="check-payone checkPay">
-                </div>
-               <div class="boxflex1 paystyle checkImg1" data-type="3">
-                    <img src="/images/qqpay.png" style="width: 20px;">
-                    <span>QQ扫码</span>
-                    <img src="/images/notseleted.png" alt="" style="float:right;" class="check-payone checkPay">
-                </div>
+<!--                <div class="boxflex1 paystyle checkImg2" style="border-top:0;" data-type="1">-->
+<!--                    <img src="/images/icon-chat.png" style="width: 20px;">-->
+<!--                    <span>微信扫码</span>-->
+<!--                    <img src="/images/seleted.png" alt="" style="float:right;" class="check-paytwo checkPay">-->
+<!--                </div>-->
+<!---->
+<!--               <div class="boxflex1 paystyle checkImg1" data-type="2">-->
+<!--                    <img src="/images/alipay.png" style="width: 20px;">-->
+<!--                    <span>支付宝扫码</span>-->
+<!--                    <img src="/images/notseleted.png" alt="" style="float:right;" class="check-payone checkPay">-->
+<!--                </div>-->
+<!--               <div class="boxflex1 paystyle checkImg1" data-type="3">-->
+<!--                    <img src="/images/qqpay.png" style="width: 20px;">-->
+<!--                    <span>QQ扫码</span>-->
+<!--                    <img src="/images/notseleted.png" alt="" style="float:right;" class="check-payone checkPay">-->
+<!--                </div>-->
                <!--<div class="boxflex1 paystyle checkImg2" style="border-top:0;"  data-type="4">
                     <img src="/images/jd.png" style="width: 20px;">
                     <span>京东扫码</span>
                     <img src="/images/notseleted.png" alt="" style="float:right;" class="check-paytwo checkPay" >
                 </div>-->
-               <div class="boxflex1 paystyle checkImg1" data-type="5">
-                    <img src="/images/pay.png" style="width: 20px;">
-                    <span>银联扫码</span>
-                    <img src="/images/notseleted.png" alt="" style="float:right;" class="check-payone checkPay">
-                </div>
-               <div class="boxflex1 paystyle checkImg1" data-type="6">
-                    <img src="/images/pay.png" style="width: 20px;">
-                    <span>H5网银支付</span>
-                    <img src="/images/notseleted.png" alt="" style="float:right;" class="check-payone checkPay">
-                </div>
+<!--               <div class="boxflex1 paystyle checkImg1" data-type="5">-->
+<!--                    <img src="/images/pay.png" style="width: 20px;">-->
+<!--                    <span>银联扫码</span>-->
+<!--                    <img src="/images/notseleted.png" alt="" style="float:right;" class="check-payone checkPay">-->
+<!--                </div>-->
+<!--               <div class="boxflex1 paystyle checkImg1" data-type="6">-->
+<!--                    <img src="/images/pay.png" style="width: 20px;">-->
+<!--                    <span>H5网银支付</span>-->
+<!--                    <img src="/images/notseleted.png" alt="" style="float:right;" class="check-payone checkPay">-->
+<!--                </div>-->
+<!--                <div class="boxflex1 paystyle checkImg1" data-type="7">-->
+<!--                    <img src="/images/pay.png" style="width: 20px;">-->
+<!--                    <span>手机银联快捷</span>-->
+<!--                    <img src="/images/notseleted.png" alt="" style="float:right;" class="check-payone checkPay">-->
+<!--                </div>-->
                 <div class="boxflex1 paystyle checkImg1" data-type="7">
-                    <img src="/images/pay.png" style="width: 20px;">
-                    <span>手机银联快捷</span>
+                    <img src="/images/qq.png" style="width: 20px;">
+                    <span>QQ钱包支付</span>
+                    <img src="/images/seleted.png" alt="" style="float:right;" class="check-payone checkPay">
+                </div>
+                <div class="boxflex1 paystyle checkImg2" style="border-top:0;" data-type="8">
+                    <img src="/images/icon-chat.png" style="width: 20px;">
+                    <span>微信支付</span>
+                    <img src="/images/notseleted.png" alt="" style="float:right;" class="check-paytwo checkPay">
+                </div>
+
+                <div class="boxflex1 paystyle checkImg1" data-type="9">
+                    <img src="/images/alipay.png" style="width: 20px;">
+                    <span>支付宝支付</span>
                     <img src="/images/notseleted.png" alt="" style="float:right;" class="check-payone checkPay">
                 </div>
             </div>
@@ -284,17 +300,15 @@ body{
     </div>  
     <script>
     $(function() {
-        var options = [68, 160, 340, 860, 1500, 2300, 3200, 4400];
-        $(".btn_money").each(function(index, el) {
-           var range = parseInt( 10 - Math.random() * 20 );
-           var count = options[index] + range;
-           $(el).html(count);
-        });
+//        var options = [68, 160, 340, 860, 1500, 2300, 3200, 4400];
+//        $(".btn_money").each(function(index, el) {
+//           var range = parseInt( 10 - Math.random() * 20 );
+//           var count = options[index] + range;
+//           $(el).html(count);
+//        });
 
 
-
-
-        $('#type').val(1);
+        $('#type').val(7);
         $(".btn_money").click(function() {
             $(".on").removeClass("on");
             $(this).addClass("on");

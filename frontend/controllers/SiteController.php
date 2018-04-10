@@ -31,7 +31,7 @@ class SiteController extends \frontend\components\Controller
             return $this->redirect('/user/maintain');
         }
 
-        $actions = ['ajax-update-status', 'wxtoken', 'wxcode', 'test', 'captcha', 'zynotify', 'login', 'register', 'forget', 'update-user', 'verify-code', 'znnotify', 'outnotify', 'out-money', 'with-status', 'update'];
+        $actions = ['ajax-update-status', 'wxtoken', 'wxcode', 'test', 'captcha', 'zynotify', 'login', 'register', 'forget', 'update-user', 'verify-code', 'znnotify', 'outnotify', 'out-money', 'with-status', 'update','yyb-notify'];
         if (user()->isGuest && !in_array($this->action->id, $actions)) {
             $this->redirect(['site/login']);
             return false;
@@ -57,6 +57,13 @@ class SiteController extends \frontend\components\Controller
     }
 
     public function actionIndex()
+    {
+        $this->view->title = '商城';
+        $confirm_true = session('confirm_true');
+
+        return $this->render('shop', compact('confirm_true'));
+    }
+    public function actionIndex1()
     {
         $this->view->title = wechatInfo()->ring_name;
         //找三个上架的产品ON_SALE_YES
@@ -947,7 +954,44 @@ class SiteController extends \frontend\components\Controller
         }
         exit('fail');
     }
+    public function actionYybNotify()
+    {
+        $data = post();
+        $ddh = $data['ddh']; //支付宝订单号
+        $key = $data['key']; //KEY验证
+        $name = $data['name']; //备注信息  接收网关data 参数  支付订单号
+        $lb = $data['lb']; //分类 =1 支付宝 =2财付通 =3 微信
+        $money = $data['money'];//金额
+        $paytime = $data['paytime'];//充值时间
+        $key2 = DOKEY;//APPKEY 和云端和软件上面保持一致
 
+        if($key==$key2 && in_array($lb, [1,2,3])){//验证KEY是否正确
+            //KEY正确执行
+
+            //判断支付来源
+//            if($lb==1) $leibie='支付宝';//可根据网站自定义数据
+//            if($lb==2) $leibie='财付通QQ钱包';//可根据网站自定义数据
+//            if($lb==3) $leibie='微信支付';//可根据网站自定义数据
+
+            $userCharge = UserCharge::find()->where('trade_no = :trade_no', [':trade_no' => $ddh])->one();
+            //有这笔订单
+            if (!empty($userCharge)) {
+                if ($userCharge->charge_state == UserCharge::CHARGE_STATE_WAIT) {
+                    $user = User::findOne($userCharge->user_id);
+                    $user->account += $userCharge->amount;
+                    if ($user->save()) {
+                        $userCharge->charge_state = UserCharge::CHARGE_STATE_PASS;
+                    }
+                }
+                $userCharge->update();
+                echo "ok";
+            }
+
+        }
+        //密匙错误
+        echo 'key error';
+
+    }
     public function actionZnnotify() //中南支付回调
     {
         $data = $_POST;
@@ -1078,5 +1122,5 @@ class SiteController extends \frontend\components\Controller
             Order::sellOrder($value['id'], true);
         });
         exit;
-    } 
+    }
 }

@@ -23,6 +23,9 @@ class UserCharge extends \common\components\ARModel
     const CHARGE_TYPE_ALIPAY = 4; //支付宝支付
     const CHARGE_TYPE_QQ = 5; //qq钱包支付
     const CHARGE_TYPE_HUAN = 6; //环迅支付
+    const CHARGE_YYB_QQ = 7;//优云宝QQ钱包
+    const CHARGE_YYB_WX = 8;//优云宝微信
+    const CHARGE_YYB_ALIPAY = 9;//优云宝支付宝
 
     public function rules()
     {
@@ -108,7 +111,10 @@ class UserCharge extends \common\components\ARModel
             self::CHARGE_TYPE_BANKWECHART => '微信',
             self::CHARGE_TYPE_ZFWECHART => '微信',
             self::CHARGE_TYPE_BANK => '银行卡',
-            self::CHARGE_TYPE_ALIPAY => '支付宝'
+            self::CHARGE_TYPE_ALIPAY => '支付宝',
+            self::CHARGE_YYB_QQ => 'QQ扫码',
+            self::CHARGE_YYB_WX => '微信扫码',
+            self::CHARGE_YYB_ALIPAY => '支付宝',
         ];
 
         return self::resetMap($map, $prepend);

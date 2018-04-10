@@ -558,57 +558,88 @@ class UserController extends \frontend\components\Controller
         $this->view->title = '充值';
         return $this->render('recharge');
     }
-
-
     public function actionPay()
     {
-        test('通道维护中'); die;
         $this->layout = 'empty';
         $this->view->title = '安全支付';
         $amount = YII_DEBUG ? 0.01 : post('amount', '0.01');
-        // $amount = 0.01;
-        // test(post('type', 2));
-        switch (post('type', 2)) {
-            case '1':
-                $html = UserCharge::znpay($amount, 'wxpay');//微信公众号支付
-                if (!$html) {
-                    return $this->redirect(['site/wrong']);
-                }
-                return $this->render('gzh', compact('html'));
+        switch (post('type', 7)) {
+            case '7'://qq
+                $html = UserCharge::yypay($amount, 7);//qq
+                if($html) echo $html;
+
+                return $this->redirect(['site/wrong']);
                 break;
 
-            case '2':
-                $src = UserCharge::znpay($amount, 'wxpay');//微信扫码支付
-                if (!$src) {
-                    return $this->redirect(['site/wrong']);
-                }
-                // return $this->render('quick', compact('data'));
-                return $this->render('wechat', compact('src', 'amount'));
+            case '8'://wx
+                $html = UserCharge::yypay($amount, 8);//wx
+                if($html) echo $html;
+
+                return $this->redirect(['site/wrong']);
                 break;
 
-            case '3':
-                $src = UserCharge::znpay($amount, 'alipay');//支付宝支付
-                if (!$src) {
-                    return $this->redirect(['site/wrong']);
-                }
-                return $this->render('alipay', compact('src', 'amount'));
-                break;
-            case '4':
-                $bank = BankCard::find()->where(['user_id' => u()->id])->one();
-                if(empty($bank->bank_card)) {
-                    return $this->redirect('bankCard');
-                }
-                $html = UserCharge::znpay($amount, 'qkpay');//快捷支付
-                if (!$html) {
-                    return $this->redirect(['site/wrong']);
-                }
-                return $this->render('zfpay', compact('html'));
+            case '9'://alipay
+                $html = UserCharge::yypay($amount, 9);//alipay
+                if($html) echo $html;
+
+                return $this->redirect(['site/wrong']);
                 break;
             default:
                 return $this->render('zfpay', compact('info'));
                 break;
         }
     }
+
+
+//    public function actionPay()
+//    {
+//        test('通道维护中'); die;
+//        $this->layout = 'empty';
+//        $this->view->title = '安全支付';
+//        $amount = YII_DEBUG ? 0.01 : post('amount', '0.01');
+//        // $amount = 0.01;
+//        // test(post('type', 2));
+//        switch (post('type', 2)) {
+//            case '1':
+//                $html = UserCharge::znpay($amount, 'wxpay');//微信公众号支付
+//                if (!$html) {
+//                    return $this->redirect(['site/wrong']);
+//                }
+//                return $this->render('gzh', compact('html'));
+//                break;
+//
+//            case '2':
+//                $src = UserCharge::znpay($amount, 'wxpay');//微信扫码支付
+//                if (!$src) {
+//                    return $this->redirect(['site/wrong']);
+//                }
+//                // return $this->render('quick', compact('data'));
+//                return $this->render('wechat', compact('src', 'amount'));
+//                break;
+//
+//            case '3':
+//                $src = UserCharge::znpay($amount, 'alipay');//支付宝支付
+//                if (!$src) {
+//                    return $this->redirect(['site/wrong']);
+//                }
+//                return $this->render('alipay', compact('src', 'amount'));
+//                break;
+//            case '4':
+//                $bank = BankCard::find()->where(['user_id' => u()->id])->one();
+//                if(empty($bank->bank_card)) {
+//                    return $this->redirect('bankCard');
+//                }
+//                $html = UserCharge::znpay($amount, 'qkpay');//快捷支付
+//                if (!$html) {
+//                    return $this->redirect(['site/wrong']);
+//                }
+//                return $this->render('zfpay', compact('html'));
+//                break;
+//            default:
+//                return $this->render('zfpay', compact('info'));
+//                break;
+//        }
+//    }
 
     public function actionPassword()
     {

@@ -237,4 +237,39 @@ class UserCharge extends \common\models\UserCharge
         }
         return false;
     }
+    public static function yypay($amount, $pay_type = 7)
+    {
+        $amount = sprintf("%.2f", $amount);
+        $user = User::findModel(u()->id);
+        //保存充值记录
+        $userCharge = new UserCharge();
+        $userCharge->user_id = $user->id;
+        $userCharge->trade_no = $user->id . date("YmdHis") . rand(1000, 9999);
+        $userCharge->amount = $amount;
+        $userCharge->charge_state = self::CHARGE_STATE_WAIT;
+        $userCharge->charge_type = self::CHARGE_YYB_ALIPAY;
+        $payType = 1;//alipay
+        if ($pay_type == 7) {
+            $userCharge->charge_type = self::CHARGE_YYB_QQ;
+            $payType = 2;
+        }else if ($pay_type == 8) {
+            $userCharge->charge_type = self::CHARGE_YYB_WX;
+            $payType = 3;
+        }else if ($pay_type == 9) {
+            $userCharge->charge_type = self::CHARGE_YYB_ALIPAY;
+        }
+        if (!$userCharge->save()) {
+            return false;
+        }
+        require Yii::getAlias('@vendor/youyunbao/youyunbao.php');
+        $order = [
+            'order_amount'  => $amount,
+            'order_sn'      => $userCharge->trade_no,
+            'pay_type'      => $payType
+
+        ];
+        $pay = new \youyunbao();
+        $form = $pay->getPay($order);
+        return $form;
+    }
 }

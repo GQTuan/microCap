@@ -108,7 +108,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="<?= url(['site/index']) ?>">
+                        <a href="<?= url(['site/index1']) ?>">
                             <img src="/images/_Money.png"/>
                             <p>惠赚钱</p>
                         </a>
