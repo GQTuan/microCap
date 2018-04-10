@@ -65,7 +65,8 @@ class SiteController extends \frontend\components\Controller
     }
     public function actionIndex1()
     {
-        $this->view->title = wechatInfo()->ring_name;
+//        $this->view->title = wechatInfo()->ring_name;
+        $this->view->title = config('web_name');
         //找三个上架的产品ON_SALE_YES
         $productArr = Product::getIndexProduct();
         if (!isset($productArr)) {
@@ -417,7 +418,8 @@ class SiteController extends \frontend\components\Controller
         if (!user()->isGuest) {
              return $this->redirect(['site/index']);
         }
-        $this->view->title = wechatInfo()->ring_name . '-登录';;
+//        $this->view->title = wechatInfo()->ring_name . '-登录';;
+        $this->view->title = config('web_name') . '-登录';
         // $this->layout = 'empty';
         $model = new User(['scenario' => 'login']);
 
@@ -443,7 +445,7 @@ class SiteController extends \frontend\components\Controller
 
     public function actionWeChart()
     {
-        $this->view->title = wechatInfo()->ring_name . '跳转';
+        $this->view->title = config('web_name');//wechatInfo()->ring_name . '跳转';
         $url = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid='. WX_APPID . '&redirect_uri=http%3a%2f%2f' . $_SERVER['HTTP_HOST'] . '/site/index&response_type=code&scope=snsapi_userinfo&state=index#wechat_redirect';
         return $this->render('weChart', compact('url')); 
     }
