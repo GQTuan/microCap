@@ -405,7 +405,7 @@ class SiteController extends \frontend\components\Controller
 
 
             $model->username = $model->mobile;
-            $model->face = config("user_face", '');
+            $model->face = config("web_logo", '');
             $model->open_id = date("Yhdhis") . rand(100000, 999999);
             if ($model->validate()) {
                 $retail = Retail::find()->joinWith(['adminUser'])->where(['retail.code' => $model->code])->one();
