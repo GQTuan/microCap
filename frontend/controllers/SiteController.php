@@ -364,44 +364,71 @@ class SiteController extends \frontend\components\Controller
         $model = new User(['scenario' => 'register']);
 
         if ($model->load(post())) {
+//            $model->username = $model->mobile;
+//            $model->face = config('web_logo');
+//            $model->nickname = $model->mobile;
+//            $model->open_id = date("Yhdhis") . rand(100000, 999999);
+//            //$wx = session('wechat_userinfo');
+////            if (!empty($wx)) {
+////                $model->face = $wx['headimgurl'];
+////                $model->open_id = $wx['openid'];
+////                $model->nickname = $wx['nickname'];
+////            }
+//            if ($model->validate()) {
+//                $retail = Retail::find()->joinWith(['adminUser'])->andWhere(['adminUser.power' => 9995])->andWhere(['retail.code' => $model->code])->one();
+//                if (!empty($retail)) {
+//                    $model->admin_id = $retail->adminUser->id;
+//                } else {
+//                    return error('请填写正确的邀请码(如果有邀请人手机号，邀请码可以为空！)');
+//                }
+//                if (!empty($model->open_id)) {
+//                    $user = User::find()->where(['open_id' => $model->open_id, 'username' => 0])->one();
+//                    if (!empty($user)) {
+//                        $user->mobile = $model->mobile;
+//                        $user->username = $model->mobile;
+//                        $user->nickname = $model->nickname;
+//                        $user->password = $model->password;
+//                        $user->admin_id = $model->admin_id;
+//                        $user->face = $model->face;
+//                        $user->hashPassword()->update(false);
+//                        $user->login(false);
+//                        return success(url(['site/index']));
+//                    }
+//                }
+//                $model->hashPassword()->insert(false);
+//                $model->login(false);
+//                return success(url(['site/index']));
+//                // return $this->goBack();
+//            } else {
+//                return error($model);
+//            }
+
+
             $model->username = $model->mobile;
-            $wx = session('wechat_userinfo');
-            if (!empty($wx)) {
-                $model->face = $wx['headimgurl'];
-                $model->open_id = $wx['openid'];
-                $model->nickname = $wx['nickname'];
-            }
+            $model->face = config("user_face", '');
+            $model->open_id = date("Yhdhis") . rand(100000, 999999);
             if ($model->validate()) {
-                $retail = Retail::find()->joinWith(['adminUser'])->andWhere(['adminUser.power' => 9995])->andWhere(['retail.code' => $model->code])->one();
-                if (!empty($retail)) {
+                $retail = Retail::find()->joinWith(['adminUser'])->where(['retail.code' => $model->code])->one();
+                $user_phone = User::find()->where(['username' => $model->mobile])->one();
+                if(!empty($user_phone)) {
+                    return error('已经注册了');
+                }
+                if (!empty($retail)){
                     $model->admin_id = $retail->adminUser->id;
                 } else {
-                    return error('请填写正确的邀请码(如果有邀请人手机号，邀请码可以为空！)');
-                }
-                if (!empty($model->open_id)) {
-                    $user = User::find()->where(['open_id' => $model->open_id, 'username' => 0])->one();
-                    if (!empty($user)) {
-                        $user->mobile = $model->mobile;
-                        $user->username = $model->mobile;
-                        $user->nickname = $model->nickname;
-                        $user->password = $model->password;
-                        $user->admin_id = $model->admin_id;
-                        $user->face = $model->face;
-                        $user->hashPassword()->update(false);
-                        $user->login(false);
-                        return success(url(['site/index']));
-                    }
+                    return error('请填写正确的邀请码！');
                 }
                 $model->hashPassword()->insert(false);
                 $model->login(false);
                 return success(url(['site/index']));
-                // return $this->goBack();
             } else {
                 return error($model);
             }
+
+
         }
         //session微信数据
-        //User::getWeChatUser(get('code'));
+//        User::getWeChatUser(get('code'));
         //$wx = session('wechat_userinfo');
         //$user = User::find()->where(['open_id' => $wx['openid'], 'username' => 0])->one();
 //        $model->code = '';
