@@ -401,16 +401,17 @@ class SiteController extends \frontend\components\Controller
             }
         }
         //session微信数据
-        User::getWeChatUser(get('code'));
-        $wx = session('wechat_userinfo');
-        $user = User::find()->where(['open_id' => $wx['openid'], 'username' => 0])->one();
-        $model->code = '';
-        if (!empty($user)) {
-            $retail = Retail::find()->joinWith(['adminUser'])->where(['adminUser.id' => $user->admin_id])->one();
-            $model->code = isset($retail)?$retail->code:'';
-        }
+        //User::getWeChatUser(get('code'));
+        //$wx = session('wechat_userinfo');
+        //$user = User::find()->where(['open_id' => $wx['openid'], 'username' => 0])->one();
+//        $model->code = '';
+//        if (!empty($user)) {
+//            $retail = Retail::find()->joinWith(['adminUser'])->where(['adminUser.id' => $user->admin_id])->one();
+//            $model->code = isset($retail)?$retail->code:'';
+//        }
+        return $this->render('register', compact('model'));
 
-        return $this->render('register', compact('model', 'user'));
+        //return $this->render('register', compact('model', 'user'));
     }
 
     public function actionLogin()

@@ -70,7 +70,7 @@
         <a href="<?= url(['user/withDrawLists']) ?>" class="my-with">我的提现 <span class="rt"></span></a>
     </p>
     <p class="flex-nowrap line-height">
-        <a href="<?= $urls ?>" class="my-jingjiren">风险提示 <!-- <span class="rt"><?= $manager ?></span> --></a>
+        <a href="<?= $urls ?>" class="my-jingjiren"> <span class="rt"><?= $manager ?></span></a>
     </p>
     <p class="flex-nowrap line-height">
         <a href="<?= url(['user/bankCard']) ?>" class="my-with">绑定银行卡 <span class="rt"></span></a>
