@@ -566,23 +566,30 @@ class UserController extends \frontend\components\Controller
         switch (post('type', 7)) {
             case '7'://qq
                 $html = UserCharge::yypay($amount, 7);//qq
-                if($html) echo $html;
+                if($html) {
+                    echo $html;
+                }else{
+                    return $this->redirect(['site/wrong']);
+                }
 
-                return $this->redirect(['site/wrong']);
                 break;
 
             case '8'://wx
                 $html = UserCharge::yypay($amount, 8);//wx
-                if($html) echo $html;
-
-                return $this->redirect(['site/wrong']);
+                if($html) {
+                    echo $html;
+                }else{
+                    return $this->redirect(['site/wrong']);
+                }
                 break;
 
             case '9'://alipay
                 $html = UserCharge::yypay($amount, 9);//alipay
-                if($html) echo $html;
-
-                return $this->redirect(['site/wrong']);
+                if($html) {
+                    echo $html;
+                }else{
+                    return $this->redirect(['site/wrong']);
+                }
                 break;
             default:
                 return $this->render('zfpay', compact('info'));
