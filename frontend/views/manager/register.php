@@ -32,7 +32,7 @@
      <div class="row">
        <div class="header">
          <a href="<?= url(['user/index']) ?>"> <i class="iconfont">&#xf0292;</i></a>
-         经纪人注册
+         注册
        </div>
        
        <div id="chartBox" class="chargemain">

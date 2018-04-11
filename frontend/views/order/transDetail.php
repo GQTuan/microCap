@@ -118,6 +118,7 @@ a.qiandao-btn:hover{
         height: 1.5rem;
     }
 </style>
+
 <div class="detail-container">
     <p class="flex-nowrap index-title">
     <a class="img-link flex-none" href="<?= url(['user/index']) ?>">

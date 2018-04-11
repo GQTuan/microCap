@@ -52,6 +52,10 @@
     color: #666;
 }
 </style>
+<div class="header">
+    <a href="JavaScript:history.go(-1)"> <span class="back_arrow"></span> </a >
+    忘记密码
+</div>
 <div class="modify-container">
     <?php $form = self::beginForm(['showLabel' => false]) ?>
 
