@@ -37,10 +37,6 @@
         font-size: 14px!important;
         line-height: 24px!important;
     }
-    .warp {
-        /* padding-top: 1.5rem; */
-        padding-bottom: 1.9rem;
-    }
 </style>
 
 <script type="text/javascript">
@@ -87,7 +83,8 @@
 <!--    <header class="mui-bar mui-bar-nav" id="header">-->
 <!--        <h4>点点商城</h4>-->
 <!--    </header>-->
-    <div id="main" class="clearfloat warp">         
+<!--    <div id="main" class="clearfloat warp">-->
+    <div id="main" class="clearfloat warp" style="padding-bottom: 1.9rem;">
         <div class="mui-content">
             <!--banner开始-->
             <div class="banner swiper-container">
