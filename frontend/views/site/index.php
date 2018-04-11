@@ -126,7 +126,7 @@
         </a>
     </li>
     <li>
-        <a href="">
+        <a href="javascript:showKefu();">
             联系客服
         </a>
     </li>
@@ -148,6 +148,7 @@
          <?php $i++;endforeach ?>
     </ul>
 </div>
+
 <script type="text/javascript">
     //持仓数据跳动
     function data(){
@@ -215,4 +216,15 @@ $(function(){
     });
 })
     
+</script>
+<script>
+    function showKefu()
+    {
+        layer.open({
+            title:" ",
+            type: 1,
+            area: ['230px','350px'],
+            content: '<image style="width:100%;" src="/images/kefu1.png">' //这里content是一个普通的String
+        });
+    }
 </script>
