@@ -103,6 +103,10 @@
         border-top: 1px solid #ddd;
     }
 </style>
+<div class="header">
+    <a href="JavaScript:history.go(-1)"> <span class="back_arrow"></span> </a >
+    投资
+</div>
 <div class="buy-container">
     <div class="buy-title">
         <p class="price up">计算中</p>

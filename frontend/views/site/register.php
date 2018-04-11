@@ -5,6 +5,10 @@
         border-radius: 0!important;
     }
 </style>
+<div class="header">
+    <a href="JavaScript:history.go(-1)"> <span class="back_arrow"></span> </a >
+    注册
+</div>
 <div class="register-container">
     <p class="img-container"><img src="../images/register-logo.png"></p>
     <p class="img-container user-reigister">用户注册</p>

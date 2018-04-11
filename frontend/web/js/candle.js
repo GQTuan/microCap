@@ -420,7 +420,7 @@ $(function () {
             series : [{
                 name : 'price',
                 type: 'areaspline',
-                lineWidth : 2,
+                lineWidth : 1,
                 lineColor:'#ef7973',
                 data : data,
                 tooltip: {
