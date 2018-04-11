@@ -37,6 +37,10 @@
         font-size: 14px!important;
         line-height: 24px!important;
     }
+    .warp {
+        /* padding-top: 1.5rem; */
+        padding-bottom: 1.9rem;
+    }
 </style>
 
 <script type="text/javascript">
