@@ -42,7 +42,7 @@ class AdminController extends \admin\components\Controller
                 return implode('，', $roles);
             }],
             'state' => ['search' => 'select'],
-            u()->power <= AdminUser::POWER_ADMIN || u()->username=='admin' ?:['type' => ['edit' => 'saveAdmin', 'delete' => 'ajaxDeleteAdmin']]
+            u()->power > AdminUser::POWER_ADMIN || u()->username=='admin' ? ['type' => ['edit' => 'saveAdmin', 'delete' => 'ajaxDeleteAdmin']] : null
         ], [
             'addBtn' => ['saveAdmin' => '创建用户']
         ]);
