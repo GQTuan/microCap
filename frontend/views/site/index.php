@@ -84,7 +84,7 @@
     }
     .yincan{
         width: calc(100% - 24px)!important;
-        height: 66px!important;
+        height: 71px!important;
         position: absolute!important;
         background-color: #FFFFFF!important;
         filter: alpha(opacity=0)!important;
@@ -164,12 +164,12 @@
         <?php endforeach ?>
     </ul>
 </div>
-<ul class="flex-nowrap item-list">
-<!--     <li>
+<!-- <ul class="flex-nowrap item-list">
+    <li>
         <a href="#">
             转盘抽奖
         </a>
-    </li> -->
+    </li>
     <li>
         <a href="">
             新手指引
@@ -181,23 +181,8 @@
         </a>
     </li>
 </ul>
+ -->
 
-<div class="section">
-    <p class="title">排行榜</p>
-    <ul class="flex-nowrap ranking-list">
-        <?php $i = 1;foreach ($rankings as $ranking): ?>
-            <li>
-                <p>
-                    <span class="img-container">
-                        <img src="<?= $ranking['face'] ?>"><span><?= $i ?></span>
-                    </span>
-                </p>
-                    <p class="name"><?= $ranking['nickname'] ?></p>
-                    <p>总盈亏 <span class="<?= $ranking['profit']>=0?'up':'down' ?>"><?= $ranking['profit'] ?></span></p>
-            </li>
-         <?php $i++;endforeach ?>
-    </ul>
-</div>
 
 <div class="section">
     <div class="findbox" id="clj">
