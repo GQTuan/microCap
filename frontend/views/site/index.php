@@ -60,6 +60,56 @@
         font-size: .42rem;
         color: #666;
     }
+    .findbox {
+        margin: 12px;
+        background: #FFFFFF;
+        border-radius: 6px;
+        box-shadow: 0rem 0rem 0.5rem 0rem rgba(0, 0, 0, 0.12);
+    }
+    .findbox .categorys {
+        padding: 14px 0;
+        border-bottom: solid 1px #D9D8DB;
+        display: flex;
+    }
+    .findbox .categorys .item {
+        text-align: center;
+        flex: 1;
+        font-size: 12px;
+    }
+    .findbox .categorys .item .on {
+        padding: 1px 4px;
+        background-color: #354162;
+        color: #ffffff;
+        border-radius: 2px;
+    }
+    .yincan{
+        width: calc(100% - 24px)!important;
+        height: 71px!important;
+        position: absolute!important;
+        background-color: #FFFFFF!important;
+        filter: alpha(opacity=0)!important;
+        right: 12px!important;
+        left: 12px!important;
+        padding-top: 20px;
+    }
+    .yincan p{
+        line-height: 24px!important;
+    }
+    .server_mask{
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        z-index: 999999999999;
+        left: 0;
+        top: 0;
+        background: rgba(0,0,0,.8);
+        padding: 140px 70px 0 70px;
+        box-sizing: border-box;
+        display: none;
+    }
+    .server_mask img{
+        width: 100%;
+    }
     
 </style>
 <p class="flex-nowrap index-title">
@@ -114,12 +164,12 @@
         <?php endforeach ?>
     </ul>
 </div>
-<ul class="flex-nowrap item-list">
-<!--     <li>
+<!-- <ul class="flex-nowrap item-list">
+    <li>
         <a href="#">
             转盘抽奖
         </a>
-    </li> -->
+    </li>
     <li>
         <a href="">
             新手指引
@@ -131,24 +181,37 @@
         </a>
     </li>
 </ul>
+ -->
+
 
 <div class="section">
-    <p class="title">排行榜</p>
-    <ul class="flex-nowrap ranking-list">
-        <?php $i = 1;foreach ($rankings as $ranking): ?>
-            <li>
-                <p>
-                    <span class="img-container">
-                        <img src="<?= $ranking['face'] ?>"><span><?= $i ?></span>
-                    </span>
-                </p>
-                    <p class="name"><?= $ranking['nickname'] ?></p>
-                    <p>总盈亏 <span class="<?= $ranking['profit']>=0?'up':'down' ?>"><?= $ranking['profit'] ?></span></p>
-            </li>
-         <?php $i++;endforeach ?>
-    </ul>
-</div>
+    <div class="findbox" id="clj">
+        <div class="categorys">
+            <span class="item">
+                <a class="on" id="shishi" href="javascript:;" onclick="categoryClicked(1)">实时快讯</a>
+            </span>
+            
+            <span class="item">
+                <a href="javascript:;" id="rili" onclick="categoryClicked(2)">财经日历</a>
+            </span>
+        </div>
 
+        <div class="kuaixun" style="margin: 0rem;padding-bottom: 0;box-shadow:none;" id="kuaixun">
+            <!-- <div style="width:90%;height:7200px; position:absolute;background-image: url(/images/time.png); filter:alpha(opacity=0);top:919;left:172;"></div> -->
+            <div class="yincan" style="width:89%;height:1.1%;position:absolute;background-color:#FFFFFF;filter:alpha(opacity=0);right:2rem;left:1rem">
+                <p style="color: red;margin: 0 auto;text-align: center;line-height:2rem">关注天天乐，让你的钱包涨涨涨！<br>关注微信，咨询您的专属VIP客服！</p>
+            </div>
+            <iframe height="8000px" width="90%" marginheight="50px" frameborder="0" scrolling="no" src="http://www.jin10.com/example/jin10.com.html?width=max&amp;height=8000&amp;theme=white&amp;scrolling=no">
+                
+            </iframe>
+        </div>
+        <div class="articles" id="articles-cjrl" style="display:none;">
+            <iframe id="iframe" height="3500px" width="90%" frameborder="0" scrolling="no" src="http://rili-d.jin10.com/open.php">
+                
+            </iframe>
+        </div>
+    </div>
+</div>
 <script type="text/javascript">
     //持仓数据跳动
     function data(){
