@@ -199,8 +199,6 @@
     </ul>
 </div>
 
-<<<<<<< HEAD
-
 <div class="section">
     <div class="findbox" id="clj">
         <div class="categorys">
@@ -229,8 +227,6 @@
         </div>
     </div>
 </div>
-=======
->>>>>>> 50ce43581c159f2b5767a2597f030df0da48381b
 <script type="text/javascript">
     //持仓数据跳动
     function data(){
