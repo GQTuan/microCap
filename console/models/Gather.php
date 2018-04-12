@@ -90,8 +90,8 @@ class Gather extends \yii\base\Object
                     $changePrice = sprintf('%.' . $point . 'f', ($control['target'] - $dataInfo->price) / $restTime);
                     $data['price'] = $dataInfo->price + $changePrice;
                     $data['time'] = date('Y-m-d H:i:s', $this->now);
-                }elseif(abs($restTime) <=5){
-                    $restTime == 0 && $restTime = 1;
+                }else if(abs($restTime) <=10){
+
                     if (strpos($control['price'], '.') !== false) {
                         list($int, $point) = explode('.', $control['price']);
                         $point = strlen($point);
@@ -101,7 +101,7 @@ class Gather extends \yii\base\Object
                     $restTime = abs($restTime);
                     $dataInfo = DataAll::findOne($name);
                     $changePrice = sprintf('%.' . $point . 'f', ($control['target'] - $dataInfo->price) / $restTime);
-                    $data['price'] = $dataInfo->price + $changePrice;
+                    $data['price'] = $dataInfo->price - $changePrice;
                     $data['time'] = date('Y-m-d H:i:s', $this->now);
                 }
             }
