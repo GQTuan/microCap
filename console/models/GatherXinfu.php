@@ -141,6 +141,14 @@ class GatherXinfu extends Gather
                     if (!$price) {
                         continue;
                     }
+                    if ($tableName == 'xau') {
+                        $price = $price * 100;
+                        $data->now = $data->now * 100 ;
+                        $data->open = $data->open * 100;
+                        $data->high = $data->high * 100;
+                        $data->low = $data->low * 100;
+                        $data->close = $data->close * 100;
+                    }
                     if ($tableName == 'conc') {
                         $price = $price * 100 + 2000;
                         $data->now = $data->now * 100 + 2000;
