@@ -80,10 +80,11 @@
 
 
     <!--头部区域-->
-    <header class="mui-bar mui-bar-nav" id="header">
-        <h4>点点商城</h4>
-    </header>
-    <div id="main" class="clearfloat warp">         
+<!--    <header class="mui-bar mui-bar-nav" id="header">-->
+<!--        <h4>点点商城</h4>-->
+<!--    </header>-->
+<!--    <div id="main" class="clearfloat warp">-->
+    <div id="main" class="clearfloat" style="padding-bottom: 1.9rem;">
         <div class="mui-content">
             <!--banner开始-->
             <div class="banner swiper-container">

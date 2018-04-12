@@ -176,7 +176,7 @@
         </a>
     </li>
     <li>
-        <a href="">
+        <a href="javascript:showKefu();">
             联系客服
         </a>
     </li>
@@ -199,6 +199,7 @@
     </ul>
 </div>
 
+<<<<<<< HEAD
 
 <div class="section">
     <div class="findbox" id="clj">
@@ -228,6 +229,8 @@
         </div>
     </div>
 </div>
+=======
+>>>>>>> 50ce43581c159f2b5767a2597f030df0da48381b
 <script type="text/javascript">
     //持仓数据跳动
     function data(){
@@ -295,4 +298,15 @@ $(function(){
     });
 })
     
+</script>
+<script>
+    function showKefu()
+    {
+        layer.open({
+            title:" ",
+            type: 1,
+            area: ['230px','350px'],
+            content: '<image style="width:100%;" src="/images/kefu1.png">' //这里content是一个普通的String
+        });
+    }
 </script>
