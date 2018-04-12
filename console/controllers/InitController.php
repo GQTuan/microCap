@@ -69,16 +69,16 @@ class InitController extends \common\components\ConsoleController
             sleep(1);
         }
     }
-
-    //标记盈亏
-    public function actionSign()
-    {
-        $path = System::isWindowsOs() ? '' : './';
-        while (true) {
-            echo exec($path . 'yii init/signorder');
-            sleep(60);
-        }
-    }
+//
+//    //标记盈亏
+//    public function actionSign()
+//    {
+//        $path = System::isWindowsOs() ? '' : './';
+//        while (true) {
+//            echo exec($path . 'yii init/signorder');
+//            sleep(60);
+//        }
+//    }
 
     public function actionGather()
     {

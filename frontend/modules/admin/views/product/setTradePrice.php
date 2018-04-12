@@ -25,6 +25,7 @@ tr td {
     <tr>
         <td>保证金</td>
         <td>一手盈亏</td>
+        <td>最大手数</td>
         <td>手续费(每手)</td>
         <td>操作</td>
     </tr>
@@ -33,6 +34,7 @@ tr td {
         <td class="hidden"><?= $form->field($model, "[$key]product_id")->hiddenInput(['value' => $product->id]) ?></td>
         <td><?= $form->field($model, "[$key]deposit")->textInput(['placeholder' => $model->label('deposit')]) ?></td>
         <td><?= $form->field($model, "[$key]one_profit")->textInput(['placeholder' => $model->label('one_profit')]) ?></td>
+        <td><?= $form->field($model, "[$key]max_hand")->textInput(['placeholder' => $model->label('max_hand')]) ?></td>
         <td><?= $form->field($model, "[$key]fee")->textInput(['placeholder' => $model->label('fee')]) ?></td>
         <td><?= Hui::dangerBtn('删除', null, ['class' => 'deleteBtn', 'data' => ['title' => '删除', 'id' => $model->id, 'url' => url(['deletePrice'])]]) ?></td>
     </tr>

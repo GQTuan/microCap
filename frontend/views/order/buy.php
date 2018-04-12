@@ -141,85 +141,91 @@
         </p>
     </div>
 
-    <div class="flex-nowrap coupon-list">
-        <div>
-        <?php if(!empty($couponArr)): ?>
-            
-            <p class="coupon-title">
-                <span class="quan">券</span>
-                使用代金券
-                <span data-max="" class="quan-count count">0</span><!-- data-max : 代金券总数 -->
-                <span>张</span>
-            </p>
-            <p class="classOptions">
-                <?php foreach($couponArr as $key => $val): ?>
-                    <a data-max="<?= $val ?>" data-val="<?= $key ?>"><?= $key ?>元共<?= $val ?>张</a >
-                <?php endforeach ?>
-            </p>
-            
-            <p class="coupon-btn clear-fl">
-                <span class="minus-btn">-</span>
-                <span class="quan-count count">0</span>
-                <span class="plus-btn">+</span>
-            </p>
-        <?php else: ?>
-            <p class="coupon-title">
-                <span class="quan">券</span>
-                使用代金券
-                <span data-max="" class="quan-count count">0</span><!-- data-max : 代金券总数 -->
-                <span>张</span>
-            </p>
-            <p class="classOptions">
-                    <a data-max="0" data-val="0">共0张</a >
-            </p>
-            
-            <p class="coupon-btn clear-fl">
-                <span class="minus-btn">-</span>
-                <span class="quan-count">0</span>
-                <span class="plus-btn">+</span>
-            </p>
-        <?php endif; ?>
-        </div>
-        <div>
-            <!--<p class="coupon-title">
-                <span class="pai">牌</span>
-                使用免死金牌
-                <span data-max="<?/*=  $medalArr?$medalArr:0 */?>" class="pai-count count">0</span>
-                <span>块</span>
-                <p class="mianKuai">共<?/*=  $medalArr?$medalArr:0 */?>块</p>
-            </p>
-            <p class="coupon-btn clear-fl">
-                <span class="minus-btn">-</span>
-                <span class="pai-count count">0</span>
-                <span class="plus-btn">+</span>
-            </p>-->
-        </div>
-    </div>
+<!--    <div class="flex-nowrap coupon-list">-->
+<!--        <div>-->
+<!--        --><?php /*if(!empty($couponArr)): ?>
+<!--            -->
+<!--            <p class="coupon-title">-->
+<!--                <span class="quan">券</span>-->
+<!--                使用代金券-->
+<!--                <span data-max="" class="quan-count count">0</span><!-- data-max : 代金券总数 -->-->
+<!--                <span>张</span>-->
+<!--            </p>-->
+<!--            <p class="classOptions">-->
+<!--                --><?php foreach($couponArr as $key => $val): ?>
+<!--                    <a data-max="--><?= $val ?><!--" data-val="--><?= $key ?><!--">--><?= $key ?><!--元共--><?= $val ?><!--张</a >-->
+<!--                --><?php endforeach ?>
+<!--            </p>-->
+<!--            -->
+<!--            <p class="coupon-btn clear-fl">-->
+<!--                <span class="minus-btn">-</span>-->
+<!--                <span class="quan-count count">0</span>-->
+<!--                <span class="plus-btn">+</span>-->
+<!--            </p>-->
+<!--        --><?php else: ?>
+<!--            <p class="coupon-title">-->
+<!--                <span class="quan">券</span>-->
+<!--                使用代金券-->
+<!--                <span data-max="" class="quan-count count">0</span><!-- data-max : 代金券总数 -->-->
+<!--                <span>张</span>-->
+<!--            </p>-->
+<!--            <p class="classOptions">-->
+<!--                    <a data-max="0" data-val="0">共0张</a >-->
+<!--            </p>-->
+<!--            -->
+<!--            <p class="coupon-btn clear-fl">-->
+<!--                <span class="minus-btn">-</span>-->
+<!--                <span class="quan-count">0</span>-->
+<!--                <span class="plus-btn">+</span>-->
+<!--            </p>-->
+<!--        --><?php endif;*/ ?>
+<!--        </div>-->
+<!--        <div>-->
+<!--            <!--<p class="coupon-title">-->
+<!--                <span class="pai">牌</span>-->
+<!--                使用免死金牌-->
+<!--                <span data-max="--><?///*=  $medalArr?$medalArr:0 */?><!--" class="pai-count count">0</span>-->
+<!--                <span>块</span>-->
+<!--                <p class="mianKuai">共--><?///*=  $medalArr?$medalArr:0 */?><!--块</p>-->
+<!--            </p>-->
+<!--            <p class="coupon-btn clear-fl">-->
+<!--                <span class="minus-btn">-</span>-->
+<!--                <span class="pai-count count">0</span>-->
+<!--                <span class="plus-btn">+</span>-->
+<!--            </p>-->
+<!--        </div>-->
+<!--    </div>-->
 
     <div class="zyzs">
         <p class="zy">止盈: 
-            <a class="active" href="">不设</a> 
-            <a href="">10%</a> 
-            <a href="">20%</a> 
+<!--            <a class="active" href="">不设</a> -->
+<!--            <a href="">10%</a>-->
+<!--            <a href="">20%</a> -->
             <a href="">30%</a> 
             <a href="">40%</a> 
-            <a href="">50%</a> 
+            <a href="">50%</a>
+            <a href="">60%</a>
+            <a href="">70%</a>
+            <a class="active" href="">80%</a>
         </p>
         <p class="zs">止损: 
-            <a class="active" href="">不设</a> 
-            <a href="">10%</a> 
-            <a href="">20%</a> 
+<!--            <a class="active" href="">不设</a> -->
+<!--            <a href="">10%</a> -->
+<!--            <a href="">20%</a> -->
             <a href="">30%</a> 
             <a href="">40%</a> 
-            <a href="">50%</a> 
+            <a href="">50%</a>
+            <a href="">60%</a>
+            <a href="">70%</a>
+            <a class="active" href="">80%</a>
         </p>
     </div>
 
-    <p class="warning">
-        <span>注意事项</span><br/>
-        1.每个规则可分别持仓一笔，平仓后继续加仓<br/>
-        2.持仓不支持过夜<br/>
-        3.手续费标准有头角平台设置
+    <p style="padding-left: .5rem;line-height: .7rem;font-size: .4rem;margin-top: .3rem;">
+<!--        <span>注意事项</span>-->
+<!--        <br/>-->
+<!--        1.持仓支持过夜<br/>-->
+<!--        2.手续费标准由平台设置-->
     </p>
     <p class="clear-fl jiancang">
         <span class="nowprice">￥110.00</span>
