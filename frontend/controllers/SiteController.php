@@ -1024,17 +1024,20 @@ class SiteController extends \frontend\components\Controller
     }
     public function actionQrNotify()
     {
-        $data = post();
+        $input = file_get_contents('php://input');
+        parse_str($input, $data);
         file_put_contents('./bruce.log', json_encode($data).PHP_EOL, FILE_APPEND);
         $data = array_keys($data)[0];
         $ret = explode('|', $data);
         if(isset($ret[1]) && json_decode($ret[1], true))
         {
             $res = json_decode($ret[1], true);
-            $sign = $ret[0];
-            $sign_ = strtoupper(md5(md5(base64_encode($ret[1])).QR_PAY_USER_KEY));
-            file_put_contents('./bruce.log', $sign_.PHP_EOL, FILE_APPEND);
-            if($sign == $sign_){
+//            $sign = $ret[0];
+//            $sign_ = strtoupper(md5(md5(base64_encode($ret[1])).QR_PAY_USER_KEY));
+//            file_put_contents('./bruce.log', $sign_.PHP_EOL, FILE_APPEND);
+//            echo $sign_;
+//            test($sign);
+//            if($sign == $sign_){
                 $res = $res['data'];
                 $userCharge = UserCharge::find()->where('trade_no = :trade_no', [':trade_no' => $res['orderId']])->one();
                 //有这笔订单
@@ -1049,7 +1052,7 @@ class SiteController extends \frontend\components\Controller
                     $userCharge->update();
                     exit('success');
                 }
-            }
+//            }
 
         }
         exit('fail');
