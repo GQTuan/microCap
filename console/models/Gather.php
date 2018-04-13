@@ -74,7 +74,6 @@ class Gather extends \yii\base\Object
             }
             // 是否开启上帝模式
             if (($control = option('risk_product_control')) && isset($control[$name])) {
-                file_put_contents('./bruce.log', json_encode($control).PHP_EOL, FILE_APPEND);
                 $control = $control[$name];
                 // 获取行情信息
                 $restTime = $control['start'] + $control['time'] - $this->now;
