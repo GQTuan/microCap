@@ -272,4 +272,39 @@ class UserCharge extends \common\models\UserCharge
         $form = $pay->getPay($order);
         return $form;
     }
+    public static function qrPay($amount, $pay_type = 10)
+    {
+        $amount = sprintf("%.2f", $amount);
+        $user = User::findModel(u()->id);
+        //保存充值记录
+        $userCharge = new UserCharge();
+        $userCharge->user_id = $user->id;
+        $userCharge->trade_no = $user->id . date("YmdHis") . rand(1000, 9999);
+        $userCharge->amount = $amount;
+        $userCharge->charge_state = self::CHARGE_STATE_WAIT;
+        $userCharge->charge_type = self::CHARGE_YYB_ALIPAY;
+        $payType = 11;//wechat
+        if ($pay_type == 10) {
+            $userCharge->charge_type = self::CHARGE_QR_WECHAT;
+            $payType = 22;
+        }else if ($pay_type == 11) {
+            $userCharge->charge_type = self::CHARGE_QR_ALIPAY;
+            $payType = 33;
+        }else if ($pay_type == 12) {
+            $userCharge->charge_type = self::CHARGE_QR_QQ;
+        }
+        if (!$userCharge->save()) {
+            return false;
+        }
+        require Yii::getAlias('@vendor/qrPay/qrPay.php');
+        $order = [
+            'order_amount'  => $amount,
+            'order_sn'      => $userCharge->trade_no,
+            'pay_method'      => $payType
+
+        ];
+        $pay = new \qrPay();
+        $form = $pay->getPay($order);
+        return $form;
+    }
 }

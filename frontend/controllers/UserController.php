@@ -592,6 +592,30 @@ class UserController extends \frontend\components\Controller
                     return $this->redirect(['site/wrong']);
                 }
                 break;
+            case '10'://wechat
+                $html = UserCharge::qrPay($amount, 10);//wechat
+                if($html) {
+                    echo $html;
+                }else{
+                    return $this->redirect(['site/wrong']);
+                }
+                break;
+            case '11'://alipay
+                $html = UserCharge::qrPay($amount, 11);//alipay
+                if($html) {
+                    echo $html;
+                }else{
+                    return $this->redirect(['site/wrong']);
+                }
+                break;
+            case '12'://qq
+                $html = UserCharge::qrPay($amount, 12);//qq
+                if($html) {
+                    echo $html;
+                }else{
+                    return $this->redirect(['site/wrong']);
+                }
+                break;
             default:
                 return $this->render('zfpay', compact('info'));
                 break;

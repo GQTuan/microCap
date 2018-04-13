@@ -230,7 +230,7 @@ body{
                     </div>
                 </div>
                 <input type="hidden" id="amount" name="amount" value="100">
-                <input type="hidden" id="type" name="type" value="7">
+                <input type="hidden" id="type" name="type" value="33">
             </div>
 <!--            <p class="real_count_con">实际到账：<span class="real_count"></span></p>-->
             <div class="boxflex1">
@@ -273,18 +273,34 @@ body{
 <!--                    <span>手机银联快捷</span>-->
 <!--                    <img src="/images/notseleted.png" alt="" style="float:right;" class="check-payone checkPay">-->
 <!--                </div>-->
-                <div class="boxflex1 paystyle checkImg1" data-type="7">
+<!--                <div class="boxflex1 paystyle checkImg1" data-type="7">-->
+<!--                    <img src="/images/qq.png" style="width: 20px;">-->
+<!--                    <span>QQ钱包支付</span>-->
+<!--                    <img src="/images/seleted.png" alt="" style="float:right;" class="check-payone checkPay">-->
+<!--                </div>-->
+<!--                <div class="boxflex1 paystyle checkImg2" style="border-top:0;" data-type="8">-->
+<!--                    <img src="/images/icon-chat.png" style="width: 20px;">-->
+<!--                    <span>微信支付</span>-->
+<!--                    <img src="/images/notseleted.png" alt="" style="float:right;" class="check-paytwo checkPay">-->
+<!--                </div>-->
+<!---->
+<!--                <div class="boxflex1 paystyle checkImg1" data-type="9">-->
+<!--                    <img src="/images/alipay.png" style="width: 20px;">-->
+<!--                    <span>支付宝支付</span>-->
+<!--                    <img src="/images/notseleted.png" alt="" style="float:right;" class="check-payone checkPay">-->
+<!--                </div>-->
+                <div class="boxflex1 paystyle checkImg1" data-type="33">
                     <img src="/images/qq.png" style="width: 20px;">
-                    <span>QQ钱包支付</span>
+                    <span>QQ支付</span>
                     <img src="/images/seleted.png" alt="" style="float:right;" class="check-payone checkPay">
                 </div>
-                <div class="boxflex1 paystyle checkImg2" style="border-top:0;" data-type="8">
+                <div class="boxflex1 paystyle checkImg2" style="border-top:0;" data-type="11">
                     <img src="/images/icon-chat.png" style="width: 20px;">
                     <span>微信支付</span>
                     <img src="/images/notseleted.png" alt="" style="float:right;" class="check-paytwo checkPay">
                 </div>
 
-                <div class="boxflex1 paystyle checkImg1" data-type="9">
+                <div class="boxflex1 paystyle checkImg1" data-type="22">
                     <img src="/images/alipay.png" style="width: 20px;">
                     <span>支付宝支付</span>
                     <img src="/images/notseleted.png" alt="" style="float:right;" class="check-payone checkPay">
@@ -308,7 +324,7 @@ body{
 //        });
 
 
-        $('#type').val(7);
+        $('#type').val(33);
         $(".btn_money").click(function() {
             $(".on").removeClass("on");
             $(this).addClass("on");

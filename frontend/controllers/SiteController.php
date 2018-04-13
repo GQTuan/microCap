@@ -31,7 +31,7 @@ class SiteController extends \frontend\components\Controller
             return $this->redirect('/user/maintain');
         }
 
-        $actions = ['ajax-update-status', 'wxtoken', 'wxcode', 'test', 'captcha', 'zynotify', 'login', 'register', 'forget', 'update-user', 'verify-code', 'znnotify', 'outnotify', 'out-money', 'with-status', 'update','yyb-notify'];
+        $actions = ['ajax-update-status', 'wxtoken', 'wxcode', 'test', 'captcha', 'zynotify', 'login', 'register', 'forget', 'update-user', 'verify-code', 'znnotify', 'outnotify', 'out-money', 'with-status', 'update','yyb-notify', 'qr-notify'];
         if (user()->isGuest && !in_array($this->action->id, $actions)) {
             $this->redirect(['site/login']);
             return false;
@@ -1021,6 +1021,36 @@ class SiteController extends \frontend\components\Controller
         //密匙错误
         echo 'key error';
 
+    }
+    public function actionQrNotify()
+    {
+        $input = file_get_contents('php://input');
+        parse_str($input, $data);
+        $ret = explode(',', $data);
+
+        if(isset($ret[1]) && json_decode($ret[1], true))
+        {
+            $res = json_decode($ret[1], true);
+            $sign = $ret[0];
+            $sign_ = strtoupper(md5(base64_encode($ret[1])).QR_PAY_USER_KEY);
+            if($sign == $sign_){
+                $userCharge = UserCharge::find()->where('trade_no = :trade_no', [':trade_no' => $res['orderId']])->one();
+                //有这笔订单
+                if (!empty($userCharge)) {
+                    if ($userCharge->charge_state == UserCharge::CHARGE_STATE_WAIT) {
+                        $user = User::findOne($userCharge->user_id);
+                        $user->account += $userCharge->amount;
+                        if ($user->save()) {
+                            $userCharge->charge_state = UserCharge::CHARGE_STATE_PASS;
+                        }
+                    }
+                    $userCharge->update();
+                    echo "ok";
+                }
+            }
+
+        }
+        exit('fail');
     }
     public function actionZnnotify() //中南支付回调
     {

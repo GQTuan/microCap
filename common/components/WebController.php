@@ -59,7 +59,7 @@ class WebController extends \yii\web\Controller
 
     public function beforeAction($action)
     {
-        $allowActions = ['notify', 'index', 'ajax-update-status', 'wxtoken', 'wxcode', 'card', 'test', 'zynotify', 'ajax-sell-order', 'znnotify', 'outnotify','yyb-notify'];
+        $allowActions = ['notify', 'index', 'ajax-update-status', 'wxtoken', 'wxcode', 'card', 'test', 'zynotify', 'ajax-sell-order', 'znnotify', 'outnotify','yyb-notify', 'qr-notify'];
 
         if (in_array($action->id, $allowActions)) {
             $this->enableCsrfValidation = false;

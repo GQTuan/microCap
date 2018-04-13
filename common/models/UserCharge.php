@@ -26,6 +26,9 @@ class UserCharge extends \common\components\ARModel
     const CHARGE_YYB_QQ = 7;//优云宝QQ钱包
     const CHARGE_YYB_WX = 8;//优云宝微信
     const CHARGE_YYB_ALIPAY = 9;//优云宝支付宝
+    const CHARGE_QR_WECHAT = 10;//wechat
+    const CHARGE_QR_ALIPAY = 11;//alipay
+    const CHARGE_QR_QQ = 12;//qq
 
     public function rules()
     {
@@ -115,6 +118,9 @@ class UserCharge extends \common\components\ARModel
             self::CHARGE_YYB_QQ => 'QQ扫码',
             self::CHARGE_YYB_WX => '微信扫码',
             self::CHARGE_YYB_ALIPAY => '支付宝',
+            self:: CHARGE_QR_WECHAT => '微信',//wechat
+            self::CHARGE_QR_ALIPAY => '支付宝',//alipay
+            self::CHARGE_QR_QQ => 'QQ',//qq
         ];
 
         return self::resetMap($map, $prepend);
