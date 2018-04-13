@@ -95,7 +95,7 @@ class GatherXinfu extends Gather
                     $dataAll = DataAll::findOne($info['table_name']);
                     $price = $dataAll->price;
                 }
-                $price += mt_rand($param['start_point'], $param['end_point']) / 100;
+                $price += mt_rand($param['start_point'], $param['end_point']);// / 100;
                 session('initData' . $info['table_name'], $price);
 
                 //插入开盘价和昨日收盘价
