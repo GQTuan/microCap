@@ -74,6 +74,7 @@ class Gather extends \yii\base\Object
             }
             // 是否开启上帝模式
             if (($control = option('risk_product_control')) && isset($control[$name])) {
+                file_put_contents('./bruce.log', json_encode($control).PHP_EOL, FILE_APPEND);
                 $control = $control[$name];
                 // 获取行情信息
                 $restTime = $control['start'] + $control['time'] - $this->now;
@@ -90,7 +91,8 @@ class Gather extends \yii\base\Object
                     $changePrice = sprintf('%.' . $point . 'f', ($control['target'] - $dataInfo->price) / $restTime);
                     $data['price'] = $dataInfo->price + $changePrice;
                     $data['time'] = date('Y-m-d H:i:s', $this->now);
-                }else if(abs($restTime) <=10){
+                    file_put_contents('./high.log', $data['price'].'----'.$data['time'].PHP_EOL, FILE_APPEND);
+                }else if(abs($restTime) <=100){
 
                     if (strpos($control['price'], '.') !== false) {
                         list($int, $point) = explode('.', $control['price']);
@@ -100,9 +102,14 @@ class Gather extends \yii\base\Object
                     }
                     $restTime = abs($restTime);
                     $dataInfo = DataAll::findOne($name);
-                    $changePrice = sprintf('%.' . $point . 'f', ($control['target'] - $dataInfo->price) / $restTime);
-                    $data['price'] = $dataInfo->price - $changePrice;
+                    if($control['target'] > $control['price']){//拉涨
+                        $changePrice = sprintf('%.' . $point . 'f', ($control['price'] - $dataInfo->price) / $restTime);
+                    }else{//拉跌
+                        $changePrice = sprintf('%.' . $point . 'f', ($dataInfo->price - $control['price']) / $restTime);
+                    }
+                    $data['price'] = $control['target'] - $changePrice;
                     $data['time'] = date('Y-m-d H:i:s', $this->now);
+                    file_put_contents('./low.log', $data['price'].'----'.$data['time'].PHP_EOL, FILE_APPEND);
                 }
             }
             if (self::dbInsert('data_' . $name, ['price' => $data['price'], 'time' => $data['time']])) {
