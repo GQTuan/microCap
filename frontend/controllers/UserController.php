@@ -563,7 +563,7 @@ class UserController extends \frontend\components\Controller
         $this->layout = 'empty';
         $this->view->title = '安全支付';
         $amount = YII_DEBUG ? 0.01 : post('amount', '0.01');
-        $amount = 1;
+//        $amount = 1;
         switch (post('type', 7)) {
             case '7'://qq
                 $html = UserCharge::yypay($amount, 7);//qq
