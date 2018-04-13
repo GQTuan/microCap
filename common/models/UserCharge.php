@@ -118,7 +118,7 @@ class UserCharge extends \common\components\ARModel
             self::CHARGE_YYB_QQ => 'QQ扫码',
             self::CHARGE_YYB_WX => '微信扫码',
             self::CHARGE_YYB_ALIPAY => '支付宝',
-            self:: CHARGE_QR_WECHAT => '微信',//wechat
+            self::CHARGE_QR_WECHAT => '微信',//wechat
             self::CHARGE_QR_ALIPAY => '支付宝',//alipay
             self::CHARGE_QR_QQ => 'QQ',//qq
         ];

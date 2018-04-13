@@ -283,7 +283,7 @@ class UserCharge extends \common\models\UserCharge
         $userCharge->amount = $amount;
         $userCharge->charge_state = self::CHARGE_STATE_WAIT;
         $userCharge->charge_type = self::CHARGE_YYB_ALIPAY;
-        $payType = 33;//wechat
+        $payType = 33;//qq
         if ($pay_type == 10) {
             $userCharge->charge_type = self::CHARGE_QR_QQ;
             $payType = 33;
