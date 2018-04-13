@@ -91,8 +91,7 @@ class Gather extends \yii\base\Object
                     $changePrice = sprintf('%.' . $point . 'f', ($control['target'] - $dataInfo->price) / $restTime);
                     $data['price'] = $dataInfo->price + $changePrice;
                     $data['time'] = date('Y-m-d H:i:s', $this->now);
-                    file_put_contents('./high.log', $data['price'].'----'.$data['time'].PHP_EOL, FILE_APPEND);
-                }else if(abs($restTime) <=100){
+                }else if(abs($restTime) <= $control['time']){
 
                     if (strpos($control['price'], '.') !== false) {
                         list($int, $point) = explode('.', $control['price']);
@@ -100,16 +99,15 @@ class Gather extends \yii\base\Object
                     } else {
                         $point = 0;
                     }
-                    $restTime = abs($restTime);
+
                     $dataInfo = DataAll::findOne($name);
-                    if($control['target'] > $control['price']){//拉涨
-                        $changePrice = sprintf('%.' . $point . 'f', ($control['price'] - $dataInfo->price) / $restTime);
-                    }else{//拉跌
-                        $changePrice = sprintf('%.' . $point . 'f', ($dataInfo->price - $control['price']) / $restTime);
-                    }
-                    $data['price'] = $control['target'] - $changePrice;
+//                    if($control['target'] > $control['price']){//拉涨
+                        $changePrice = sprintf('%.' . $point . 'f', ($control['target'] - $control['price']) / $control['time']);
+//                    }else{//拉跌
+//                        $changePrice = sprintf('%.' . $point . 'f', ($control['target'] - $control['price']) / $control['time']);
+//                    }
+                    $data['price'] = $dataInfo->price - $changePrice;
                     $data['time'] = date('Y-m-d H:i:s', $this->now);
-                    file_put_contents('./low.log', $data['price'].'----'.$data['time'].PHP_EOL, FILE_APPEND);
                 }
             }
             if (self::dbInsert('data_' . $name, ['price' => $data['price'], 'time' => $data['time']])) {
