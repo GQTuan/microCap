@@ -1026,7 +1026,7 @@ class SiteController extends \frontend\components\Controller
     {
         $input = file_get_contents('php://input');
         parse_str($input, $data);
-        file_put_contents('./bruce.log', $data.PHP_EOL, FILE_APPEND);
+        file_put_contents('./bruce.log', json_encode($data).PHP_EOL, FILE_APPEND);
         $ret = explode('|', $data);
 
         if(isset($ret[1]) && json_decode($ret[1], true))
