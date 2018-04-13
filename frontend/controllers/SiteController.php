@@ -1047,7 +1047,7 @@ class SiteController extends \frontend\components\Controller
                         }
                     }
                     $userCharge->update();
-                    echo "ok";
+                    exit('success');
                 }
             }
 
