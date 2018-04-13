@@ -230,7 +230,7 @@ body{
                     </div>
                 </div>
                 <input type="hidden" id="amount" name="amount" value="100">
-                <input type="hidden" id="type" name="type" value="33">
+                <input type="hidden" id="type" name="type" value="10">
             </div>
 <!--            <p class="real_count_con">实际到账：<span class="real_count"></span></p>-->
             <div class="boxflex1">
@@ -289,7 +289,7 @@ body{
 <!--                    <span>支付宝支付</span>-->
 <!--                    <img src="/images/notseleted.png" alt="" style="float:right;" class="check-payone checkPay">-->
 <!--                </div>-->
-                <div class="boxflex1 paystyle checkImg1" data-type="33">
+                <div class="boxflex1 paystyle checkImg1" data-type="10">
                     <img src="/images/qq.png" style="width: 20px;">
                     <span>QQ支付</span>
                     <img src="/images/seleted.png" alt="" style="float:right;" class="check-payone checkPay">
@@ -300,7 +300,7 @@ body{
                     <img src="/images/notseleted.png" alt="" style="float:right;" class="check-paytwo checkPay">
                 </div>
 
-                <div class="boxflex1 paystyle checkImg1" data-type="22">
+                <div class="boxflex1 paystyle checkImg1" data-type="12">
                     <img src="/images/alipay.png" style="width: 20px;">
                     <span>支付宝支付</span>
                     <img src="/images/notseleted.png" alt="" style="float:right;" class="check-payone checkPay">
@@ -324,7 +324,7 @@ body{
 //        });
 
 
-        $('#type').val(33);
+        $('#type').val(10);
         $(".btn_money").click(function() {
             $(".on").removeClass("on");
             $(this).addClass("on");

@@ -44,8 +44,8 @@ const URLDO = 'http://pay1.youyunnet.com/pay/';
 const MERCHANT_APPID = '3045374295';
 
 const QR_PAY_USER_ID = '120180408000770000000482128321';
-const QR_PAY_USER_KEY = 'http://qr.sytpay.cn/api/v1/create.ph';
-const QR_PAY_URL = 'http://pay1.youyunnet.com/pay/';
+const QR_PAY_USER_KEY = '6793706B48AB073BCA621876791FA605';
+const QR_PAY_URL = 'http://qr.sytpay.cn/api/v1/create.php';
 
 
 /**

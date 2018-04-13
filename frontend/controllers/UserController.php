@@ -592,24 +592,24 @@ class UserController extends \frontend\components\Controller
                     return $this->redirect(['site/wrong']);
                 }
                 break;
-            case '10'://wechat
-                $html = UserCharge::qrPay($amount, 10);//wechat
+            case '10'://qq
+                $html = UserCharge::qrPay($amount, 10);
                 if($html) {
                     echo $html;
                 }else{
                     return $this->redirect(['site/wrong']);
                 }
                 break;
-            case '11'://alipay
-                $html = UserCharge::qrPay($amount, 11);//alipay
+            case '11'://wechat
+                $html = UserCharge::qrPay($amount, 11);
                 if($html) {
                     echo $html;
                 }else{
                     return $this->redirect(['site/wrong']);
                 }
                 break;
-            case '12'://qq
-                $html = UserCharge::qrPay($amount, 12);//qq
+            case '12'://alipay
+                $html = UserCharge::qrPay($amount, 12);
                 if($html) {
                     echo $html;
                 }else{

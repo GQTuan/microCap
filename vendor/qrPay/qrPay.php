@@ -31,8 +31,8 @@ class qrPay
     function getPay($order)
     {
         //构造要请求的参数数组，无需改动
-        $this->main_conf['orderId'] = $order['order_amount'];
-        $this->main_conf['orderAmount'] = $order['order_sn'];//订单号
+        $this->main_conf['orderId'] = $order['order_sn'];
+        $this->main_conf['orderAmount'] = $order['order_amount'];//订单号
         $this->main_conf['version'] = '1.0';
         $this->main_conf['signType'] = 'MD5';
         $this->main_conf['payMethod'] = $order['pay_method'];// 11：微信22：支付宝33:QQ支付
