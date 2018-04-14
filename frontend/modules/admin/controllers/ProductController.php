@@ -2,6 +2,7 @@
 
 namespace admin\controllers;
 
+use common\models\AdminUser;
 use Yii;
 use admin\models\User;
 use admin\models\Product;
@@ -20,28 +21,54 @@ class ProductController extends \admin\components\Controller
     public function actionList()
     {
         $query = (new Product)->listQuery()->orderBy('hot ASC');
-
-        $html = $query->getTable([
-            'name' => ['type' => 'text'],
-            'desc' => ['type' => 'text'],
-            'hot' => ['type' => 'text', 'header' => '排序'],
-            'currency' => ['type' => 'select'],
-            'force_sell' => ['type' => 'select'],
-            'is_trade' => ['type' => 'select'],
-            'on_sale' => ['type' => 'select'],
-            ['type' => ['delete'], 'width' => '250px', 'value' => function ($row) {
-                return 
-                    implode(str_repeat('&nbsp;', 2), [
-                        Hui::successBtn('设置交易时间', ['setTradeTime', 'id' => $row->id], ['class' => 'fancybox fancybox.iframe']),
-                        Hui::primaryBtn('设置交易价格', ['setTradePrice', 'id' => $row->id], ['class' => 'fancybox fancybox.iframe'])
-                    ]);
-            }]
-        ], [
-            'paging' => 20,
-            // 'addBtn' => u()->isMe() ? ['addStock' => '添加产品'] : null,
-            'addBtn' => u()->isMe() ? ['addProduct' => '添加特殊产品'] : null,
-            'extraBtn' => ['ajaxAllUp' => '一键上架', 'ajaxAllDown' => '一键下架']
-        ]);
+        if (u()->power <= AdminUser::POWER_ADMIN) {
+            $data_ = [
+                'name' => ['type' => 'input'],
+                'desc' => ['type' => 'input'],
+                'hot' => ['type' => 'text', 'header' => '排序'],
+                'currency' => ['type' => 'select'],
+                'force_sell' => ['type' => 'select'],
+                'is_trade' => ['type' => 'select'],
+                'on_sale' => ['type' => 'select'],
+                ['type' => ['delete'], 'width' => '250px', 'value' => function ($row) {
+                    return
+                        implode(str_repeat('&nbsp;', 2), [
+                            Hui::successBtn('设置交易时间', ['setTradeTime', 'id' => $row->id], ['class' => 'fancybox fancybox.iframe']),
+                            Hui::primaryBtn('设置交易价格', ['setTradePrice', 'id' => $row->id], ['class' => 'fancybox fancybox.iframe'])
+                        ]);
+                }],
+                [
+                    'paging' => 20,
+                    // 'addBtn' => u()->isMe() ? ['addStock' => '添加产品'] : null,
+                    'addBtn' => u()->isMe() ? ['addProduct' => '添加特殊产品'] : null,
+                    'extraBtn' => ['ajaxAllUp' => '一键上架', 'ajaxAllDown' => '一键下架']
+                ]
+            ];
+        }else{
+            $data_ = [
+                'name' => ['type' => 'text'],
+                'desc' => ['type' => 'text'],
+                'hot' => ['type' => 'text', 'header' => '排序'],
+                'currency' => ['type' => 'select'],
+                'force_sell' => ['type' => 'select'],
+                'is_trade' => ['type' => 'select'],
+                'on_sale' => ['type' => 'select'],
+                ['type' => ['delete'], 'width' => '250px', 'value' => function ($row) {
+                    return
+                        implode(str_repeat('&nbsp;', 2), [
+                            Hui::successBtn('设置交易时间', ['setTradeTime', 'id' => $row->id], ['class' => 'fancybox fancybox.iframe']),
+                            Hui::primaryBtn('设置交易价格', ['setTradePrice', 'id' => $row->id], ['class' => 'fancybox fancybox.iframe'])
+                        ]);
+                }],
+                [
+                    'paging' => 20,
+                    // 'addBtn' => u()->isMe() ? ['addStock' => '添加产品'] : null,
+                    'addBtn' => u()->isMe() ? ['addProduct' => '添加特殊产品'] : null,
+                    'extraBtn' => ['ajaxAllUp' => '一键上架', 'ajaxAllDown' => '一键下架']
+                ]
+            ];
+        }
+        $html = $query->getTable($data_);
 
         return $this->render('list', compact('html'));
     }
