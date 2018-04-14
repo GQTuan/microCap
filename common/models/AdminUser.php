@@ -159,8 +159,8 @@ class AdminUser extends \common\components\ARModel
         return  [
             self::POWER_SETTLE => '运营中心',
             self::POWER_OPERATE => '会员',
-            self::POWER_MEMBER => '机构', 
-            self::POWER_RING => '经纪人', 
+            self::POWER_MEMBER => '会员单位',
+            self::POWER_RING => '代理商',
         ];
     }
 
@@ -172,8 +172,8 @@ class AdminUser extends \common\components\ARModel
             self::POWER_ADMIN => '交易所',
             self::POWER_SETTLE => '运营中心',
             self::POWER_OPERATE => '会员',
-            self::POWER_MEMBER => '机构', 
-            self::POWER_RING => '经纪人', 
+            self::POWER_MEMBER => '会员单位',
+            self::POWER_RING => '代理商',
         ];
         $map = [];
         foreach ($maps as $key => $val) {
