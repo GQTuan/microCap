@@ -117,6 +117,86 @@ a.qiandao-btn:hover{
     .section .product-list {
         height: 1.5rem;
     }
+
+
+    @keyframes sponde{
+    0%{width:6px;height:6px;opacity:1;}
+    100%{width:30px;height:30px;opacity:0;}
+  }
+  @-webkit-keyframes sponde{
+    0%{width:6px;height:6px;opacity:1;}
+    100%{width:30px;height:30px;opacity:0;}
+  }
+  @-moz-keyframes sponde{
+    0%{width:6px;height:6px;opacity:1;}
+    100%{width:30px;height:30px;opacity:0;}
+  }
+  @-ms-keyframes sponde{
+    0%{width:6px;height:6px;opacity:1;}
+    100%{width:30px;height:30px;opacity:0;}
+  }
+  @-o-keyframes sponde{
+    0%{width:6px;height:6px;opacity:1;}
+    100%{width:30px;height:30px;opacity:0;}
+  }
+  .aniContainer{
+    position:absolute;
+    width:50px;
+    height:50px;
+    display:flex;
+    display:-webkit-box;/* android 2.1-3.0, ios 3.2-4.3 */
+    display:-webkit-flex;/* Chrome 21+ */
+    align-items:center;
+    justify-content:center;
+    -webkit-box-pack: center;/* android 2.1-3.0, ios 3.2-4.3 */
+    -webkit-box-align: center;/* android 2.1-3.0, ios 3.2-4.3 */
+    /*bottom: 94px;*/
+
+
+    justify-content: center;
+    -webkit-box-pack:center;
+    -webkit-justify-content: center;
+    -ms-flex-pack:center;
+    justify-content:center;
+
+
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    right: -14px;
+    visibility:hidden;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    /*opacity:0;*/
+
+    overflow-x: visible!important;
+    z-index: 999;
+  }
+  .line-container{
+    overflow-x: visible!important;
+  }
+  .aniContainer .core{
+    position:absolute;
+    width:3px;
+    height:3px;
+    border-radius:50%;
+    background:#2158ED;
+    top:24px;
+    left:24px;
+  }
+  .aniContainer .aniBorder{
+      border-radius:50%;
+     /* border:6px solid #2158ED;*/
+     background:#2158ED;
+      -webkit-animation:sponde 1s infinite;
+     -moz-animation:sponde 1s infinite;
+     -ms-animation:sponde 1s infinite;
+     -o-animation:sponde 1s infinite;
+     animation:sponde 1s infinite;
+  }
 </style>
 
 <div class="detail-container">

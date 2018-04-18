@@ -508,7 +508,7 @@ $(function () {
                     load: function () {
                         var series = this.series;
                         setTimeout(function () {
-                            //getPrice1(series[0]);
+                            getPrice1(series[0]);
                             getHideOrder();
                         }, 2000);
                     }
